@@ -72,6 +72,10 @@ class Discriminator(nn.Module):
         return validity
 
 
+def adversarial_loss_ls(scores, logits):
+    return 0.5 * ((scores - logits) ** 2).mean()
+
+
 # Define the training process
 def train(generator, discriminator, dataloader, num_epochs, latent_dim, num_classes):
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -101,15 +105,15 @@ def train(generator, discriminator, dataloader, num_epochs, latent_dim, num_clas
 
             gen_images = generator(z, gen_labels)
 
-            g_loss = adversarial_loss(discriminator(gen_images, gen_labels), valid)
+            g_loss = adversarial_loss_ls(discriminator(gen_images, gen_labels), valid)
 
             g_loss.backward()
             optimizer_G.step()
 
             optimizer_D.zero_grad()
 
-            real_loss = adversarial_loss(discriminator(real_images, labels), valid)
-            fake_loss = adversarial_loss(discriminator(gen_images.detach(), gen_labels), fake)
+            real_loss = adversarial_loss_ls(discriminator(real_images, labels), valid)
+            fake_loss = adversarial_loss_ls(discriminator(gen_images.detach(), gen_labels), fake)
 
             d_loss = (real_loss + fake_loss) / 2
 
