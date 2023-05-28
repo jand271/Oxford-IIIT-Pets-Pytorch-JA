@@ -6,7 +6,6 @@
 #SBATCH --mem=128000
 #SBATCH --cpus-per-task=1
 #SBATCH --job-name=try_spoof_resnet
-#SBATCH --gres=gpu:1
 
 module purge
 module load python/3.6.1
