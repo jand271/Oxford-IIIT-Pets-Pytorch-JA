@@ -12,6 +12,6 @@ module purge
 module load python/3.6.1
 module load cuda/11.0 
 
-source venv/bin/activate
+pip install torch timm
 
 python try_spoof_resnet.py
