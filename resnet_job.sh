@@ -12,7 +12,7 @@ module load cuda/11.0
 current_datetime=$(date +"%D %T")
 echo "Current date and time: $current_datetime"
 echo "Starting Script"
-stdbuf -oL python3 try_spoof_resnet.py
+python3 -u try_spoof_resnet.py
 
 echo "Ending Script"
 current_datetime=$(date +"%D %T")
