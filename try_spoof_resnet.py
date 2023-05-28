@@ -1,4 +1,4 @@
-
+from datetime import datetime
 import timm
 from timm.data.transforms_factory import create_transform
 from timm.data import resolve_data_config
@@ -216,5 +216,7 @@ def create_image():
 
 
 if __name__ == '__main__':
+    print("Current date and time in Python:", datetime.now())
     training()
+    print("Current date and time in Python:", datetime.now())
 
