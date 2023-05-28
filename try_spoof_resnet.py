@@ -85,8 +85,8 @@ def train(generator, discriminator, dataloader, num_epochs, latent_dim, num_clas
     discriminator.to(device)
     adversarial_loss.to(device)
 
-    optimizer_G = optim.Adam(generator.parameters(), lr=0.0002, betas=(0.5, 0.999))
-    optimizer_D = optim.Adam(discriminator.parameters(), lr=0.0002, betas=(0.5, 0.999))
+    optimizer_G = optim.Adam(generator.parameters(), lr=0.002, betas=(0.5, 0.999))
+    optimizer_D = optim.Adam(discriminator.parameters(), lr=0.002, betas=(0.5, 0.999))
 
     for epoch in range(num_epochs):
         for i, (real_images, labels) in enumerate(dataloader):
