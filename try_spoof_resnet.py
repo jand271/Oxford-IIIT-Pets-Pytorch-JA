@@ -73,7 +73,7 @@ class Discriminator(nn.Module):
 
 
 def adversarial_loss_ls(scores, logits):
-    return 0.5 * ((scores - logits) ** 2).mean()
+    return ((scores - logits) ** 2).mean()
 
 
 # Define the training process
