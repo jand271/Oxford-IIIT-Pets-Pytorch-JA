@@ -203,20 +203,29 @@ def create_image():
     img_shape = (3, 224, 224)
 
     generator = Generator(latent_dim, img_shape, num_classes)
-    generator.load_state_dict(torch.load("generator_res.pth"))
+    generator.load_state_dict(torch.load("generator_res.pth", map_location=torch.device('cpu')))
 
     generator.eval()
 
-    z = torch.randn(1, latent_dim).to(device)
-    label = torch.tensor([4]).to(device)  # Replace 5 with the desired label
-    with torch.no_grad():
-        generated_image = generator(z, label)
+    # z = torch.randn(1, latent_dim).to(device)
+    # label = torch.tensor([4]).to(device)  # Replace 5 with the desired label
+    # with torch.no_grad():
+    #     generated_image = generator(z, label)
+    #
+    # save_image(inverse_transform(generated_image[0]), "generated_image.png")
 
-    save_image(inverse_transform(generated_image[0]), "generated_image.png")
+    for i in range(37):
+        z = torch.randn(1, latent_dim).to(device)
+        label = torch.tensor([i]).to(device)  # Replace 5 with the desired label
+        with torch.no_grad():
+            generated_image = generator(z, label)
+
+        plt.imshow(inverse_transform(generated_image[0]))
+        plt.show()
 
 
 if __name__ == '__main__':
     print("Current date and time in Python:", datetime.now())
-    training()
+    #training()
     print("Current date and time in Python:", datetime.now())
-
+    create_image()
