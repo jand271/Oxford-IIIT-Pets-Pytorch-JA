@@ -187,7 +187,7 @@ def training():
     discriminator = Discriminator(img_shape, num_classes)
 
     # Train the GAN
-    num_epochs = 50
+    num_epochs = 500
     train(generator, discriminator, dataloader, num_epochs, latent_dim, num_classes)
 
     torch.save(generator.state_dict(), "generator_res.pth")
@@ -226,6 +226,6 @@ def create_image():
 
 if __name__ == '__main__':
     print("Current date and time in Python:", datetime.now())
-    #training()
+    training()
     print("Current date and time in Python:", datetime.now())
-    create_image()
+    #create_image()
