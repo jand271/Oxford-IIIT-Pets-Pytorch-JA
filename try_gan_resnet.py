@@ -157,7 +157,7 @@ def load_images(model, data_dir):
 
     # Load the image dataset
     dataset = ImageFolder(data_dir, transform=transform)
-    dataloader = DataLoader(dataset, batch_size=32, shuffle=False)
+    dataloader = DataLoader(dataset, batch_size=32, shuffle=True)
 
     return dataloader
 
