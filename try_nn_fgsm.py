@@ -22,7 +22,7 @@ class AdversarialModel(torch.nn.Module):
             torch.nn.BatchNorm1d(100),
             torch.nn.LeakyReLU(0.1, inplace=True),
             torch.nn.Linear(100, 3 * 224 * 224),
-            torch.nn.Tanh()
+            torch.nn.Tanh(),
         )
 
     def forward(self, image):
@@ -30,7 +30,7 @@ class AdversarialModel(torch.nn.Module):
         return adversarial_noise.view(-1, 3, 224, 224)
 
 
-def train(adversarial_model, timm_model, dataloader, num_epochs):
+def train(adversarial_model, timm_model, dataloader, num_epochs, display_images=False):
 
     desired_label = 0
 
@@ -39,13 +39,14 @@ def train(adversarial_model, timm_model, dataloader, num_epochs):
     adversarial_model.to(device)
     timm_model.to(device)
 
-    optimizer = torch.optim.Adam(adversarial_model.parameters(), lr=0.001, betas=(0.5, 0.999))
+    optimizer = torch.optim.Adam(adversarial_model.parameters(), lr=0.001, betas=(0.5, 0.999), weight_decay=0.0001)
     loss_function = torch.nn.CrossEntropyLoss()
 
     for epoch in range(num_epochs):
         for batch, (images, labels) in enumerate(dataloader):
 
             images = images.to(device)
+            labels = labels.to(device)
 
             batch_size = images.size(0)
             labels_one_hot = torch.zeros((batch_size, 37))
@@ -55,25 +56,24 @@ def train(adversarial_model, timm_model, dataloader, num_epochs):
             optimizer.zero_grad()
             adversarial_noise = adversarial_model(images)
             label_predicted = timm_model(adversarial_noise + images)
-            loss = loss_function(label_predicted, labels_one_hot) + 1e2 * torch.max(torch.abs(adversarial_noise))
+            loss = loss_function(label_predicted, labels_one_hot) + 1e-2 * torch.norm(adversarial_noise).mean()
 
             loss.backward()
             optimizer.step()
 
-            if batch % 1 == 0:
+            if batch % 50 == 0:
                 print(
-                    "[Epoch %d/%d] [Batch %d/%d] [loss: %f]"
-                    % (epoch, num_epochs, batch, len(dataloader), loss)
+                    "[Epoch %d/%d] [Batch %d/%d] [loss: %f] [Spoofed Label: %d/%d] [Desired Label: %d/%d]"
+                    % (epoch, num_epochs, batch, len(dataloader), loss, torch.sum(torch.argmax(label_predicted, axis=1) != labels).item(), batch_size, torch.sum(torch.argmax(label_predicted, axis=1) == desired_label).item(), batch_size)
                 )
+        if display_images:
+            print(f'original label{labels[0]}')
+            print(f'new label{torch.argmax(label_predicted[0])}')
+            plt.imshow(inverse_transform(images[0] + adversarial_noise[0]))
+            plt.show()
 
-            if batch % 10 == 0:
-                print(f'original label{labels[0]}')
-                print(f'new label{torch.argmax(label_predicted[0])}')
-                plt.imshow(inverse_transform(images[0] + adversarial_noise[0]))
-                plt.show()
 
-
-def training(num_epochs, load_save=False):
+def training(num_epochs, load_save=False, display_images=False):
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -87,10 +87,10 @@ def training(num_epochs, load_save=False):
     if load_save:
         assert False
 
-    train(adversarial_model, timm_model, dataloader, num_epochs)
+    train(adversarial_model, timm_model, dataloader, num_epochs, display_images=display_images)
 
     torch.save(adversarial_model.state_dict(), "adversarial_res.pth")
 
 
 if __name__ == '__main__':
-    training(100)
+    training(100, display_images=True)
