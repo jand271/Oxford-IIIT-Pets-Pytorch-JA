@@ -39,7 +39,7 @@ def train(adversarial_model, timm_model, dataloader, num_epochs, display_images=
     adversarial_model.to(device)
     timm_model.to(device)
 
-    optimizer = torch.optim.Adam(adversarial_model.parameters(), lr=0.001, betas=(0.5, 0.999), weight_decay=0.0001)
+    optimizer = torch.optim.Adam(adversarial_model.parameters(), lr=0.001, betas=(0.5, 0.999), weight_decay=0.02)
     loss_function = torch.nn.CrossEntropyLoss()
 
     for epoch in range(num_epochs):
@@ -56,7 +56,7 @@ def train(adversarial_model, timm_model, dataloader, num_epochs, display_images=
             optimizer.zero_grad()
             adversarial_noise = adversarial_model(images)
             label_predicted = timm_model(adversarial_noise + images)
-            loss = loss_function(label_predicted, labels_one_hot) + 1e-2 * torch.norm(adversarial_noise).mean()
+            loss = loss_function(label_predicted, labels_one_hot) + 2e-2 * torch.norm(adversarial_noise).mean()
 
             loss.backward()
             optimizer.step()
