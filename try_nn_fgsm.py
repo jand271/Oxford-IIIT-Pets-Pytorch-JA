@@ -5,7 +5,7 @@ from matplotlib import pyplot as plt
 
 import timm
 import torch
-from common import load_model, load_images, inverse_transform
+from common import load_model, load_images, inverse_transform, attempt_gpu_acceleration
 
 
 class AdversarialModel(torch.nn.Module):
@@ -34,7 +34,7 @@ def train(adversarial_model, timm_model, dataloader, num_epochs):
 
     desired_label = 0
 
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    device = attempt_gpu_acceleration()
 
     adversarial_model.to(device)
     timm_model.to(device)
@@ -45,12 +45,14 @@ def train(adversarial_model, timm_model, dataloader, num_epochs):
     for epoch in range(num_epochs):
         for batch, (images, labels) in enumerate(dataloader):
 
+            images = images.to(device)
+
             batch_size = images.size(0)
             labels_one_hot = torch.zeros((batch_size, 37))
             labels_one_hot[:, desired_label] = 1
+            labels_one_hot = labels_one_hot.to(device)
 
             optimizer.zero_grad()
-
             adversarial_noise = adversarial_model(images)
             label_predicted = timm_model(adversarial_noise + images)
             loss = loss_function(label_predicted, labels_one_hot) + 1e2 * torch.max(torch.abs(adversarial_noise))

@@ -3,6 +3,7 @@ import timm
 from timm.data.transforms_factory import create_transform
 from timm.data import resolve_data_config
 
+import torch
 from torch.utils.data import DataLoader
 
 from torchvision.datasets import ImageFolder
@@ -43,3 +44,19 @@ def inverse_transform(image):
     image = CenterCrop(size=(235, 235))(image)
     image = Resize(size=(224, 224), interpolation=2)(image)
     return image
+
+
+def attempt_gpu_acceleration():
+    if torch.cuda.is_available():
+        device = torch.device("cuda")
+        print("CUDA is available. Using CUDA.")
+        return device
+
+    if torch.backends.mps.is_available():
+        device = torch.device(torch.device("mps"))
+        print("MPS is available. Using MPS.")
+        return device
+
+    device = torch.device("cpu")
+    print("Neither CUDA nor MPS is available. Using CPU.")
+    return device
