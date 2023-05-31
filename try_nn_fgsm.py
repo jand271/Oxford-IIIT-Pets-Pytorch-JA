@@ -21,6 +21,9 @@ class AdversarialModel(torch.nn.Module):
             torch.nn.Linear(100, 100),
             torch.nn.BatchNorm1d(100),
             torch.nn.LeakyReLU(0.1, inplace=True),
+            torch.nn.Linear(100, 100),
+            torch.nn.BatchNorm1d(100),
+            torch.nn.LeakyReLU(0.1, inplace=True),
             torch.nn.Linear(100, 3 * 224 * 224),
             torch.nn.Tanh(),
         )
@@ -39,7 +42,7 @@ def train(adversarial_model, timm_model, dataloader, num_epochs, display_images=
     adversarial_model.to(device)
     timm_model.to(device)
 
-    optimizer = torch.optim.Adam(adversarial_model.parameters(), lr=0.001, betas=(0.5, 0.999), weight_decay=0.02)
+    optimizer = torch.optim.Adam(adversarial_model.parameters(), lr=0.00001, betas=(0.5, 0.999), weight_decay=0.02)
     loss_function = torch.nn.CrossEntropyLoss()
 
     for epoch in range(num_epochs):
@@ -56,7 +59,7 @@ def train(adversarial_model, timm_model, dataloader, num_epochs, display_images=
             optimizer.zero_grad()
             adversarial_noise = adversarial_model(images)
             label_predicted = timm_model(adversarial_noise + images)
-            loss = loss_function(label_predicted, labels_one_hot) + 2e-2 * torch.norm(adversarial_noise).mean()
+            loss = loss_function(label_predicted, labels_one_hot) + 1e-2 * torch.norm(adversarial_noise).mean()
 
             loss.backward()
             optimizer.step()
@@ -67,9 +70,10 @@ def train(adversarial_model, timm_model, dataloader, num_epochs, display_images=
                     % (epoch, num_epochs, batch, len(dataloader), loss, torch.sum(torch.argmax(label_predicted, axis=1) != labels).item(), batch_size, torch.sum(torch.argmax(label_predicted, axis=1) == desired_label).item(), batch_size)
                 )
         if display_images:
-            print(f'original label{labels[0]}')
-            print(f'new label{torch.argmax(label_predicted[0])}')
+            print(f'original label{labels[0]} : new label{torch.argmax(label_predicted[0])}')
             plt.imshow(inverse_transform(images[0] + adversarial_noise[0]))
+            plt.show()
+            plt.imshow(inverse_transform(adversarial_noise[0]))
             plt.show()
 
 
