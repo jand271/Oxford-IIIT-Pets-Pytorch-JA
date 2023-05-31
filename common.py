@@ -27,9 +27,15 @@ def load_images(model, data_dir):
 
     # Load the image dataset
     dataset = ImageFolder(data_dir, transform=transform)
-    dataloader = DataLoader(dataset, batch_size=32, shuffle=True)
 
-    return dataloader
+    train_size = int(0.8 * len(dataset))
+    test_size = len(dataset) - train_size
+    train_dataset, test_dataset = torch.utils.data.random_split(dataset, [train_size, test_size])
+
+    train_dataloader = DataLoader(train_dataset, batch_size=32, shuffle=True)
+    test_dataloader = DataLoader(test_dataset, batch_size=32, shuffle=False)
+
+    return train_dataloader, test_dataloader
 
 
 def inverse_transform(image):
