@@ -1,11 +1,8 @@
-
-from datetime import datetime
-
 from matplotlib import pyplot as plt
 
-import timm
 import torch
-from common import load_model, load_images, inverse_transform, attempt_gpu_acceleration
+import torch.nn as nn
+from common import load_model, load_images, inverse_transform, attempt_gpu_acceleration, Unflatten
 
 
 class AdversarialModel(torch.nn.Module):
@@ -14,23 +11,23 @@ class AdversarialModel(torch.nn.Module):
         super(AdversarialModel, self).__init__()
 
         self.model = torch.nn.Sequential(
-            torch.nn.Flatten(),
-            torch.nn.Linear(3 * 224 * 224, 100),
-            torch.nn.BatchNorm1d(100),
-            torch.nn.LeakyReLU(0.1, inplace=True),
-            torch.nn.Linear(100, 100),
-            torch.nn.BatchNorm1d(100),
-            torch.nn.LeakyReLU(0.1, inplace=True),
-            torch.nn.Linear(100, 100),
-            torch.nn.BatchNorm1d(100),
-            torch.nn.LeakyReLU(0.1, inplace=True),
-            torch.nn.Linear(100, 3 * 224 * 224),
-            torch.nn.Tanh(),
+            nn.Flatten(),
+            nn.Linear(3 * 224 * 224, 336),
+            nn.BatchNorm1d(336),
+            nn.LeakyReLU(0.1, inplace=True),
+            nn.Linear(336, 336),
+            nn.BatchNorm1d(336),
+            nn.LeakyReLU(0.1, inplace=True),
+            nn.Linear(336, 336),
+            nn.BatchNorm1d(336),
+            nn.LeakyReLU(0.1, inplace=True),
+            nn.Linear(336, 3 * 224 * 224),
+            nn.Tanh(),
+            Unflatten(-1, 3, 224, 224)
         )
 
     def forward(self, image):
-        adversarial_noise = self.model(image)
-        return adversarial_noise.view(-1, 3, 224, 224)
+        return self.model(image)
 
 
 def validate_test_set(adversarial_model, timm_model, test_dataloader, desired_label, device):
@@ -40,7 +37,7 @@ def validate_test_set(adversarial_model, timm_model, test_dataloader, desired_la
         with torch.no_grad():
             adversarial_noise = adversarial_model(images)
             label_predicted = timm_model(images + adversarial_noise)
-            correct += torch.sum(torch.argmax(label_predicted, axis=1) == desired_label).item()
+            correct += torch.sum(torch.argmax(label_predicted, axis = 1) == desired_label).item()
     return correct / len(test_dataloader.dataset)
 
 
@@ -53,7 +50,10 @@ def train(adversarial_model, timm_model, train_dataloader, test_dataloader, num_
     adversarial_model.to(device)
     timm_model.to(device)
 
-    optimizer = torch.optim.Adam(adversarial_model.parameters(), lr=0.001, betas=(0.5, 0.999), weight_decay=0.02)
+    optimizer = torch.optim.Adam(adversarial_model.parameters(),
+                                 lr = 0.001,
+                                 betas = (0.1, 0.999),
+                                 weight_decay = 0.02)
     loss_function = torch.nn.CrossEntropyLoss()
 
     for epoch in range(num_epochs):
@@ -62,8 +62,8 @@ def train(adversarial_model, timm_model, train_dataloader, test_dataloader, num_
             images = images.to(device)
             labels = labels.to(device)
 
-            batch_size = images.size(0)
-            labels_one_hot = torch.zeros((batch_size, 37))
+            batch_size = images.size(0)  # default batch-size
+            labels_one_hot = torch.zeros((batch_size, 37))  # 37 categories
             labels_one_hot[:, desired_label] = 1
             labels_one_hot = labels_one_hot.to(device)
 
@@ -78,8 +78,15 @@ def train(adversarial_model, timm_model, train_dataloader, test_dataloader, num_
             if batch % 50 == 0:
                 print(
                     "[Epoch %d/%d] [Batch %d/%d] [loss: %f] [Spoofed Label: %d/%d] [Desired Label: %d/%d]"
-                    % (epoch, num_epochs, batch, len(train_dataloader), loss, torch.sum(torch.argmax(label_predicted, axis=1) != labels).item(), batch_size, torch.sum(torch.argmax(label_predicted, axis=1) == desired_label).item(), batch_size)
+                    % (epoch,
+                       num_epochs,
+                       batch,
+                       len(train_dataloader),
+                       loss, torch.sum(torch.argmax(label_predicted, axis=1) != labels).item(),
+                       batch_size, torch.sum(torch.argmax(label_predicted, axis=1) == desired_label).item(),
+                       batch_size)
                 )
+
         if display_images:
             print(f'original label{labels[0]} : new label{torch.argmax(label_predicted[0])}')
             plt.imshow(inverse_transform(images[0] + adversarial_noise[0]))
@@ -105,7 +112,7 @@ def training(num_epochs, load_save=False, display_images=False):
     if load_save:
         assert False
 
-    train(adversarial_model, timm_model, train_dataloader, test_dataloader, num_epochs, display_images=display_images)
+    train(adversarial_model, timm_model, train_dataloader, test_dataloader, num_epochs, display_images = display_images)
 
     torch.save(adversarial_model.state_dict(), "adversarial_res.pth")
 

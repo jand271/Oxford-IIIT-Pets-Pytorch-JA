@@ -1,9 +1,9 @@
-
 import timm
 from timm.data.transforms_factory import create_transform
 from timm.data import resolve_data_config
 
 import torch
+import torch.nn as nn
 from torch.utils.data import DataLoader
 
 from torchvision.datasets import ImageFolder
@@ -66,3 +66,20 @@ def attempt_gpu_acceleration():
     device = torch.device("cpu")
     print("Neither CUDA nor MPS is available. Using CPU.")
     return device
+
+
+# From CS231N A3
+class Unflatten(nn.Module):
+    """
+    An Unflatten module receives an input of shape (N, C*H*W) and reshapes it
+    to produce an output of shape (N, C, H, W).
+    """
+    def __init__(self, N=-1, C=128, H=7, W=7):
+        super(Unflatten, self).__init__()
+        self.N = N
+        self.C = C
+        self.H = H
+        self.W = W
+
+    def forward(self, x):
+        return x.view(self.N, self.C, self.H, self.W)
