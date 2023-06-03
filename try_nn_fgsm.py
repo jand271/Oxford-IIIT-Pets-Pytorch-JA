@@ -1,7 +1,8 @@
-from matplotlib import pyplot as plt
-
 import torch
 import torch.nn as nn
+import optuna
+from optuna.trial import TrialState
+from matplotlib import pyplot as plt
 from common import load_model, load_images, inverse_transform, attempt_gpu_acceleration, Unflatten
 
 
@@ -9,6 +10,10 @@ class AdversarialModel(torch.nn.Module):
 
     def __init__(self, ):
         super(AdversarialModel, self).__init__()
+
+        # While we could have left the task of figuring out the best configuration
+        # for the number of hyperparameters in Hidden Layers, for now,
+        # we are using a variant of a model that Jason created
 
         self.model = torch.nn.Sequential(
             nn.Flatten(),
@@ -41,19 +46,29 @@ def validate_test_set(adversarial_model, timm_model, test_dataloader, desired_la
     return correct / len(test_dataloader.dataset)
 
 
-def train(adversarial_model, timm_model, train_dataloader, test_dataloader, num_epochs, display_images=False):
+def train(trial):
+    device = attempt_gpu_acceleration()
+    # Change it to true manually. This function can't accpet any inputs, so hard-coding for now
+    display_images = True
+    timm_model = load_model()
+    timm_model = timm_model.to(device)
+    train_dataloader, test_dataloader = load_images(timm_model, "datasets/images")
+    adversarial_model = AdversarialModel().to(device)
 
+    # Initial validation accuracy
+    validation_accuracy = 0
     desired_label = 0
 
-    device = attempt_gpu_acceleration()
+    lr = trial.suggest_float("lr", 5e-4, 1e-2, log=True)
+    weight_decay = trial.suggest_float("weight_decay", 1e-3, 2e-2, log=True)
+    gan_weight_decay = trial.suggest_float("gan_weight_decay", 1e-3, 2e-2, log=True)
+    num_epochs = trial.suggest_int("num_epochs", 10, 50)
 
-    adversarial_model.to(device)
-    timm_model.to(device)
 
     optimizer = torch.optim.Adam(adversarial_model.parameters(),
-                                 lr = 0.001,
+                                 lr = lr,
                                  betas = (0.1, 0.999),
-                                 weight_decay = 0.02)
+                                 weight_decay = weight_decay)
     loss_function = torch.nn.CrossEntropyLoss()
 
     for epoch in range(num_epochs):
@@ -70,7 +85,8 @@ def train(adversarial_model, timm_model, train_dataloader, test_dataloader, num_
             optimizer.zero_grad()
             adversarial_noise = adversarial_model(images)
             label_predicted = timm_model(adversarial_noise + images)
-            loss = loss_function(label_predicted, labels_one_hot) + 1e-2 * torch.norm(adversarial_noise).mean()
+            loss = loss_function(label_predicted, labels_one_hot) + \
+                gan_weight_decay * torch.norm(adversarial_noise).mean()
 
             loss.backward()
             optimizer.step()
@@ -97,25 +113,37 @@ def train(adversarial_model, timm_model, train_dataloader, test_dataloader, num_
         validation_accuracy = validate_test_set(adversarial_model, timm_model, test_dataloader, desired_label, device)
         print("[Epoch %d/%d] [Val: %f]" % (epoch, num_epochs, validation_accuracy))
 
+    torch.save(adversarial_model.state_dict(), "adversarial_res.pth")
+    return validation_accuracy
+
 
 def training(num_epochs, load_save=False, display_images=False):
-
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-
-    timm_model = load_model()
-    timm_model = timm_model.to(device)
-
-    train_dataloader, test_dataloader = load_images(timm_model, "datasets/images")
-
-    adversarial_model = AdversarialModel()
-
+    # Currently, num_epochs is a hyper-parameter, so we are ignoring it for now.
     if load_save:
         assert False
+    # Use Meta's Optuna for hyperparameter search.
+    # Adopted from https://github.com/optuna/optuna-examples/blob/main/pytorch/pytorch_simple.py
+    study = optuna.create_study(direction="maximize")
+    # We wish to maximize validation accuracy
+    study.optimize(train, n_trials=100, timeout=600)
 
-    train(adversarial_model, timm_model, train_dataloader, test_dataloader, num_epochs, display_images = display_images)
+    pruned_trials = study.get_trials(deepcopy=False, states=[TrialState.PRUNED])
+    complete_trials = study.get_trials(deepcopy=False, states=[TrialState.COMPLETE])
 
-    torch.save(adversarial_model.state_dict(), "adversarial_res.pth")
+    print("Study statistics: ")
+    print("  Number of finished trials: ", len(study.trials))
+    print("  Number of pruned trials: ", len(pruned_trials))
+    print("  Number of complete trials: ", len(complete_trials))
+
+    print("Best trial:")
+    trial = study.best_trial
+
+    print("  Value: ", trial.value)
+
+    print("  Params: ")
+    for key, value in trial.params.items():
+        print("    {}: {}".format(key, value))
 
 
 if __name__ == '__main__':
-    training(10, display_images=True)
+    training(10, display_images=False)
