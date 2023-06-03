@@ -13,7 +13,8 @@ class AdversarialModel(torch.nn.Module):
 
         # While we could have left the task of figuring out the best configuration
         # for the number of hyperparameters in Hidden Layers, for now,
-        # we are using a variant of a model that Jason created
+        # we are using a variant of a model that Jason created.
+        # But maybe we can try finding a CNN (with ConvTranspose2D) that would work well.
 
         self.model = torch.nn.Sequential(
             nn.Flatten(),
@@ -49,7 +50,7 @@ def validate_test_set(adversarial_model, timm_model, test_dataloader, desired_la
 def train(trial):
     device = attempt_gpu_acceleration()
     # Change it to true manually. This function can't accpet any inputs, so hard-coding for now
-    display_images = True
+    display_images = False
     timm_model = load_model()
     timm_model = timm_model.to(device)
     train_dataloader, test_dataloader = load_images(timm_model, "datasets/images")
@@ -114,7 +115,7 @@ def train(trial):
         print("[Epoch %d/%d] [Val: %f]" % (epoch, num_epochs, validation_accuracy))
 
     torch.save(adversarial_model.state_dict(), "adversarial_res.pth")
-    return validation_accuracy
+    return validation_accuracy/float(torch.sum(torch.abs(adversarial_noise) ** 2))
 
 
 def training(num_epochs, load_save=False, display_images=False):

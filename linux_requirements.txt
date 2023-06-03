@@ -1,0 +1,7 @@
+pip install optuna
+pip install jupyter notebook
+pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118
+pip install timm
+pip install scipy
+pip install matplotlib
+pip install datasets
