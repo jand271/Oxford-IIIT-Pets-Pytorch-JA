@@ -150,14 +150,19 @@ def regressor_train(model, regressor, train_dataloader, val_dataloader, noises_d
             loss.backward()
             optimizer.step()
         
+        train_loss, train_inacc = regressor_test(
+            model, regressor, train_noises, train_dataloader, verbose=False)
         val_loss, val_inacc = regressor_test(
             model, regressor, val_noises, val_dataloader, verbose=False)
         if (not val_loss_history) or val_inacc > val_inacc_history[-1]:
             best_regressor_state = regressor.state_dict()
 
         if verbose and epoch % 1 == 0: # TODO: back to 10
-            print("[Epoch {}/{}]: [val loss: {:.4f}] [val inaccuracy: {:.4f}]".format(
-                epoch, num_epochs, val_loss, val_inacc))
+            print("[Epoch {}/{}]:".format(epoch, num_epochs))
+            print("[train loss: {:.4f}] [train inaccuracy: {:.4f}]".format(
+                train_loss, train_inacc))
+            print("[val loss: {:.4f}] [val inaccuracy: {:.4f}]".format(
+                val_loss, val_inacc))
 
     torch.save(best_regressor_state, "models/regressor_res.pth")
     torch.save(val_loss_history, "results/reg_val_loss_hist.pkl")
@@ -222,7 +227,7 @@ def main():
 
     best_regressor_state, val_loss, val_inacc = regressor_train(
         model, regressor, train_dataloader, val_dataloader, noises_dict,
-        num_epochs=100, lr=1e-2, verbose=True)
+        num_epochs=10, lr=5e-3, verbose=True)
 
     regressor.load_state_dict(best_regressor_state)
     test_noises = noises_dict["test"]
