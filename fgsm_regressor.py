@@ -8,10 +8,11 @@ from torchvision.datasets import ImageFolder
 from torchvision import models
 import torch.nn as nn
 import torch.nn.functional as F
-from torch.optim import AdamW
+from torch.optim import Adam
 from tqdm import tqdm
 
 from common import inverse_transform, load_model
+from try_nn_fgsm import AdversarialModel
 
 class Regressor(nn.Module):
     def __init__(self, out_dim=224):
@@ -54,9 +55,9 @@ def load_images(model, data_dir):
 
     return train_dataloader, val_dataloader, test_dataloader, class_to_index_dict, index_to_class_list
 
-def fgs_noises(model, train_dataloader, val_dataloader, test_dataloader, desired_label,
-               batch_size=32, num_classes=37, max_iter=10, lr=1e-3, debug=False):
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+def fgs_noises(model, train_dataloader, val_dataloader, test_dataloader,
+               num_classes=37, max_iter=10, lr=1e-3, debug=False):
+    device = torch.device("cuda:1" if torch.cuda.is_available() else "cpu")
     model = model.to(device)
     noises = {
         "train": [],
@@ -69,9 +70,9 @@ def fgs_noises(model, train_dataloader, val_dataloader, test_dataloader, desired
 
     for dataloader, name in zip([train_dataloader, val_dataloader, test_dataloader],
                                 ["train", "val", "test"]):
-        for batch_num, (images, labels) in enumerate(dataloader):
-            one_hot_labels = torch.zeros((batch_size, num_classes)).to(device)
-            one_hot_labels[range(batch_size), labels] = 1
+        for batch_num, (images, labels) in tqdm(enumerate(dataloader)):
+            one_hot_labels = torch.zeros((len(labels), num_classes)).to(device)
+            one_hot_labels[range(len(labels)), labels] = 1
 
             images = images.to(device)
             labels = labels.to(device)
@@ -79,7 +80,7 @@ def fgs_noises(model, train_dataloader, val_dataloader, test_dataloader, desired
             images_init = images.clone().detach()
             images.requires_grad_()
 
-            for _ in tqdm(range(max_iter)):
+            for _ in range(max_iter):
                 # compute relevant derivatives
                 y_pred = model(images)
                 loss = torch.nn.functional.cross_entropy(y_pred, labels)
@@ -126,10 +127,11 @@ def fgs_noises(model, train_dataloader, val_dataloader, test_dataloader, desired
     return noises, former_acc, after_acc, count
 
 def regressor_train(model, regressor, train_dataloader, val_dataloader, noises_dict,
-                    num_epochs=100, batch_size=32, lr=1e-3, max_iter=10,
-                    verbose=True, debug=False):
-    optimizer = AdamW(regressor.parameters(), lr=0.0001, betas=(0.5, 0.999))
-
+                    num_epochs=100, lr=1e-4, verbose=True):
+    device = torch.device("cuda:1" if torch.cuda.is_available() else "cpu")
+    optimizer = Adam(regressor.parameters(), lr=lr, betas=(0.9, 0.999))
+    model = model.to(device)
+    regressor = regressor.to(device)
     train_noises, val_noises = noises_dict["train"], noises_dict["val"]
 
     val_loss_history = []
@@ -137,12 +139,14 @@ def regressor_train(model, regressor, train_dataloader, val_dataloader, noises_d
     best_regressor_state = None
 
     for epoch in tqdm(range(num_epochs)):
-        for batch_num, (images, labels), noises in zip(
+        for (batch_num, (images, labels)), noises in zip(
                 enumerate(train_dataloader), train_noises):
+            images = images.to(device)
+            noises = noises.to(device)
+
             optimizer.zero_grad()
             noises_pred = regressor(images)
-            print(noises_pred.shape)
-            loss = F.mse_loss(noises_pred, noises)
+            loss = F.mse_loss(noises_pred, noises, reduction="sum")
             loss.backward()
             optimizer.step()
         
@@ -152,10 +156,8 @@ def regressor_train(model, regressor, train_dataloader, val_dataloader, noises_d
             best_regressor_state = regressor.state_dict()
 
         if verbose and epoch % 1 == 0: # TODO: back to 10
-            print("[Epoch %d/%d] [Batch %d/%d]:"
-                % (epoch, num_epochs, batch_num, len(train_dataloader)))
-            print("Val loss: {:.4f}".format(val_loss))
-            print("Val inaccuracy: {:.4f}".format(val_inacc))
+            print("[Epoch {}/{}]: [val loss: {:.4f}] [val inaccuracy: {:.4f}]".format(
+                epoch, num_epochs, val_loss, val_inacc))
 
     torch.save(best_regressor_state, "models/regressor_res.pth")
     torch.save(val_loss_history, "results/reg_val_loss_hist.pkl")
@@ -164,17 +166,35 @@ def regressor_train(model, regressor, train_dataloader, val_dataloader, noises_d
     return best_regressor_state, val_loss_history, val_inacc_history
 
 def regressor_test(model, regressor, noises, dataloader, verbose=True):
+    device = torch.device("cuda:1" if torch.cuda.is_available() else "cpu")
+    model = model.to(device)
+    regressor = regressor.to(device)
+
     loss = 0
-
-    for batch_num, (images, labels), current_noises in zip(
+    incorrect = 0
+    count = 0
+    for (batch_num, (images, labels)), current_noises in zip(
             enumerate(dataloader), noises):
-        noises_pred = regressor(images)
-        loss += F.mse_loss(noises_pred, current_noises)
+        with torch.no_grad():
+            images = images.to(device)
+            labels = labels.to(device)
+            current_noises = current_noises.to(device)
 
-        new_images = images + noises_pred
-        y_pred = model(new_images)
-        inaccuracy = torch.sum(y_pred != labels) / len(labels)
+            noises_pred = regressor(images)
+            loss += F.mse_loss(noises_pred, current_noises, reduction="sum")
+
+            new_images = images + noises_pred
+            y_pred = model(new_images).argmax(dim=1)
+            incorrect += torch.sum(y_pred != labels)
+            count += len(labels)
+
+        del images
+        del labels
+        del current_noises
+        del noises_pred
+        del new_images
     
+    inaccuracy = incorrect / count
     if verbose:
         print("Test loss: {:.4f}".format(loss))
         print("Test inaccuracy: {:.4f}".format(inaccuracy))
@@ -183,20 +203,30 @@ def regressor_test(model, regressor, noises, dataloader, verbose=True):
 
 def main():
     model = load_model()
-    regressor = Regressor(out_dim=224)
+    #regressor = Regressor(out_dim=224)
+    regressor = AdversarialModel()
 
     train_dataloader, val_dataloader, test_dataloader, class_to_index, index_to_class = load_images(
         model, "datasets/images")
     desired_label = 0
-    noises_dict = fgs_noises(model, train_dataloader, val_dataloader, test_dataloader, desired_label,
-                             batch_size=32, num_classes=37, max_iter=50, lr=1e-3, debug=False)
 
-    # best_regressor_state, val_loss, val_inacc = regressor_train(
-    #     model, regressor, train_dataloader, val_dataloader, noises_dict,
-    #     num_epochs=2, batch_size=32, lr=1e-3, max_iter=10, verbose=True, debug=True)
+    try:
+        noises_path = "results/fgs_noises.pkl"
+        noises_dict = torch.load(noises_path)
+        print("Loaded noises from {}".format(noises_path))
+    except:
+        # will take 30 min to 1 hour
+        noises_dict = fgs_noises(
+            model, train_dataloader, val_dataloader, test_dataloader,
+            num_classes=37, max_iter=50, lr=1e-3, debug=False)
 
-    # regressor.load_state_dict(best_regressor_state)
-    # loss, val = regressor_test(model, regressor, test_dataloader, noises_dict, verbose=True)
+    best_regressor_state, val_loss, val_inacc = regressor_train(
+        model, regressor, train_dataloader, val_dataloader, noises_dict,
+        num_epochs=100, lr=1e-2, verbose=True)
+
+    regressor.load_state_dict(best_regressor_state)
+    test_noises = noises_dict["test"]
+    loss, val = regressor_test(model, regressor, test_dataloader, test_noises, verbose=True)
 
 if __name__ == "__main__":
     main()
