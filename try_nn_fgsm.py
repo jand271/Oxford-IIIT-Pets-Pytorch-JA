@@ -115,7 +115,7 @@ def train(trial):
         print("[Epoch %d/%d] [Val: %f]" % (epoch, num_epochs, validation_accuracy))
 
     torch.save(adversarial_model.state_dict(), "adversarial_res.pth")
-    return validation_accuracy/float(torch.sum(torch.abs(adversarial_noise) ** 2))
+    return validation_accuracy / torch.sum(adversarial_noise ** 2)
 
 
 def training(num_epochs, load_save=False, display_images=False):
