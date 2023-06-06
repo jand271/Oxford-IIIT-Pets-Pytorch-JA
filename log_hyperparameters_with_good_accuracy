@@ -1,0 +1,16 @@
+[I 2023-06-06 03:41:31,692] Trial 1 finished with value: 1.1338173862895928e-05 and parameters: {'lr': 0.0007735715760689735, 'weight_decay': 0.014972033626580174, 'gan_weight_decay': 0.002588251318607572, 'num_epochs': 3}.
+Validation accuracy: 0.934371]
+[I 2023-06-06 03:43:57,469] Trial 2 finished with value: 1.3484758710546885e-05 and parameters: {'lr': 0.001914976017022342, 'weight_decay': 0.004714067109404357, 'gan_weight_decay': 0.0039330958006019824, 'num_epochs': 3}.
+[Validation accuracy: 0.941813]
+[I 2023-06-06 03:46:22,460] Trial 3 finished with value: 7.839805221010465e-06 and parameters: {'lr': 0.0005691813698441982, 'weight_decay': 0.007549556030099224, 'gan_weight_decay': 0.0018818871841690045, 'num_epochs': 3}.
+[Validation accuracy: 0.969553]
+[I 2023-06-06 03:48:44,835] Trial 4 finished with value: 1.1275987162662204e-05 and parameters: {'lr': 0.008946242505975727, 'weight_decay': 0.002911015088238134, 'gan_weight_decay': 0.0029547354869349798, 'num_epochs': 3}.
+[Validation accuracy: 0.974290]
+[I 2023-06-06 03:51:07,598] Trial 5 finished with value: 5.411880465544527e-06 and parameters: {'lr': 0.0014435055414318764, 'weight_decay': 0.01301094992553036, 'gan_weight_decay': 0.0013503069019490115, 'num_epochs': 3}. 
+[Validation accuracy: 0.951962]
+[I 2023-06-06 03:55:53,779] Trial 7 finished with value: 2.1225227101240307e-05 and parameters: {'lr': 0.004056509530364085, 'weight_decay': 0.001837172203524331, 'gan_weight_decay': 0.008078625231290904, 'num_epochs': 3}. 
+[Validation accuracy: 0.944520]
+[I 2023-06-06 03:58:17,623] Trial 8 finished with value: 1.0501372344151605e-05 and parameters: {'lr': 0.0014625940845294566, 'weight_decay': 0.003199644174159458, 'gan_weight_decay': 0.002369343130004177, 'num_epochs': 3}.
+[Validation accuracy: 0.949932]
+[I 2023-06-06 04:17:25,397] Trial 16 finished with value: 2.8425371056073345e-05 and parameters: {'lr': 0.005709309973306099, 'weight_decay': 0.017801569643057256, 'gan_weight_decay': 0.013885532973916197, 'num_epochs': 3}.
+Validation accuracy: 0.926252
