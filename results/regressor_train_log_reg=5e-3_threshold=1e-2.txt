@@ -1,0 +1,303 @@
+Loaded noises from datasets/fgs_noises.pkl
+Correct Label: 4
+Former Label: 4
+Current Label: 4
+[Epoch 0/50]:
+[train loss: 53207.6055] [train inaccuracy: 0.2145]
+[val loss: 17988.0195] [val inaccuracy: 0.2179]
+Correct Label: 4
+Former Label: 4
+Current Label: 4
+[Epoch 1/50]:
+[train loss: 53501.6445] [train inaccuracy: 0.2400]
+[val loss: 18087.1797] [val inaccuracy: 0.2240]
+Correct Label: 4
+Former Label: 4
+Current Label: 4
+[Epoch 2/50]:
+[train loss: 53142.4922] [train inaccuracy: 0.2357]
+[val loss: 17965.8926] [val inaccuracy: 0.2124]
+Correct Label: 4
+Former Label: 4
+Current Label: 4
+[Epoch 3/50]:
+[train loss: 52752.3555] [train inaccuracy: 0.2289]
+[val loss: 17834.1621] [val inaccuracy: 0.2057]
+Correct Label: 4
+Former Label: 4
+Current Label: 4
+[Epoch 4/50]:
+[train loss: 52499.1523] [train inaccuracy: 0.2321]
+[val loss: 17746.6543] [val inaccuracy: 0.2091]
+Correct Label: 4
+Former Label: 4
+Current Label: 4
+[Epoch 5/50]:
+[train loss: 52352.2930] [train inaccuracy: 0.2373]
+[val loss: 17697.9238] [val inaccuracy: 0.2165]
+Correct Label: 4
+Former Label: 4
+Current Label: 4
+[Epoch 6/50]:
+[train loss: 52259.3398] [train inaccuracy: 0.2384]
+[val loss: 17667.3242] [val inaccuracy: 0.2240]
+Correct Label: 4
+Former Label: 4
+Current Label: 4
+[Epoch 7/50]:
+[train loss: 52175.1484] [train inaccuracy: 0.2409]
+[val loss: 17635.2148] [val inaccuracy: 0.2226]
+Correct Label: 4
+Former Label: 4
+Current Label: 4
+[Epoch 8/50]:
+[train loss: 52083.8594] [train inaccuracy: 0.2411]
+[val loss: 17603.7949] [val inaccuracy: 0.2158]
+Correct Label: 4
+Former Label: 4
+Current Label: 4
+[Epoch 9/50]:
+[train loss: 52024.6484] [train inaccuracy: 0.2364]
+[val loss: 17584.0781] [val inaccuracy: 0.2064]
+Correct Label: 4
+Former Label: 4
+Current Label: 4
+[Epoch 10/50]:
+[train loss: 51969.9766] [train inaccuracy: 0.2370]
+[val loss: 17566.0918] [val inaccuracy: 0.2172]
+Correct Label: 4
+Former Label: 4
+Current Label: 4
+[Epoch 11/50]:
+[train loss: 51910.5820] [train inaccuracy: 0.2309]
+[val loss: 17546.4102] [val inaccuracy: 0.2131]
+Correct Label: 4
+Former Label: 4
+Current Label: 4
+[Epoch 12/50]:
+[train loss: 51862.6758] [train inaccuracy: 0.2339]
+[val loss: 17530.1660] [val inaccuracy: 0.2077]
+Correct Label: 4
+Former Label: 4
+Current Label: 4
+[Epoch 13/50]:
+[train loss: 51807.7773] [train inaccuracy: 0.2357]
+[val loss: 17510.5918] [val inaccuracy: 0.2050]
+Correct Label: 4
+Former Label: 4
+Current Label: 4
+[Epoch 14/50]:
+[train loss: 51761.3633] [train inaccuracy: 0.2341]
+[val loss: 17494.8906] [val inaccuracy: 0.1982]
+Correct Label: 4
+Former Label: 4
+Current Label: 4
+[Epoch 15/50]:
+[train loss: 51716.7695] [train inaccuracy: 0.2334]
+[val loss: 17479.6172] [val inaccuracy: 0.1922]
+Correct Label: 4
+Former Label: 4
+Current Label: 4
+[Epoch 16/50]:
+[train loss: 51667.6445] [train inaccuracy: 0.2285]
+[val loss: 17461.3145] [val inaccuracy: 0.1935]
+Correct Label: 4
+Former Label: 4
+Current Label: 4
+[Epoch 17/50]:
+[train loss: 51644.0078] [train inaccuracy: 0.2269]
+[val loss: 17454.7949] [val inaccuracy: 0.1922]
+Correct Label: 4
+Former Label: 4
+Current Label: 4
+[Epoch 18/50]:
+[train loss: 51614.8633] [train inaccuracy: 0.2271]
+[val loss: 17444.3887] [val inaccuracy: 0.1854]
+Correct Label: 4
+Former Label: 4
+Current Label: 4
+[Epoch 19/50]:
+[train loss: 51597.3438] [train inaccuracy: 0.2280]
+[val loss: 17437.5508] [val inaccuracy: 0.1935]
+Correct Label: 4
+Former Label: 4
+Current Label: 4
+[Epoch 20/50]:
+[train loss: 51576.3125] [train inaccuracy: 0.2289]
+[val loss: 17428.8613] [val inaccuracy: 0.1881]
+Correct Label: 4
+Former Label: 4
+Current Label: 4
+[Epoch 21/50]:
+[train loss: 51554.1289] [train inaccuracy: 0.2298]
+[val loss: 17423.7969] [val inaccuracy: 0.1867]
+Correct Label: 4
+Former Label: 4
+Current Label: 4
+[Epoch 22/50]:
+[train loss: 51539.3789] [train inaccuracy: 0.2255]
+[val loss: 17420.3242] [val inaccuracy: 0.1779]
+Correct Label: 4
+Former Label: 4
+Current Label: 4
+[Epoch 23/50]:
+[train loss: 51530.8320] [train inaccuracy: 0.2276]
+[val loss: 17416.4453] [val inaccuracy: 0.1766]
+Correct Label: 4
+Former Label: 4
+Current Label: 4
+[Epoch 24/50]:
+[train loss: 51517.3945] [train inaccuracy: 0.2255]
+[val loss: 17411.0156] [val inaccuracy: 0.1793]
+Correct Label: 4
+Former Label: 4
+Current Label: 4
+[Epoch 25/50]:
+[train loss: 51508.7930] [train inaccuracy: 0.2260]
+[val loss: 17407.3594] [val inaccuracy: 0.1786]
+Correct Label: 4
+Former Label: 4
+Current Label: 4
+[Epoch 26/50]:
+[train loss: 51497.3789] [train inaccuracy: 0.2258]
+[val loss: 17404.5430] [val inaccuracy: 0.1806]
+Correct Label: 4
+Former Label: 4
+Current Label: 4
+[Epoch 27/50]:
+[train loss: 51487.9375] [train inaccuracy: 0.2246]
+[val loss: 17398.6641] [val inaccuracy: 0.1813]
+Correct Label: 4
+Former Label: 4
+Current Label: 4
+[Epoch 28/50]:
+[train loss: 51482.7422] [train inaccuracy: 0.2278]
+[val loss: 17396.3496] [val inaccuracy: 0.1766]
+Correct Label: 4
+Former Label: 4
+Current Label: 4
+[Epoch 29/50]:
+[train loss: 51475.4727] [train inaccuracy: 0.2336]
+[val loss: 17393.1699] [val inaccuracy: 0.1712]
+Correct Label: 4
+Former Label: 4
+Current Label: 4
+[Epoch 30/50]:
+[train loss: 51466.6758] [train inaccuracy: 0.2316]
+[val loss: 17391.4395] [val inaccuracy: 0.1685]
+Correct Label: 4
+Former Label: 4
+Current Label: 4
+[Epoch 31/50]:
+[train loss: 51467.6133] [train inaccuracy: 0.2294]
+[val loss: 17392.2852] [val inaccuracy: 0.1725]
+Correct Label: 4
+Former Label: 4
+Current Label: 4
+[Epoch 32/50]:
+[train loss: 51471.1758] [train inaccuracy: 0.2343]
+[val loss: 17393.8770] [val inaccuracy: 0.1732]
+Correct Label: 4
+Former Label: 4
+Current Label: 4
+[Epoch 33/50]:
+[train loss: 51470.0391] [train inaccuracy: 0.2366]
+[val loss: 17392.8730] [val inaccuracy: 0.1786]
+Correct Label: 4
+Former Label: 4
+Current Label: 4
+[Epoch 34/50]:
+[train loss: 51469.6562] [train inaccuracy: 0.2377]
+[val loss: 17392.4863] [val inaccuracy: 0.1773]
+Correct Label: 4
+Former Label: 4
+Current Label: 4
+[Epoch 35/50]:
+[train loss: 51468.8945] [train inaccuracy: 0.2422]
+[val loss: 17392.8438] [val inaccuracy: 0.1779]
+Correct Label: 4
+Former Label: 4
+Current Label: 4
+[Epoch 36/50]:
+[train loss: 51473.1133] [train inaccuracy: 0.2402]
+[val loss: 17394.4805] [val inaccuracy: 0.1867]
+Correct Label: 4
+Former Label: 4
+Current Label: 4
+[Epoch 37/50]:
+[train loss: 51469.5781] [train inaccuracy: 0.2397]
+[val loss: 17392.4160] [val inaccuracy: 0.1786]
+Correct Label: 4
+Former Label: 4
+Current Label: 4
+[Epoch 38/50]:
+[train loss: 51475.8438] [train inaccuracy: 0.2429]
+[val loss: 17394.4766] [val inaccuracy: 0.1766]
+Correct Label: 4
+Former Label: 4
+Current Label: 4
+[Epoch 39/50]:
+[train loss: 51483.3906] [train inaccuracy: 0.2433]
+[val loss: 17400.1934] [val inaccuracy: 0.1779]
+Correct Label: 4
+Former Label: 4
+Current Label: 4
+[Epoch 40/50]:
+[train loss: 51492.3164] [train inaccuracy: 0.2461]
+[val loss: 17403.6230] [val inaccuracy: 0.1806]
+Correct Label: 4
+Former Label: 4
+Current Label: 4
+[Epoch 41/50]:
+[train loss: 51494.4961] [train inaccuracy: 0.2470]
+[val loss: 17403.9121] [val inaccuracy: 0.1894]
+Correct Label: 4
+Former Label: 4
+Current Label: 4
+[Epoch 42/50]:
+[train loss: 51495.8672] [train inaccuracy: 0.2461]
+[val loss: 17402.5000] [val inaccuracy: 0.1854]
+Correct Label: 4
+Former Label: 4
+Current Label: 4
+[Epoch 43/50]:
+[train loss: 51503.9727] [train inaccuracy: 0.2461]
+[val loss: 17404.6973] [val inaccuracy: 0.1827]
+Correct Label: 4
+Former Label: 4
+Current Label: 4
+[Epoch 44/50]:
+[train loss: 51515.7266] [train inaccuracy: 0.2515]
+[val loss: 17409.4531] [val inaccuracy: 0.1881]
+Correct Label: 4
+Former Label: 4
+Current Label: 4
+[Epoch 45/50]:
+[train loss: 51526.6914] [train inaccuracy: 0.2508]
+[val loss: 17414.0527] [val inaccuracy: 0.1942]
+Correct Label: 4
+Former Label: 4
+Current Label: 4
+[Epoch 46/50]:
+[train loss: 51530.8555] [train inaccuracy: 0.2542]
+[val loss: 17415.5742] [val inaccuracy: 0.1955]
+Correct Label: 4
+Former Label: 4
+Current Label: 4
+[Epoch 47/50]:
+[train loss: 51538.5977] [train inaccuracy: 0.2537]
+[val loss: 17417.3496] [val inaccuracy: 0.1881]
+Correct Label: 4
+Former Label: 4
+Current Label: 4
+[Epoch 48/50]:
+[train loss: 51549.9648] [train inaccuracy: 0.2580]
+[val loss: 17420.1797] [val inaccuracy: 0.1962]
+Correct Label: 4
+Former Label: 4
+Current Label: 4
+[Epoch 49/50]:
+[train loss: 51558.2227] [train inaccuracy: 0.2585]
+[val loss: 17422.7207] [val inaccuracy: 0.1901]
+Test loss: 3524.7529
+Test inaccuracy: 0.2064

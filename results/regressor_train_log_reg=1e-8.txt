@@ -1,0 +1,36 @@
+Loaded noises from results/fgs_noises.pkl
+[Epoch 0/10]:
+[train loss: 136.1189] [train inaccuracy: 0.3773]
+[val loss: 46.7829] [val inaccuracy: 0.3735]
+[Epoch 1/10]:
+[train loss: 135.5546] [train inaccuracy: 0.3841]
+[val loss: 46.8415] [val inaccuracy: 0.3748]
+[Epoch 2/10]:
+[train loss: 135.2150] [train inaccuracy: 0.4919]
+[val loss: 46.8653] [val inaccuracy: 0.4797]
+[Epoch 3/10]:
+[train loss: 134.9013] [train inaccuracy: 0.5830]
+[val loss: 46.8765] [val inaccuracy: 0.5480]
+[Epoch 4/10]:
+[train loss: 134.2148] [train inaccuracy: 0.6171]
+[val loss: 46.8798] [val inaccuracy: 0.5954]
+[Epoch 5/10]:
+[train loss: 133.9008] [train inaccuracy: 0.6502]
+[val loss: 46.8870] [val inaccuracy: 0.6245]
+[Epoch 6/10]:
+[train loss: 133.4995] [train inaccuracy: 0.6635]
+[val loss: 46.8892] [val inaccuracy: 0.6367]
+[Epoch 7/10]:
+[train loss: 133.0076] [train inaccuracy: 0.7003]
+[val loss: 46.8890] [val inaccuracy: 0.6732]
+[Epoch 8/10]:
+[train loss: 132.6344] [train inaccuracy: 0.7280]
+[val loss: 46.8887] [val inaccuracy: 0.7179]
+[Epoch 9/10]:
+[train loss: 132.3957] [train inaccuracy: 0.7370]
+[val loss: 46.8866] [val inaccuracy: 0.7267]
+Test loss: 46.8843
+Test inaccuracy: 0.7449
+Correct Label: 15
+Former Label: 15
+Current Label: 15

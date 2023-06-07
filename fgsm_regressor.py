@@ -9,18 +9,23 @@ from torchvision import models
 import torch.nn as nn
 import torch.nn.functional as F
 from torch.optim import Adam
+from torch.optim import SGD
 from tqdm import tqdm
+import random
 
 from common import inverse_transform, load_model
 from try_nn_fgsm import AdversarialModel
 
-class Regressor(nn.Module):
+class ResNetRegressor(nn.Module):
     def __init__(self, out_dim=224):
-        super(Regressor, self).__init__()
+        super(ResNetRegressor, self).__init__()
         self.out_dim = out_dim
+        
         resnet = models.resnet18(weights=models.ResNet18_Weights.DEFAULT)
         resnet_layers = list(resnet.children())[:-1]
         self.resnet_embedding = torch.nn.Sequential(*resnet_layers)
+        self.resnet_embedding.requires_grad = False
+        
         self.head = nn.Linear(512, 3 * out_dim * out_dim)
 
     def forward(self, img):
@@ -28,6 +33,22 @@ class Regressor(nn.Module):
         out = out.reshape((-1, 512))
         out = self.head(out)
         out = out.reshape((-1, 3, self.out_dim, self.out_dim))
+        return out
+
+class Regressor(nn.Module):
+    def __init__(self):
+        super(Regressor, self).__init__()
+        self.model = nn.Sequential(
+            nn.Conv2d(3, 32, (5, 5), padding=2),
+            nn.Conv2d(32, 64, (3, 3), padding=1),
+            nn.ReLU(),
+            nn.Conv2d(64, 32, (3, 3), padding=1),
+            nn.Conv2d(32, 3, (3, 3), padding=1),
+            torch.nn.Tanh()
+        )
+
+    def forward(self, img):
+        out = self.model(img)
         return out
 
 def load_images(model, data_dir):
@@ -123,16 +144,21 @@ def fgs_noises(model, train_dataloader, val_dataloader, test_dataloader,
     print("Accuracy of model over original images: {:.4f}".format(former_acc))
     print("Accuracy of model over images after FGS: {:.4f}".format(after_acc))
 
-    torch.save(noises, "results/fgs_noises.pkl")
+    torch.save(noises, "datasets/fgs_noises.pkl")
     return noises, former_acc, after_acc, count
 
 def regressor_train(model, regressor, train_dataloader, val_dataloader, noises_dict,
-                    num_epochs=100, lr=1e-4, verbose=True):
+                    num_epochs=100, lr=1e-4, reg=0, verbose=True):
     device = torch.device("cuda:1" if torch.cuda.is_available() else "cpu")
     optimizer = Adam(regressor.parameters(), lr=lr, betas=(0.9, 0.999))
+    #optimizer = SGD(regressor.parameters(), lr=lr)
+    threshold = 0.01
+
+
     model = model.to(device)
     regressor = regressor.to(device)
     train_noises, val_noises = noises_dict["train"], noises_dict["val"]
+    target = torch.tensor([1]).to(device)
 
     val_loss_history = []
     val_inacc_history = []
@@ -143,21 +169,29 @@ def regressor_train(model, regressor, train_dataloader, val_dataloader, noises_d
                 enumerate(train_dataloader), train_noises):
             images = images.to(device)
             noises = noises.to(device)
+            #noises.requires_grad = False
 
             optimizer.zero_grad()
             noises_pred = regressor(images)
-            loss = F.mse_loss(noises_pred, noises, reduction="sum")
+            loss = F.cosine_embedding_loss(
+                noises_pred.reshape((-1, 3*224*224)),
+                noises.reshape((-1, 3*224*224)),
+                target)
+            clipped = (noises_pred > threshold).to(float)
+            loss += reg * torch.sum(clipped) / len(labels)
             loss.backward()
             optimizer.step()
         
         train_loss, train_inacc = regressor_test(
-            model, regressor, train_noises, train_dataloader, verbose=False)
+            model, regressor, train_noises, train_dataloader,
+            reg=reg, verbose=False)
         val_loss, val_inacc = regressor_test(
-            model, regressor, val_noises, val_dataloader, verbose=False)
+            model, regressor, val_noises, val_dataloader,
+            epoch=epoch, reg=reg, verbose=False, display_image=True)
         if (not val_loss_history) or val_inacc > val_inacc_history[-1]:
             best_regressor_state = regressor.state_dict()
 
-        if verbose and epoch % 1 == 0: # TODO: back to 10
+        if verbose:
             print("[Epoch {}/{}]:".format(epoch, num_epochs))
             print("[train loss: {:.4f}] [train inaccuracy: {:.4f}]".format(
                 train_loss, train_inacc))
@@ -170,14 +204,22 @@ def regressor_train(model, regressor, train_dataloader, val_dataloader, noises_d
 
     return best_regressor_state, val_loss_history, val_inacc_history
 
-def regressor_test(model, regressor, noises, dataloader, verbose=True):
+def regressor_test(model, regressor, noises, dataloader,
+                   epoch=-1, reg=0, verbose=True, display_image=False):
     device = torch.device("cuda:1" if torch.cuda.is_available() else "cpu")
     model = model.to(device)
     regressor = regressor.to(device)
+    target = torch.tensor([1]).to(device)
+    threshold = 0.01
 
     loss = 0
     incorrect = 0
     count = 0
+
+    if display_image:
+        #sample_idx = random.randint(0, len(dataloader)-1)
+        sample_idx = 0
+
     for (batch_num, (images, labels)), current_noises in zip(
             enumerate(dataloader), noises):
         with torch.no_grad():
@@ -186,12 +228,25 @@ def regressor_test(model, regressor, noises, dataloader, verbose=True):
             current_noises = current_noises.to(device)
 
             noises_pred = regressor(images)
-            loss += F.mse_loss(noises_pred, current_noises, reduction="sum")
+            loss += F.cosine_embedding_loss(
+                noises_pred.reshape((-1, 3*224*224)),
+                current_noises.reshape((-1, 3*224*224)),
+                target)
+            clipped = (noises_pred > threshold).to(float)
+            loss += reg * torch.sum(clipped) / len(labels)
 
             new_images = images + noises_pred
             y_pred = model(new_images).argmax(dim=1)
             incorrect += torch.sum(y_pred != labels)
             count += len(labels)
+
+            if display_image and batch_num == sample_idx:
+                sample_correct_label = labels[0]
+                sample_former_label = model(images).argmax(dim=1)[0]
+                sample_current_label = y_pred[0]
+                sample_image_init = images[0]
+                sample_image = new_images[0]
+                sample_noise = noises_pred[0]
 
         del images
         del labels
@@ -204,19 +259,38 @@ def regressor_test(model, regressor, noises, dataloader, verbose=True):
         print("Test loss: {:.4f}".format(loss))
         print("Test inaccuracy: {:.4f}".format(inaccuracy))
 
+    if display_image:
+        # print sampled images
+        print(f'Correct Label: {sample_correct_label}')
+        print(f'Former Label: {sample_former_label}')
+        print(f'Current Label: {sample_current_label}')
+        # Display initial image
+        plt.imshow(inverse_transform(sample_image_init.squeeze()))
+        plt.axis('off')
+        plt.savefig("results/new/former.png".format(epoch))
+        # Display final image
+        plt.imshow(inverse_transform(sample_image.squeeze()))
+        plt.axis('off')
+        plt.savefig("results/new/current{}.png".format(epoch))
+        # Display noise generated
+        plt.imshow(inverse_transform(sample_noise.squeeze()))
+        plt.axis('off')
+        plt.savefig("results/new/noise{}.png".format(epoch))
+
     return loss, inaccuracy
 
 def main():
     model = load_model()
-    #regressor = Regressor(out_dim=224)
+    #regressor = ResNetRegressor(out_dim=224)
     regressor = AdversarialModel()
+    #regressor = Regressor()
 
     train_dataloader, val_dataloader, test_dataloader, class_to_index, index_to_class = load_images(
         model, "datasets/images")
     desired_label = 0
 
     try:
-        noises_path = "results/fgs_noises.pkl"
+        noises_path = "datasets/fgs_noises.pkl"
         noises_dict = torch.load(noises_path)
         print("Loaded noises from {}".format(noises_path))
     except:
@@ -225,13 +299,16 @@ def main():
             model, train_dataloader, val_dataloader, test_dataloader,
             num_classes=37, max_iter=50, lr=1e-3, debug=False)
 
+    # Take about 10-15 min
     best_regressor_state, val_loss, val_inacc = regressor_train(
         model, regressor, train_dataloader, val_dataloader, noises_dict,
-        num_epochs=10, lr=5e-3, verbose=True)
+        num_epochs=50, lr=1e-3, reg=5e-3, verbose=True)
 
     regressor.load_state_dict(best_regressor_state)
     test_noises = noises_dict["test"]
-    loss, val = regressor_test(model, regressor, test_dataloader, test_noises, verbose=True)
+    loss, val = regressor_test(
+        model, regressor, test_noises, test_dataloader,
+        reg=1e-3, verbose=True, display_image=False)
 
 if __name__ == "__main__":
     main()
