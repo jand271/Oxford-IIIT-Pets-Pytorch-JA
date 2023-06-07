@@ -1,16 +1,1913 @@
-[I 2023-06-06 03:41:31,692] Trial 1 finished with value: 1.1338173862895928e-05 and parameters: {'lr': 0.0007735715760689735, 'weight_decay': 0.014972033626580174, 'gan_weight_decay': 0.002588251318607572, 'num_epochs': 3}.
-Validation accuracy: 0.934371]
-[I 2023-06-06 03:43:57,469] Trial 2 finished with value: 1.3484758710546885e-05 and parameters: {'lr': 0.001914976017022342, 'weight_decay': 0.004714067109404357, 'gan_weight_decay': 0.0039330958006019824, 'num_epochs': 3}.
-[Validation accuracy: 0.941813]
-[I 2023-06-06 03:46:22,460] Trial 3 finished with value: 7.839805221010465e-06 and parameters: {'lr': 0.0005691813698441982, 'weight_decay': 0.007549556030099224, 'gan_weight_decay': 0.0018818871841690045, 'num_epochs': 3}.
-[Validation accuracy: 0.969553]
-[I 2023-06-06 03:48:44,835] Trial 4 finished with value: 1.1275987162662204e-05 and parameters: {'lr': 0.008946242505975727, 'weight_decay': 0.002911015088238134, 'gan_weight_decay': 0.0029547354869349798, 'num_epochs': 3}.
-[Validation accuracy: 0.974290]
-[I 2023-06-06 03:51:07,598] Trial 5 finished with value: 5.411880465544527e-06 and parameters: {'lr': 0.0014435055414318764, 'weight_decay': 0.01301094992553036, 'gan_weight_decay': 0.0013503069019490115, 'num_epochs': 3}. 
-[Validation accuracy: 0.951962]
-[I 2023-06-06 03:55:53,779] Trial 7 finished with value: 2.1225227101240307e-05 and parameters: {'lr': 0.004056509530364085, 'weight_decay': 0.001837172203524331, 'gan_weight_decay': 0.008078625231290904, 'num_epochs': 3}. 
-[Validation accuracy: 0.944520]
-[I 2023-06-06 03:58:17,623] Trial 8 finished with value: 1.0501372344151605e-05 and parameters: {'lr': 0.0014625940845294566, 'weight_decay': 0.003199644174159458, 'gan_weight_decay': 0.002369343130004177, 'num_epochs': 3}.
-[Validation accuracy: 0.949932]
-[I 2023-06-06 04:17:25,397] Trial 16 finished with value: 2.8425371056073345e-05 and parameters: {'lr': 0.005709309973306099, 'weight_decay': 0.017801569643057256, 'gan_weight_decay': 0.013885532973916197, 'num_epochs': 3}.
-Validation accuracy: 0.926252
+cat results/penalize_large_perturbations_fgsm
+CUDA is available. Using CUDA.
+lr: %f 0.0010938665130722175
+weight_decay: %f 0.001009899817702099
+gan_weight_decay: %f 0.015234604153682474
+[Epoch 0/3] [Batch 0/185] [loss: 17.539310] [Spoofed Label: 25/32] [Desired Label: 1/32]
+[Epoch 0/3] [Batch 50/185] [loss: 7.641211] [Spoofed Label: 31/32] [Desired Label: 25/32]
+[Epoch 0/3] [Batch 100/185] [loss: 6.070853] [Spoofed Label: 28/32] [Desired Label: 28/32]
+[Epoch 0/3] [Batch 150/185] [loss: 5.989193] [Spoofed Label: 32/32] [Desired Label: 24/32]
+[Epoch 0/3] [Val: 0.879567]
+[Epoch 1/3] [Batch 0/185] [loss: 5.137199] [Spoofed Label: 31/32] [Desired Label: 28/32]
+[Epoch 1/3] [Batch 50/185] [loss: 4.522685] [Spoofed Label: 32/32] [Desired Label: 28/32]
+[Epoch 1/3] [Batch 100/185] [loss: 4.628575] [Spoofed Label: 31/32] [Desired Label: 27/32]
+[Epoch 1/3] [Batch 150/185] [loss: 4.381479] [Spoofed Label: 31/32] [Desired Label: 30/32]
+[Epoch 1/3] [Val: 0.815968]
+[Epoch 2/3] [Batch 0/185] [loss: 4.414756] [Spoofed Label: 31/32] [Desired Label: 30/32]
+[Epoch 2/3] [Batch 50/185] [loss: 4.541212] [Spoofed Label: 32/32] [Desired Label: 29/32]
+[Epoch 2/3] [Batch 100/185] [loss: 4.202617] [Spoofed Label: 30/32] [Desired Label: 28/32]
+[Epoch 2/3] [Batch 150/185] [loss: 4.031890] [Spoofed Label: 32/32] [Desired Label: 31/32]
+[Epoch 2/3] [Val: 0.751691]
+CUDA is available. Using CUDA.
+lr: %f 0.007309159025308213
+weight_decay: %f 0.0011789460638031127
+gan_weight_decay: %f 0.013081216709019801
+[Epoch 0/3] [Batch 0/185] [loss: 15.914330] [Spoofed Label: 21/32] [Desired Label: 0/32]
+[Epoch 0/3] [Batch 50/185] [loss: 7.616826] [Spoofed Label: 28/32] [Desired Label: 24/32]
+[Epoch 0/3] [Batch 100/185] [loss: 5.995069] [Spoofed Label: 29/32] [Desired Label: 27/32]
+[Epoch 0/3] [Batch 150/185] [loss: 4.562726] [Spoofed Label: 32/32] [Desired Label: 24/32]
+[Epoch 0/3] [Val: 0.810555]
+[Epoch 1/3] [Batch 0/185] [loss: 3.911215] [Spoofed Label: 31/32] [Desired Label: 26/32]
+[Epoch 1/3] [Batch 50/185] [loss: 3.817545] [Spoofed Label: 31/32] [Desired Label: 28/32]
+[Epoch 1/3] [Batch 100/185] [loss: 3.695979] [Spoofed Label: 29/32] [Desired Label: 27/32]
+[Epoch 1/3] [Batch 150/185] [loss: 3.380455] [Spoofed Label: 31/32] [Desired Label: 26/32]
+[Epoch 1/3] [Val: 0.827470]
+[Epoch 2/3] [Batch 0/185] [loss: 3.059985] [Spoofed Label: 30/32] [Desired Label: 30/32]
+[Epoch 2/3] [Batch 50/185] [loss: 2.821780] [Spoofed Label: 32/32] [Desired Label: 30/32]
+[Epoch 2/3] [Batch 100/185] [loss: 2.955337] [Spoofed Label: 31/32] [Desired Label: 27/32]
+[Epoch 2/3] [Batch 150/185] [loss: 2.909868] [Spoofed Label: 32/32] [Desired Label: 29/32]
+[Epoch 2/3] [Val: 0.831529]
+CUDA is available. Using CUDA.
+lr: %f 0.006904423321649763
+weight_decay: %f 0.002963190394562991
+gan_weight_decay: %f 0.008709745751382263
+[Epoch 0/3] [Batch 0/185] [loss: 12.519209] [Spoofed Label: 24/32] [Desired Label: 1/32]
+[Epoch 0/3] [Batch 50/185] [loss: 5.973435] [Spoofed Label: 29/32] [Desired Label: 24/32]
+[Epoch 0/3] [Batch 100/185] [loss: 4.999216] [Spoofed Label: 28/32] [Desired Label: 18/32]
+[Epoch 0/3] [Batch 150/185] [loss: 4.154188] [Spoofed Label: 31/32] [Desired Label: 23/32]
+[Epoch 0/3] [Val: 0.851827]
+[Epoch 1/3] [Batch 0/185] [loss: 3.477178] [Spoofed Label: 32/32] [Desired Label: 26/32]
+[Epoch 1/3] [Batch 50/185] [loss: 2.751159] [Spoofed Label: 31/32] [Desired Label: 27/32]
+[Epoch 1/3] [Batch 100/185] [loss: 2.867935] [Spoofed Label: 32/32] [Desired Label: 28/32]
+[Epoch 1/3] [Batch 150/185] [loss: 2.541105] [Spoofed Label: 30/32] [Desired Label: 30/32]
+[Epoch 1/3] [Val: 0.869418]
+[Epoch 2/3] [Batch 0/185] [loss: 2.654068] [Spoofed Label: 30/32] [Desired Label: 28/32]
+[Epoch 2/3] [Batch 50/185] [loss: 2.550951] [Spoofed Label: 31/32] [Desired Label: 27/32]
+[Epoch 2/3] [Batch 100/185] [loss: 2.637563] [Spoofed Label: 29/32] [Desired Label: 30/32]
+[Epoch 2/3] [Batch 150/185] [loss: 2.607266] [Spoofed Label: 31/32] [Desired Label: 29/32]
+[Epoch 2/3] [Val: 0.892422]
+CUDA is available. Using CUDA.
+lr: %f 0.008887306734823547
+weight_decay: %f 0.00703559433042118
+gan_weight_decay: %f 0.019731825852079315
+[Epoch 0/3] [Batch 0/185] [loss: 20.648540] [Spoofed Label: 25/32] [Desired Label: 3/32]
+[Epoch 0/3] [Batch 50/185] [loss: 11.557299] [Spoofed Label: 26/32] [Desired Label: 14/32]
+[Epoch 0/3] [Batch 100/185] [loss: 5.917670] [Spoofed Label: 31/32] [Desired Label: 16/32]
+[Epoch 0/3] [Batch 150/185] [loss: 4.670902] [Spoofed Label: 30/32] [Desired Label: 23/32]
+[Epoch 0/3] [Val: 0.554127]
+[Epoch 1/3] [Batch 0/185] [loss: 5.429534] [Spoofed Label: 26/32] [Desired Label: 16/32]
+[Epoch 1/3] [Batch 50/185] [loss: 5.219301] [Spoofed Label: 31/32] [Desired Label: 20/32]
+[Epoch 1/3] [Batch 100/185] [loss: 4.773064] [Spoofed Label: 28/32] [Desired Label: 21/32]
+[Epoch 1/3] [Batch 150/185] [loss: 5.041035] [Spoofed Label: 29/32] [Desired Label: 18/32]
+[Epoch 1/3] [Val: 0.679973]
+[Epoch 2/3] [Batch 0/185] [loss: 4.089381] [Spoofed Label: 30/32] [Desired Label: 28/32]
+[Epoch 2/3] [Batch 50/185] [loss: 4.919452] [Spoofed Label: 27/32] [Desired Label: 19/32]
+[Epoch 2/3] [Batch 100/185] [loss: 4.259367] [Spoofed Label: 29/32] [Desired Label: 22/32]
+[Epoch 2/3] [Batch 150/185] [loss: 4.892952] [Spoofed Label: 30/32] [Desired Label: 24/32]
+[Epoch 2/3] [Val: 0.728687]
+CUDA is available. Using CUDA.
+lr: %f 0.0018720195794135514
+weight_decay: %f 0.004872636846637629
+gan_weight_decay: %f 0.011618833165745742
+[Epoch 0/3] [Batch 0/185] [loss: 14.395762] [Spoofed Label: 27/32] [Desired Label: 1/32]
+[Epoch 0/3] [Batch 50/185] [loss: 5.234878] [Spoofed Label: 30/32] [Desired Label: 30/32]
+[Epoch 0/3] [Batch 100/185] [loss: 5.328333] [Spoofed Label: 29/32] [Desired Label: 20/32]
+[Epoch 0/3] [Batch 150/185] [loss: 4.119070] [Spoofed Label: 30/32] [Desired Label: 26/32]
+[Epoch 0/3] [Val: 0.783491]
+[Epoch 1/3] [Batch 0/185] [loss: 4.050669] [Spoofed Label: 32/32] [Desired Label: 28/32]
+[Epoch 1/3] [Batch 50/185] [loss: 3.856153] [Spoofed Label: 29/32] [Desired Label: 26/32]
+[Epoch 1/3] [Batch 100/185] [loss: 3.841012] [Spoofed Label: 32/32] [Desired Label: 27/32]
+[Epoch 1/3] [Batch 150/185] [loss: 3.461306] [Spoofed Label: 30/32] [Desired Label: 28/32]
+[Epoch 1/3] [Val: 0.842355]
+[Epoch 2/3] [Batch 0/185] [loss: 3.357247] [Spoofed Label: 32/32] [Desired Label: 31/32]
+[Epoch 2/3] [Batch 50/185] [loss: 3.641336] [Spoofed Label: 31/32] [Desired Label: 29/32]
+[Epoch 2/3] [Batch 100/185] [loss: 3.475858] [Spoofed Label: 29/32] [Desired Label: 25/32]
+[Epoch 2/3] [Batch 150/185] [loss: 3.369780] [Spoofed Label: 31/32] [Desired Label: 29/32]
+[Epoch 2/3] [Val: 0.802436]
+CUDA is available. Using CUDA.
+lr: %f 0.003932383648361048
+weight_decay: %f 0.007308582629036681
+gan_weight_decay: %f 0.008577903957585994
+[Epoch 0/3] [Batch 0/185] [loss: 12.179665] [Spoofed Label: 26/32] [Desired Label: 1/32]
+[Epoch 0/3] [Batch 50/185] [loss: 4.509084] [Spoofed Label: 30/32] [Desired Label: 27/32]
+[Epoch 0/3] [Batch 100/185] [loss: 4.812763] [Spoofed Label: 28/32] [Desired Label: 23/32]
+[Epoch 0/3] [Batch 150/185] [loss: 3.860428] [Spoofed Label: 30/32] [Desired Label: 29/32]
+[Epoch 0/3] [Val: 0.752368]
+[Epoch 1/3] [Batch 0/185] [loss: 3.309969] [Spoofed Label: 30/32] [Desired Label: 26/32]
+[Epoch 1/3] [Batch 50/185] [loss: 3.230810] [Spoofed Label: 31/32] [Desired Label: 26/32]
+[Epoch 1/3] [Batch 100/185] [loss: 3.584241] [Spoofed Label: 28/32] [Desired Label: 24/32]
+[Epoch 1/3] [Batch 150/185] [loss: 2.646739] [Spoofed Label: 31/32] [Desired Label: 27/32]
+[Epoch 1/3] [Val: 0.840325]
+[Epoch 2/3] [Batch 0/185] [loss: 3.668206] [Spoofed Label: 31/32] [Desired Label: 21/32]
+[Epoch 2/3] [Batch 50/185] [loss: 2.544863] [Spoofed Label: 28/32] [Desired Label: 30/32]
+[Epoch 2/3] [Batch 100/185] [loss: 2.561159] [Spoofed Label: 31/32] [Desired Label: 27/32]
+[Epoch 2/3] [Batch 150/185] [loss: 2.224604] [Spoofed Label: 30/32] [Desired Label: 32/32]
+[Epoch 2/3] [Val: 0.891746]
+CUDA is available. Using CUDA.
+lr: %f 0.0008296123948912311
+weight_decay: %f 0.00526577037601107
+gan_weight_decay: %f 0.0038968047952124356
+[Epoch 0/3] [Batch 0/185] [loss: 8.511271] [Spoofed Label: 29/32] [Desired Label: 1/32]
+[Epoch 0/3] [Batch 50/185] [loss: 3.105284] [Spoofed Label: 31/32] [Desired Label: 30/32]
+[Epoch 0/3] [Batch 100/185] [loss: 2.110335] [Spoofed Label: 32/32] [Desired Label: 30/32]
+[Epoch 0/3] [Batch 150/185] [loss: 1.793403] [Spoofed Label: 31/32] [Desired Label: 32/32]
+[Epoch 0/3] [Val: 0.955345]
+[Epoch 1/3] [Batch 0/185] [loss: 1.734629] [Spoofed Label: 31/32] [Desired Label: 32/32]
+[Epoch 1/3] [Batch 50/185] [loss: 2.198556] [Spoofed Label: 31/32] [Desired Label: 28/32]
+[Epoch 1/3] [Batch 100/185] [loss: 1.805367] [Spoofed Label: 31/32] [Desired Label: 31/32]
+[Epoch 1/3] [Batch 150/185] [loss: 1.742826] [Spoofed Label: 30/32] [Desired Label: 30/32]
+[Epoch 1/3] [Val: 0.972936]
+[Epoch 2/3] [Batch 0/185] [loss: 1.662163] [Spoofed Label: 32/32] [Desired Label: 32/32]
+[Epoch 2/3] [Batch 50/185] [loss: 1.720657] [Spoofed Label: 32/32] [Desired Label: 27/32]
+[Epoch 2/3] [Batch 100/185] [loss: 1.697975] [Spoofed Label: 30/32] [Desired Label: 28/32]
+[Epoch 2/3] [Batch 150/185] [loss: 2.054733] [Spoofed Label: 32/32] [Desired Label: 29/32]
+[Epoch 2/3] [Val: 0.966171]
+CUDA is available. Using CUDA.
+lr: %f 0.0035584213267819756
+weight_decay: %f 0.0013561974828119078
+gan_weight_decay: %f 0.011912606159993544
+[Epoch 0/3] [Batch 0/185] [loss: 14.733337] [Spoofed Label: 26/32] [Desired Label: 1/32]
+[Epoch 0/3] [Batch 50/185] [loss: 7.318979] [Spoofed Label: 30/32] [Desired Label: 27/32]
+[Epoch 0/3] [Batch 100/185] [loss: 4.954229] [Spoofed Label: 32/32] [Desired Label: 27/32]
+[Epoch 0/3] [Batch 150/185] [loss: 4.187182] [Spoofed Label: 30/32] [Desired Label: 30/32]
+[Epoch 0/3] [Val: 0.721245]
+[Epoch 1/3] [Batch 0/185] [loss: 3.977665] [Spoofed Label: 30/32] [Desired Label: 27/32]
+[Epoch 1/3] [Batch 50/185] [loss: 3.935704] [Spoofed Label: 27/32] [Desired Label: 23/32]
+[Epoch 1/3] [Batch 100/185] [loss: 3.762655] [Spoofed Label: 30/32] [Desired Label: 26/32]
+[Epoch 1/3] [Batch 150/185] [loss: 3.594800] [Spoofed Label: 31/32] [Desired Label: 25/32]
+[Epoch 1/3] [Val: 0.830176]
+[Epoch 2/3] [Batch 0/185] [loss: 3.491318] [Spoofed Label: 31/32] [Desired Label: 29/32]
+[Epoch 2/3] [Batch 50/185] [loss: 3.920441] [Spoofed Label: 30/32] [Desired Label: 25/32]
+[Epoch 2/3] [Batch 100/185] [loss: 3.462985] [Spoofed Label: 30/32] [Desired Label: 25/32]
+[Epoch 2/3] [Batch 150/185] [loss: 3.289241] [Spoofed Label: 31/32] [Desired Label: 29/32]
+[Epoch 2/3] [Val: 0.844384]
+CUDA is available. Using CUDA.
+lr: %f 0.0007968592925320175
+weight_decay: %f 0.0033754559623534646
+gan_weight_decay: %f 0.0017907718906752356
+[Epoch 0/3] [Batch 0/185] [loss: 7.041467] [Spoofed Label: 24/32] [Desired Label: 1/32]
+[Epoch 0/3] [Batch 50/185] [loss: 2.341566] [Spoofed Label: 30/32] [Desired Label: 29/32]
+[Epoch 0/3] [Batch 100/185] [loss: 1.313402] [Spoofed Label: 32/32] [Desired Label: 31/32]
+[Epoch 0/3] [Batch 150/185] [loss: 1.089294] [Spoofed Label: 27/32] [Desired Label: 32/32]
+[Epoch 0/3] [Val: 0.979702]
+[Epoch 1/3] [Batch 0/185] [loss: 1.023757] [Spoofed Label: 32/32] [Desired Label: 32/32]
+[Epoch 1/3] [Batch 50/185] [loss: 1.130469] [Spoofed Label: 32/32] [Desired Label: 31/32]
+[Epoch 1/3] [Batch 100/185] [loss: 1.005435] [Spoofed Label: 32/32] [Desired Label: 31/32]
+[Epoch 1/3] [Batch 150/185] [loss: 0.932377] [Spoofed Label: 32/32] [Desired Label: 31/32]
+[Epoch 1/3] [Val: 0.950609]
+[Epoch 2/3] [Batch 0/185] [loss: 1.045379] [Spoofed Label: 31/32] [Desired Label: 31/32]
+[Epoch 2/3] [Batch 50/185] [loss: 0.900271] [Spoofed Label: 31/32] [Desired Label: 32/32]
+[Epoch 2/3] [Batch 100/185] [loss: 0.850831] [Spoofed Label: 31/32] [Desired Label: 32/32]
+[Epoch 2/3] [Batch 150/185] [loss: 0.884608] [Spoofed Label: 32/32] [Desired Label: 31/32]
+[Epoch 2/3] [Val: 0.987821]
+CUDA is available. Using CUDA.
+lr: %f 0.0032607426130851097
+weight_decay: %f 0.012902107740809078
+gan_weight_decay: %f 0.0010904637699346745
+[Epoch 0/3] [Batch 0/185] [loss: 6.027621] [Spoofed Label: 27/32] [Desired Label: 2/32]
+[Epoch 0/3] [Batch 50/185] [loss: 1.345982] [Spoofed Label: 32/32] [Desired Label: 29/32]
+[Epoch 0/3] [Batch 100/185] [loss: 1.264124] [Spoofed Label: 30/32] [Desired Label: 30/32]
+[Epoch 0/3] [Batch 150/185] [loss: 1.262062] [Spoofed Label: 31/32] [Desired Label: 29/32]
+[Epoch 0/3] [Val: 0.906631]
+[Epoch 1/3] [Batch 0/185] [loss: 1.862976] [Spoofed Label: 29/32] [Desired Label: 27/32]
+[Epoch 1/3] [Batch 50/185] [loss: 1.251169] [Spoofed Label: 30/32] [Desired Label: 28/32]
+[Epoch 1/3] [Batch 100/185] [loss: 1.097614] [Spoofed Label: 32/32] [Desired Label: 32/32]
+[Epoch 1/3] [Batch 150/185] [loss: 1.429125] [Spoofed Label: 30/32] [Desired Label: 28/32]
+[Epoch 1/3] [Val: 0.843031]
+[Epoch 2/3] [Batch 0/185] [loss: 1.509742] [Spoofed Label: 31/32] [Desired Label: 27/32]
+[Epoch 2/3] [Batch 50/185] [loss: 0.930978] [Spoofed Label: 31/32] [Desired Label: 31/32]
+[Epoch 2/3] [Batch 100/185] [loss: 0.715910] [Spoofed Label: 31/32] [Desired Label: 30/32]
+[Epoch 2/3] [Batch 150/185] [loss: 0.996146] [Spoofed Label: 32/32] [Desired Label: 29/32]
+[Epoch 2/3] [Val: 0.908660]
+CUDA is available. Using CUDA.
+lr: %f 0.006259439967625135
+weight_decay: %f 0.0020320684870256712
+gan_weight_decay: %f 0.005006704397351715
+[Epoch 0/3] [Batch 0/185] [loss: 9.952409] [Spoofed Label: 24/32] [Desired Label: 0/32]
+[Epoch 0/3] [Batch 50/185] [loss: 4.506999] [Spoofed Label: 30/32] [Desired Label: 30/32]
+[Epoch 0/3] [Batch 100/185] [loss: 3.585515] [Spoofed Label: 28/32] [Desired Label: 30/32]
+[Epoch 0/3] [Batch 150/185] [loss: 3.296138] [Spoofed Label: 31/32] [Desired Label: 26/32]
+[Epoch 0/3] [Val: 0.944520]
+[Epoch 1/3] [Batch 0/185] [loss: 2.879597] [Spoofed Label: 32/32] [Desired Label: 32/32]
+[Epoch 1/3] [Batch 50/185] [loss: 2.378813] [Spoofed Label: 30/32] [Desired Label: 29/32]
+[Epoch 1/3] [Batch 100/185] [loss: 2.099380] [Spoofed Label: 29/32] [Desired Label: 28/32]
+[Epoch 1/3] [Batch 150/185] [loss: 1.813885] [Spoofed Label: 31/32] [Desired Label: 31/32]
+[Epoch 1/3] [Val: 0.924222]
+[Epoch 2/3] [Batch 0/185] [loss: 1.747206] [Spoofed Label: 30/32] [Desired Label: 30/32]
+[Epoch 2/3] [Batch 50/185] [loss: 1.512141] [Spoofed Label: 30/32] [Desired Label: 31/32]
+[Epoch 2/3] [Batch 100/185] [loss: 1.912252] [Spoofed Label: 31/32] [Desired Label: 30/32]
+[Epoch 2/3] [Batch 150/185] [loss: 1.875326] [Spoofed Label: 32/32] [Desired Label: 28/32]
+[Epoch 2/3] [Val: 0.939107]
+CUDA is available. Using CUDA.
+lr: %f 0.009892422245238036
+weight_decay: %f 0.009207471231685839
+gan_weight_decay: %f 0.019308042623459257
+[Epoch 0/3] [Batch 0/185] [loss: 20.928272] [Spoofed Label: 25/32] [Desired Label: 1/32]
+[Epoch 0/3] [Batch 50/185] [loss: 8.695110] [Spoofed Label: 24/32] [Desired Label: 2/32]
+[Epoch 0/3] [Batch 100/185] [loss: 6.865406] [Spoofed Label: 29/32] [Desired Label: 16/32]
+[Epoch 0/3] [Batch 150/185] [loss: 6.363684] [Spoofed Label: 27/32] [Desired Label: 11/32]
+[Epoch 0/3] [Val: 0.564276]
+[Epoch 1/3] [Batch 0/185] [loss: 5.119169] [Spoofed Label: 24/32] [Desired Label: 21/32]
+[Epoch 1/3] [Batch 50/185] [loss: 5.453808] [Spoofed Label: 25/32] [Desired Label: 16/32]
+[Epoch 1/3] [Batch 100/185] [loss: 4.423165] [Spoofed Label: 30/32] [Desired Label: 27/32]
+[Epoch 1/3] [Batch 150/185] [loss: 5.010084] [Spoofed Label: 30/32] [Desired Label: 21/32]
+[Epoch 1/3] [Val: 0.682679]
+[Epoch 2/3] [Batch 0/185] [loss: 4.631037] [Spoofed Label: 29/32] [Desired Label: 22/32]
+[Epoch 2/3] [Batch 50/185] [loss: 4.646579] [Spoofed Label: 29/32] [Desired Label: 23/32]
+[Epoch 2/3] [Batch 100/185] [loss: 4.325855] [Spoofed Label: 31/32] [Desired Label: 28/32]
+[Epoch 2/3] [Batch 150/185] [loss: 4.630613] [Spoofed Label: 31/32] [Desired Label: 24/32]
+[Epoch 2/3] [Val: 0.698241]
+CUDA is available. Using CUDA.
+lr: %f 0.00991043497843149
+weight_decay: %f 0.015640619423675138
+gan_weight_decay: %f 0.018327688049560614
+[Epoch 0/3] [Batch 0/185] [loss: 19.961378] [Spoofed Label: 25/32] [Desired Label: 0/32]
+[Epoch 0/3] [Batch 50/185] [loss: 9.290384] [Spoofed Label: 16/32] [Desired Label: 2/32]
+[Epoch 0/3] [Batch 100/185] [loss: 7.313997] [Spoofed Label: 23/32] [Desired Label: 1/32]
+[Epoch 0/3] [Batch 150/185] [loss: 6.067401] [Spoofed Label: 22/32] [Desired Label: 1/32]
+[Epoch 0/3] [Val: 0.029093]
+[Epoch 1/3] [Batch 0/185] [loss: 6.551129] [Spoofed Label: 27/32] [Desired Label: 1/32]
+[Epoch 1/3] [Batch 50/185] [loss: 6.386635] [Spoofed Label: 26/32] [Desired Label: 0/32]
+[Epoch 1/3] [Batch 100/185] [loss: 6.392590] [Spoofed Label: 18/32] [Desired Label: 0/32]
+[Epoch 1/3] [Batch 150/185] [loss: 6.783958] [Spoofed Label: 21/32] [Desired Label: 0/32]
+[Epoch 1/3] [Val: 0.027740]
+[Epoch 2/3] [Batch 0/185] [loss: 6.527981] [Spoofed Label: 24/32] [Desired Label: 0/32]
+[Epoch 2/3] [Batch 50/185] [loss: 6.906694] [Spoofed Label: 24/32] [Desired Label: 0/32]
+[Epoch 2/3] [Batch 100/185] [loss: 5.743377] [Spoofed Label: 23/32] [Desired Label: 2/32]
+[Epoch 2/3] [Batch 150/185] [loss: 5.913268] [Spoofed Label: 24/32] [Desired Label: 3/32]
+[Epoch 2/3] [Val: 0.025710]
+CUDA is available. Using CUDA.
+lr: %f 0.006059544239349483
+weight_decay: %f 0.0020627807676430157
+gan_weight_decay: %f 0.01884286480005105
+[Epoch 0/3] [Batch 0/185] [loss: 20.446091] [Spoofed Label: 28/32] [Desired Label: 1/32]
+[Epoch 0/3] [Batch 50/185] [loss: 9.077759] [Spoofed Label: 26/32] [Desired Label: 15/32]
+[Epoch 0/3] [Batch 100/185] [loss: 7.492042] [Spoofed Label: 27/32] [Desired Label: 15/32]
+[Epoch 0/3] [Batch 150/185] [loss: 6.768756] [Spoofed Label: 31/32] [Desired Label: 24/32]
+[Epoch 0/3] [Val: 0.681326]
+[Epoch 1/3] [Batch 0/185] [loss: 5.587806] [Spoofed Label: 28/32] [Desired Label: 27/32]
+[Epoch 1/3] [Batch 50/185] [loss: 5.072513] [Spoofed Label: 32/32] [Desired Label: 25/32]
+[Epoch 1/3] [Batch 100/185] [loss: 4.658333] [Spoofed Label: 30/32] [Desired Label: 22/32]
+[Epoch 1/3] [Batch 150/185] [loss: 4.733656] [Spoofed Label: 29/32] [Desired Label: 21/32]
+[Epoch 1/3] [Val: 0.688769]
+[Epoch 2/3] [Batch 0/185] [loss: 4.394556] [Spoofed Label: 29/32] [Desired Label: 23/32]
+[Epoch 2/3] [Batch 50/185] [loss: 4.496563] [Spoofed Label: 26/32] [Desired Label: 22/32]
+[Epoch 2/3] [Batch 100/185] [loss: 4.376135] [Spoofed Label: 26/32] [Desired Label: 22/32]
+[Epoch 2/3] [Batch 150/185] [loss: 4.114297] [Spoofed Label: 28/32] [Desired Label: 23/32]
+[Epoch 2/3] [Val: 0.667794]
+CUDA is available. Using CUDA.
+lr: %f 0.005533730086340593
+weight_decay: %f 0.001876451476057817
+gan_weight_decay: %f 0.007417267075693726
+[Epoch 0/3] [Batch 0/185] [loss: 11.987308] [Spoofed Label: 21/32] [Desired Label: 0/32]
+[Epoch 0/3] [Batch 50/185] [loss: 5.439529] [Spoofed Label: 30/32] [Desired Label: 29/32]
+[Epoch 0/3] [Batch 100/185] [loss: 3.600310] [Spoofed Label: 31/32] [Desired Label: 28/32]
+[Epoch 0/3] [Batch 150/185] [loss: 3.192982] [Spoofed Label: 32/32] [Desired Label: 32/32]
+[Epoch 0/3] [Val: 0.861976]
+[Epoch 1/3] [Batch 0/185] [loss: 3.067779] [Spoofed Label: 30/32] [Desired Label: 29/32]
+[Epoch 1/3] [Batch 50/185] [loss: 2.741461] [Spoofed Label: 30/32] [Desired Label: 31/32]
+[Epoch 1/3] [Batch 100/185] [loss: 2.636003] [Spoofed Label: 30/32] [Desired Label: 28/32]
+[Epoch 1/3] [Batch 150/185] [loss: 2.322423] [Spoofed Label: 30/32] [Desired Label: 31/32]
+[Epoch 1/3] [Val: 0.882950]
+[Epoch 2/3] [Batch 0/185] [loss: 2.376618] [Spoofed Label: 28/32] [Desired Label: 28/32]
+[Epoch 2/3] [Batch 50/185] [loss: 2.376817] [Spoofed Label: 31/32] [Desired Label: 27/32]
+[Epoch 2/3] [Batch 100/185] [loss: 2.021560] [Spoofed Label: 31/32] [Desired Label: 32/32]
+[Epoch 2/3] [Batch 150/185] [loss: 2.387761] [Spoofed Label: 31/32] [Desired Label: 27/32]
+[Epoch 2/3] [Val: 0.910690]
+CUDA is available. Using CUDA.
+lr: %f 0.004889984773766174
+weight_decay: %f 0.0010198825623073911
+gan_weight_decay: %f 0.01298846298255754
+[Epoch 0/3] [Batch 0/185] [loss: 15.817004] [Spoofed Label: 23/32] [Desired Label: 2/32]
+[Epoch 0/3] [Batch 50/185] [loss: 8.381387] [Spoofed Label: 30/32] [Desired Label: 26/32]
+[Epoch 0/3] [Batch 100/185] [loss: 5.860484] [Spoofed Label: 31/32] [Desired Label: 25/32]
+[Epoch 0/3] [Batch 150/185] [loss: 5.143878] [Spoofed Label: 29/32] [Desired Label: 26/32]
+[Epoch 0/3] [Val: 0.807848]
+[Epoch 1/3] [Batch 0/185] [loss: 4.461932] [Spoofed Label: 28/32] [Desired Label: 26/32]
+[Epoch 1/3] [Batch 50/185] [loss: 3.937183] [Spoofed Label: 29/32] [Desired Label: 22/32]
+[Epoch 1/3] [Batch 100/185] [loss: 3.734565] [Spoofed Label: 25/32] [Desired Label: 23/32]
+[Epoch 1/3] [Batch 150/185] [loss: 3.533850] [Spoofed Label: 32/32] [Desired Label: 29/32]
+[Epoch 1/3] [Val: 0.815291]
+[Epoch 2/3] [Batch 0/185] [loss: 3.604028] [Spoofed Label: 32/32] [Desired Label: 27/32]
+[Epoch 2/3] [Batch 50/185] [loss: 3.695808] [Spoofed Label: 29/32] [Desired Label: 26/32]
+[Epoch 2/3] [Batch 100/185] [loss: 3.057408] [Spoofed Label: 31/32] [Desired Label: 28/32]
+[Epoch 2/3] [Batch 150/185] [loss: 3.013402] [Spoofed Label: 30/32] [Desired Label: 28/32]
+[Epoch 2/3] [Val: 0.798376]
+CUDA is available. Using CUDA.
+lr: %f 0.00248058014839311
+weight_decay: %f 0.0018567157155967794
+gan_weight_decay: %f 0.013575518828708232
+[Epoch 0/3] [Batch 0/185] [loss: 15.924795] [Spoofed Label: 23/32] [Desired Label: 1/32]
+[Epoch 0/3] [Batch 50/185] [loss: 7.709651] [Spoofed Label: 28/32] [Desired Label: 22/32]
+[Epoch 0/3] [Batch 100/185] [loss: 5.958874] [Spoofed Label: 28/32] [Desired Label: 16/32]
+[Epoch 0/3] [Batch 150/185] [loss: 6.042871] [Spoofed Label: 29/32] [Desired Label: 27/32]
+[Epoch 0/3] [Val: 0.748985]
+[Epoch 1/3] [Batch 0/185] [loss: 4.857258] [Spoofed Label: 30/32] [Desired Label: 26/32]
+[Epoch 1/3] [Batch 50/185] [loss: 4.637765] [Spoofed Label: 29/32] [Desired Label: 22/32]
+[Epoch 1/3] [Batch 100/185] [loss: 4.036896] [Spoofed Label: 29/32] [Desired Label: 28/32]
+[Epoch 1/3] [Batch 150/185] [loss: 4.445959] [Spoofed Label: 29/32] [Desired Label: 27/32]
+[Epoch 1/3] [Val: 0.806495]
+[Epoch 2/3] [Batch 0/185] [loss: 4.080026] [Spoofed Label: 27/32] [Desired Label: 29/32]
+[Epoch 2/3] [Batch 50/185] [loss: 4.292004] [Spoofed Label: 30/32] [Desired Label: 26/32]
+[Epoch 2/3] [Batch 100/185] [loss: 4.190280] [Spoofed Label: 31/32] [Desired Label: 29/32]
+[Epoch 2/3] [Batch 150/185] [loss: 4.036203] [Spoofed Label: 31/32] [Desired Label: 25/32]
+[Epoch 2/3] [Val: 0.824763]
+CUDA is available. Using CUDA.
+lr: %f 0.0070574979838252715
+weight_decay: %f 0.0026709292600475797
+gan_weight_decay: %f 0.01979960110623522
+[Epoch 0/3] [Batch 0/185] [loss: 21.200195] [Spoofed Label: 23/32] [Desired Label: 1/32]
+[Epoch 0/3] [Batch 50/185] [loss: 8.722027] [Spoofed Label: 29/32] [Desired Label: 18/32]
+[Epoch 0/3] [Batch 100/185] [loss: 6.540855] [Spoofed Label: 31/32] [Desired Label: 19/32]
+[Epoch 0/3] [Batch 150/185] [loss: 5.758926] [Spoofed Label: 32/32] [Desired Label: 22/32]
+[Epoch 0/3] [Val: 0.617050]
+[Epoch 1/3] [Batch 0/185] [loss: 5.417389] [Spoofed Label: 31/32] [Desired Label: 20/32]
+[Epoch 1/3] [Batch 50/185] [loss: 5.132604] [Spoofed Label: 29/32] [Desired Label: 18/32]
+[Epoch 1/3] [Batch 100/185] [loss: 4.403100] [Spoofed Label: 28/32] [Desired Label: 22/32]
+[Epoch 1/3] [Batch 150/185] [loss: 4.837897] [Spoofed Label: 29/32] [Desired Label: 19/32]
+[Epoch 1/3] [Val: 0.622463]
+[Epoch 2/3] [Batch 0/185] [loss: 4.515612] [Spoofed Label: 27/32] [Desired Label: 20/32]
+[Epoch 2/3] [Batch 50/185] [loss: 4.215645] [Spoofed Label: 29/32] [Desired Label: 23/32]
+[Epoch 2/3] [Batch 100/185] [loss: 3.980411] [Spoofed Label: 28/32] [Desired Label: 24/32]
+[Epoch 2/3] [Batch 150/185] [loss: 4.210365] [Spoofed Label: 28/32] [Desired Label: 25/32]
+[Epoch 2/3] [Val: 0.627876]
+CUDA is available. Using CUDA.
+lr: %f 0.007488922712887667
+weight_decay: %f 0.003219862635174475
+gan_weight_decay: %f 0.009703708007338052
+[Epoch 0/3] [Batch 0/185] [loss: 12.624132] [Spoofed Label: 24/32] [Desired Label: 2/32]
+[Epoch 0/3] [Batch 50/185] [loss: 6.139378] [Spoofed Label: 26/32] [Desired Label: 23/32]
+[Epoch 0/3] [Batch 100/185] [loss: 4.955476] [Spoofed Label: 30/32] [Desired Label: 22/32]
+[Epoch 0/3] [Batch 150/185] [loss: 3.498668] [Spoofed Label: 29/32] [Desired Label: 25/32]
+[Epoch 0/3] [Val: 0.724628]
+[Epoch 1/3] [Batch 0/185] [loss: 3.910678] [Spoofed Label: 28/32] [Desired Label: 21/32]
+[Epoch 1/3] [Batch 50/185] [loss: 3.183777] [Spoofed Label: 28/32] [Desired Label: 26/32]
+[Epoch 1/3] [Batch 100/185] [loss: 3.054659] [Spoofed Label: 29/32] [Desired Label: 25/32]
+[Epoch 1/3] [Batch 150/185] [loss: 2.880646] [Spoofed Label: 31/32] [Desired Label: 27/32]
+[Epoch 1/3] [Val: 0.811231]
+[Epoch 2/3] [Batch 0/185] [loss: 2.490892] [Spoofed Label: 32/32] [Desired Label: 31/32]
+[Epoch 2/3] [Batch 50/185] [loss: 2.774804] [Spoofed Label: 31/32] [Desired Label: 27/32]
+[Epoch 2/3] [Batch 100/185] [loss: 2.441671] [Spoofed Label: 31/32] [Desired Label: 30/32]
+[Epoch 2/3] [Batch 150/185] [loss: 2.799043] [Spoofed Label: 30/32] [Desired Label: 28/32]
+[Epoch 2/3] [Val: 0.878890]
+CUDA is available. Using CUDA.
+lr: %f 0.004737053737775937
+weight_decay: %f 0.001462127869028591
+gan_weight_decay: %f 0.006154990222195945
+[Epoch 0/3] [Batch 0/185] [loss: 10.989548] [Spoofed Label: 22/32] [Desired Label: 0/32]
+[Epoch 0/3] [Batch 50/185] [loss: 4.424563] [Spoofed Label: 32/32] [Desired Label: 32/32]
+[Epoch 0/3] [Batch 100/185] [loss: 3.120732] [Spoofed Label: 32/32] [Desired Label: 29/32]
+[Epoch 0/3] [Batch 150/185] [loss: 3.330868] [Spoofed Label: 32/32] [Desired Label: 27/32]
+[Epoch 0/3] [Val: 0.893775]
+[Epoch 1/3] [Batch 0/185] [loss: 2.721443] [Spoofed Label: 30/32] [Desired Label: 30/32]
+[Epoch 1/3] [Batch 50/185] [loss: 2.849446] [Spoofed Label: 32/32] [Desired Label: 28/32]
+[Epoch 1/3] [Batch 100/185] [loss: 2.679559] [Spoofed Label: 29/32] [Desired Label: 27/32]
+[Epoch 1/3] [Batch 150/185] [loss: 2.481128] [Spoofed Label: 32/32] [Desired Label: 30/32]
+[Epoch 1/3] [Val: 0.903248]
+[Epoch 2/3] [Batch 0/185] [loss: 2.181185] [Spoofed Label: 32/32] [Desired Label: 32/32]
+[Epoch 2/3] [Batch 50/185] [loss: 2.301016] [Spoofed Label: 30/32] [Desired Label: 28/32]
+[Epoch 2/3] [Batch 100/185] [loss: 2.192328] [Spoofed Label: 30/32] [Desired Label: 30/32]
+[Epoch 2/3] [Batch 150/185] [loss: 2.047634] [Spoofed Label: 32/32] [Desired Label: 29/32]
+[Epoch 2/3] [Val: 0.910014]
+CUDA is available. Using CUDA.
+lr: %f 0.008257210407304545
+weight_decay: %f 0.0027222894941395003
+gan_weight_decay: %f 0.010659201570051166
+[Epoch 0/3] [Batch 0/185] [loss: 13.764267] [Spoofed Label: 30/32] [Desired Label: 1/32]
+[Epoch 0/3] [Batch 50/185] [loss: 8.518618] [Spoofed Label: 23/32] [Desired Label: 12/32]
+[Epoch 0/3] [Batch 100/185] [loss: 4.772043] [Spoofed Label: 26/32] [Desired Label: 13/32]
+[Epoch 0/3] [Batch 150/185] [loss: 5.949915] [Spoofed Label: 27/32] [Desired Label: 20/32]
+[Epoch 0/3] [Val: 0.749662]
+[Epoch 1/3] [Batch 0/185] [loss: 3.569659] [Spoofed Label: 30/32] [Desired Label: 21/32]
+[Epoch 1/3] [Batch 50/185] [loss: 3.122670] [Spoofed Label: 31/32] [Desired Label: 29/32]
+[Epoch 1/3] [Batch 100/185] [loss: 3.339337] [Spoofed Label: 28/32] [Desired Label: 23/32]
+[Epoch 1/3] [Batch 150/185] [loss: 3.071582] [Spoofed Label: 31/32] [Desired Label: 28/32]
+[Epoch 1/3] [Val: 0.794993]
+[Epoch 2/3] [Batch 0/185] [loss: 3.271009] [Spoofed Label: 30/32] [Desired Label: 20/32]
+[Epoch 2/3] [Batch 50/185] [loss: 2.957541] [Spoofed Label: 29/32] [Desired Label: 28/32]
+[Epoch 2/3] [Batch 100/185] [loss: 3.615659] [Spoofed Label: 32/32] [Desired Label: 21/32]
+[Epoch 2/3] [Batch 150/185] [loss: 3.072908] [Spoofed Label: 31/32] [Desired Label: 28/32]
+[Epoch 2/3] [Val: 0.878890]
+CUDA is available. Using CUDA.
+lr: %f 0.006444316942413481
+weight_decay: %f 0.002311737074135583
+gan_weight_decay: %f 0.015841637003650818
+[Epoch 0/3] [Batch 0/185] [loss: 17.622707] [Spoofed Label: 25/32] [Desired Label: 2/32]
+[Epoch 0/3] [Batch 50/185] [loss: 9.213236] [Spoofed Label: 28/32] [Desired Label: 24/32]
+[Epoch 0/3] [Batch 100/185] [loss: 6.335863] [Spoofed Label: 26/32] [Desired Label: 18/32]
+[Epoch 0/3] [Batch 150/185] [loss: 5.520954] [Spoofed Label: 27/32] [Desired Label: 20/32]
+[Epoch 0/3] [Val: 0.684709]
+[Epoch 1/3] [Batch 0/185] [loss: 4.792965] [Spoofed Label: 29/32] [Desired Label: 23/32]
+[Epoch 1/3] [Batch 50/185] [loss: 4.515909] [Spoofed Label: 28/32] [Desired Label: 24/32]
+[Epoch 1/3] [Batch 100/185] [loss: 3.765051] [Spoofed Label: 29/32] [Desired Label: 23/32]
+[Epoch 1/3] [Batch 150/185] [loss: 3.834605] [Spoofed Label: 27/32] [Desired Label: 24/32]
+[Epoch 1/3] [Val: 0.700271]
+[Epoch 2/3] [Batch 0/185] [loss: 3.864630] [Spoofed Label: 30/32] [Desired Label: 25/32]
+[Epoch 2/3] [Batch 50/185] [loss: 4.288105] [Spoofed Label: 28/32] [Desired Label: 22/32]
+[Epoch 2/3] [Batch 100/185] [loss: 4.042299] [Spoofed Label: 27/32] [Desired Label: 24/32]
+[Epoch 2/3] [Batch 150/185] [loss: 4.126083] [Spoofed Label: 30/32] [Desired Label: 23/32]
+[Epoch 2/3] [Val: 0.725304]
+CUDA is available. Using CUDA.
+lr: %f 0.006010373360115847
+weight_decay: %f 0.0014159078802123935
+gan_weight_decay: %f 0.015047489357273642
+[Epoch 0/3] [Batch 0/185] [loss: 17.165253] [Spoofed Label: 27/32] [Desired Label: 2/32]
+[Epoch 0/3] [Batch 50/185] [loss: 8.081259] [Spoofed Label: 31/32] [Desired Label: 25/32]
+[Epoch 0/3] [Batch 100/185] [loss: 7.229612] [Spoofed Label: 26/32] [Desired Label: 14/32]
+[Epoch 0/3] [Batch 150/185] [loss: 5.013329] [Spoofed Label: 29/32] [Desired Label: 22/32]
+[Epoch 0/3] [Val: 0.828823]
+[Epoch 1/3] [Batch 0/185] [loss: 4.579124] [Spoofed Label: 30/32] [Desired Label: 26/32]
+[Epoch 1/3] [Batch 50/185] [loss: 4.938329] [Spoofed Label: 32/32] [Desired Label: 30/32]
+[Epoch 1/3] [Batch 100/185] [loss: 4.126816] [Spoofed Label: 31/32] [Desired Label: 21/32]
+[Epoch 1/3] [Batch 150/185] [loss: 3.501561] [Spoofed Label: 30/32] [Desired Label: 28/32]
+[Epoch 1/3] [Val: 0.795670]
+[Epoch 2/3] [Batch 0/185] [loss: 3.764479] [Spoofed Label: 32/32] [Desired Label: 27/32]
+[Epoch 2/3] [Batch 50/185] [loss: 3.385798] [Spoofed Label: 30/32] [Desired Label: 28/32]
+[Epoch 2/3] [Batch 100/185] [loss: 3.657880] [Spoofed Label: 28/32] [Desired Label: 22/32]
+[Epoch 2/3] [Batch 150/185] [loss: 3.441615] [Spoofed Label: 31/32] [Desired Label: 26/32]
+[Epoch 2/3] [Val: 0.745602]
+CUDA is available. Using CUDA.
+lr: %f 0.007703186697539929
+weight_decay: %f 0.0015028647477027413
+gan_weight_decay: %f 0.01501737223003452
+[Epoch 0/3] [Batch 0/185] [loss: 17.524288] [Spoofed Label: 25/32] [Desired Label: 2/32]
+[Epoch 0/3] [Batch 50/185] [loss: 10.287867] [Spoofed Label: 30/32] [Desired Label: 25/32]
+[Epoch 0/3] [Batch 100/185] [loss: 6.207223] [Spoofed Label: 26/32] [Desired Label: 17/32]
+[Epoch 0/3] [Batch 150/185] [loss: 5.390647] [Spoofed Label: 31/32] [Desired Label: 22/32]
+[Epoch 0/3] [Val: 0.698241]
+[Epoch 1/3] [Batch 0/185] [loss: 4.678288] [Spoofed Label: 27/32] [Desired Label: 19/32]
+[Epoch 1/3] [Batch 50/185] [loss: 3.826070] [Spoofed Label: 29/32] [Desired Label: 25/32]
+[Epoch 1/3] [Batch 100/185] [loss: 3.405961] [Spoofed Label: 30/32] [Desired Label: 27/32]
+[Epoch 1/3] [Batch 150/185] [loss: 3.644950] [Spoofed Label: 30/32] [Desired Label: 27/32]
+[Epoch 1/3] [Val: 0.797700]
+[Epoch 2/3] [Batch 0/185] [loss: 3.111682] [Spoofed Label: 28/32] [Desired Label: 31/32]
+[Epoch 2/3] [Batch 50/185] [loss: 3.633587] [Spoofed Label: 25/32] [Desired Label: 23/32]
+[Epoch 2/3] [Batch 100/185] [loss: 3.133510] [Spoofed Label: 29/32] [Desired Label: 29/32]
+[Epoch 2/3] [Batch 150/185] [loss: 3.786541] [Spoofed Label: 29/32] [Desired Label: 20/32]
+[Epoch 2/3] [Val: 0.786198]
+CUDA is available. Using CUDA.
+lr: %f 0.004499945356678698
+weight_decay: %f 0.001519734774989003
+gan_weight_decay: %f 0.01531474714626804
+[Epoch 0/3] [Batch 0/185] [loss: 17.668297] [Spoofed Label: 28/32] [Desired Label: 0/32]
+[Epoch 0/3] [Batch 50/185] [loss: 9.322485] [Spoofed Label: 28/32] [Desired Label: 25/32]
+[Epoch 0/3] [Batch 100/185] [loss: 6.487123] [Spoofed Label: 28/32] [Desired Label: 13/32]
+[Epoch 0/3] [Batch 150/185] [loss: 5.261259] [Spoofed Label: 32/32] [Desired Label: 30/32]
+[Epoch 0/3] [Val: 0.642084]
+[Epoch 1/3] [Batch 0/185] [loss: 6.359993] [Spoofed Label: 23/32] [Desired Label: 11/32]
+[Epoch 1/3] [Batch 50/185] [loss: 4.455737] [Spoofed Label: 30/32] [Desired Label: 28/32]
+[Epoch 1/3] [Batch 100/185] [loss: 4.761027] [Spoofed Label: 30/32] [Desired Label: 25/32]
+[Epoch 1/3] [Batch 150/185] [loss: 4.066126] [Spoofed Label: 29/32] [Desired Label: 25/32]
+[Epoch 1/3] [Val: 0.811908]
+[Epoch 2/3] [Batch 0/185] [loss: 4.227416] [Spoofed Label: 30/32] [Desired Label: 29/32]
+[Epoch 2/3] [Batch 50/185] [loss: 3.981306] [Spoofed Label: 31/32] [Desired Label: 25/32]
+[Epoch 2/3] [Batch 100/185] [loss: 3.594663] [Spoofed Label: 29/32] [Desired Label: 25/32]
+[Epoch 2/3] [Batch 150/185] [loss: 3.687354] [Spoofed Label: 31/32] [Desired Label: 26/32]
+[Epoch 2/3] [Val: 0.800406]
+CUDA is available. Using CUDA.
+lr: %f 0.005432699275718611
+weight_decay: %f 0.0016510088485638388
+gan_weight_decay: %f 0.010778926951293216
+[Epoch 0/3] [Batch 0/185] [loss: 13.477331] [Spoofed Label: 24/32] [Desired Label: 2/32]
+[Epoch 0/3] [Batch 50/185] [loss: 7.370607] [Spoofed Label: 29/32] [Desired Label: 25/32]
+[Epoch 0/3] [Batch 100/185] [loss: 4.903101] [Spoofed Label: 30/32] [Desired Label: 24/32]
+[Epoch 0/3] [Batch 150/185] [loss: 4.057034] [Spoofed Label: 32/32] [Desired Label: 29/32]
+[Epoch 0/3] [Val: 0.834235]
+[Epoch 1/3] [Batch 0/185] [loss: 3.620683] [Spoofed Label: 30/32] [Desired Label: 27/32]
+[Epoch 1/3] [Batch 50/185] [loss: 3.402067] [Spoofed Label: 31/32] [Desired Label: 25/32]
+[Epoch 1/3] [Batch 100/185] [loss: 2.969638] [Spoofed Label: 32/32] [Desired Label: 28/32]
+[Epoch 1/3] [Batch 150/185] [loss: 3.218055] [Spoofed Label: 30/32] [Desired Label: 25/32]
+[Epoch 1/3] [Val: 0.836942]
+[Epoch 2/3] [Batch 0/185] [loss: 2.799826] [Spoofed Label: 29/32] [Desired Label: 27/32]
+[Epoch 2/3] [Batch 50/185] [loss: 2.744949] [Spoofed Label: 31/32] [Desired Label: 27/32]
+[Epoch 2/3] [Batch 100/185] [loss: 2.390918] [Spoofed Label: 30/32] [Desired Label: 30/32]
+[Epoch 2/3] [Batch 150/185] [loss: 2.602577] [Spoofed Label: 30/32] [Desired Label: 28/32]
+[Epoch 2/3] [Val: 0.847091]
+CUDA is available. Using CUDA.
+lr: %f 0.007386178518864869
+weight_decay: %f 0.001341560905870407
+gan_weight_decay: %f 0.015062624406179696
+[Epoch 0/3] [Batch 0/185] [loss: 17.180365] [Spoofed Label: 25/32] [Desired Label: 3/32]
+[Epoch 0/3] [Batch 50/185] [loss: 9.579988] [Spoofed Label: 30/32] [Desired Label: 27/32]
+[Epoch 0/3] [Batch 100/185] [loss: 5.357333] [Spoofed Label: 30/32] [Desired Label: 26/32]
+[Epoch 0/3] [Batch 150/185] [loss: 4.914520] [Spoofed Label: 27/32] [Desired Label: 17/32]
+[Epoch 0/3] [Val: 0.763870]
+[Epoch 1/3] [Batch 0/185] [loss: 4.450545] [Spoofed Label: 29/32] [Desired Label: 24/32]
+[Epoch 1/3] [Batch 50/185] [loss: 3.854951] [Spoofed Label: 30/32] [Desired Label: 26/32]
+[Epoch 1/3] [Batch 100/185] [loss: 3.856150] [Spoofed Label: 31/32] [Desired Label: 27/32]
+[Epoch 1/3] [Batch 150/185] [loss: 3.433179] [Spoofed Label: 29/32] [Desired Label: 24/32]
+[Epoch 1/3] [Val: 0.779432]
+[Epoch 2/3] [Batch 0/185] [loss: 3.444887] [Spoofed Label: 29/32] [Desired Label: 27/32]
+[Epoch 2/3] [Batch 50/185] [loss: 3.907380] [Spoofed Label: 26/32] [Desired Label: 21/32]
+[Epoch 2/3] [Batch 100/185] [loss: 3.191059] [Spoofed Label: 29/32] [Desired Label: 27/32]
+[Epoch 2/3] [Batch 150/185] [loss: 3.150528] [Spoofed Label: 29/32] [Desired Label: 25/32]
+[Epoch 2/3] [Val: 0.778755]
+CUDA is available. Using CUDA.
+lr: %f 0.00807743350152187
+weight_decay: %f 0.0023685293510545286
+gan_weight_decay: %f 0.007591192770806341
+[Epoch 0/3] [Batch 0/185] [loss: 11.337162] [Spoofed Label: 24/32] [Desired Label: 1/32]
+[Epoch 0/3] [Batch 50/185] [loss: 6.235892] [Spoofed Label: 28/32] [Desired Label: 21/32]
+[Epoch 0/3] [Batch 100/185] [loss: 4.072305] [Spoofed Label: 28/32] [Desired Label: 26/32]
+[Epoch 0/3] [Batch 150/185] [loss: 2.836179] [Spoofed Label: 32/32] [Desired Label: 30/32]
+[Epoch 0/3] [Val: 0.857240]
+[Epoch 1/3] [Batch 0/185] [loss: 2.364946] [Spoofed Label: 28/32] [Desired Label: 30/32]
+[Epoch 1/3] [Batch 50/185] [loss: 2.808475] [Spoofed Label: 31/32] [Desired Label: 26/32]
+[Epoch 1/3] [Batch 100/185] [loss: 2.716580] [Spoofed Label: 32/32] [Desired Label: 29/32]
+[Epoch 1/3] [Batch 150/185] [loss: 2.730099] [Spoofed Label: 30/32] [Desired Label: 26/32]
+[Epoch 1/3] [Val: 0.880244]
+[Epoch 2/3] [Batch 0/185] [loss: 2.701243] [Spoofed Label: 32/32] [Desired Label: 28/32]
+[Epoch 2/3] [Batch 50/185] [loss: 2.352177] [Spoofed Label: 30/32] [Desired Label: 31/32]
+[Epoch 2/3] [Batch 100/185] [loss: 2.610479] [Spoofed Label: 30/32] [Desired Label: 28/32]
+[Epoch 2/3] [Batch 150/185] [loss: 2.153158] [Spoofed Label: 32/32] [Desired Label: 31/32]
+[Epoch 2/3] [Val: 0.871448]
+CUDA is available. Using CUDA.
+lr: %f 0.009622186491477764
+weight_decay: %f 0.003856766578303338
+gan_weight_decay: %f 0.0198374363951609
+[Epoch 0/3] [Batch 0/185] [loss: 20.945278] [Spoofed Label: 22/32] [Desired Label: 0/32]
+[Epoch 0/3] [Batch 50/185] [loss: 9.472464] [Spoofed Label: 28/32] [Desired Label: 7/32]
+[Epoch 0/3] [Batch 100/185] [loss: 6.833725] [Spoofed Label: 29/32] [Desired Label: 18/32]
+[Epoch 0/3] [Batch 150/185] [loss: 5.014362] [Spoofed Label: 30/32] [Desired Label: 18/32]
+[Epoch 0/3] [Val: 0.583897]
+[Epoch 1/3] [Batch 0/185] [loss: 5.272711] [Spoofed Label: 26/32] [Desired Label: 16/32]
+[Epoch 1/3] [Batch 50/185] [loss: 4.078409] [Spoofed Label: 31/32] [Desired Label: 22/32]
+[Epoch 1/3] [Batch 100/185] [loss: 5.182393] [Spoofed Label: 29/32] [Desired Label: 14/32]
+[Epoch 1/3] [Batch 150/185] [loss: 4.631723] [Spoofed Label: 29/32] [Desired Label: 17/32]
+[Epoch 1/3] [Val: 0.568336]
+[Epoch 2/3] [Batch 0/185] [loss: 4.495831] [Spoofed Label: 25/32] [Desired Label: 21/32]
+[Epoch 2/3] [Batch 50/185] [loss: 4.845400] [Spoofed Label: 28/32] [Desired Label: 19/32]
+[Epoch 2/3] [Batch 100/185] [loss: 4.562116] [Spoofed Label: 30/32] [Desired Label: 20/32]
+[Epoch 2/3] [Batch 150/185] [loss: 4.820172] [Spoofed Label: 27/32] [Desired Label: 17/32]
+[Epoch 2/3] [Val: 0.581867]
+CUDA is available. Using CUDA.
+lr: %f 0.004297299972399025
+weight_decay: %f 0.0010737466555058167
+gan_weight_decay: %f 0.015399433761387594
+[Epoch 0/3] [Batch 0/185] [loss: 17.288715] [Spoofed Label: 27/32] [Desired Label: 1/32]
+[Epoch 0/3] [Batch 50/185] [loss: 8.755184] [Spoofed Label: 28/32] [Desired Label: 20/32]
+[Epoch 0/3] [Batch 100/185] [loss: 6.199015] [Spoofed Label: 31/32] [Desired Label: 20/32]
+[Epoch 0/3] [Batch 150/185] [loss: 5.534454] [Spoofed Label: 25/32] [Desired Label: 20/32]
+[Epoch 0/3] [Val: 0.683356]
+[Epoch 1/3] [Batch 0/185] [loss: 5.202162] [Spoofed Label: 29/32] [Desired Label: 24/32]
+[Epoch 1/3] [Batch 50/185] [loss: 5.130258] [Spoofed Label: 30/32] [Desired Label: 24/32]
+[Epoch 1/3] [Batch 100/185] [loss: 4.488281] [Spoofed Label: 30/32] [Desired Label: 24/32]
+[Epoch 1/3] [Batch 150/185] [loss: 4.636367] [Spoofed Label: 26/32] [Desired Label: 19/32]
+[Epoch 1/3] [Val: 0.784844]
+[Epoch 2/3] [Batch 0/185] [loss: 4.313540] [Spoofed Label: 29/32] [Desired Label: 24/32]
+[Epoch 2/3] [Batch 50/185] [loss: 3.705606] [Spoofed Label: 31/32] [Desired Label: 26/32]
+[Epoch 2/3] [Batch 100/185] [loss: 3.605484] [Spoofed Label: 28/32] [Desired Label: 29/32]
+[Epoch 2/3] [Batch 150/185] [loss: 4.035778] [Spoofed Label: 30/32] [Desired Label: 21/32]
+[Epoch 2/3] [Val: 0.803789]
+CUDA is available. Using CUDA.
+lr: %f 0.003124705235045974
+weight_decay: %f 0.0012095536054967883
+gan_weight_decay: %f 0.01019045795814415
+[Epoch 0/3] [Batch 0/185] [loss: 13.031254] [Spoofed Label: 22/32] [Desired Label: 2/32]
+[Epoch 0/3] [Batch 50/185] [loss: 6.370036] [Spoofed Label: 31/32] [Desired Label: 28/32]
+[Epoch 0/3] [Batch 100/185] [loss: 4.852688] [Spoofed Label: 32/32] [Desired Label: 26/32]
+[Epoch 0/3] [Batch 150/185] [loss: 4.663927] [Spoofed Label: 31/32] [Desired Label: 26/32]
+[Epoch 0/3] [Val: 0.765223]
+[Epoch 1/3] [Batch 0/185] [loss: 4.755575] [Spoofed Label: 29/32] [Desired Label: 25/32]
+[Epoch 1/3] [Batch 50/185] [loss: 4.843555] [Spoofed Label: 26/32] [Desired Label: 13/32]
+[Epoch 1/3] [Batch 100/185] [loss: 3.670837] [Spoofed Label: 29/32] [Desired Label: 29/32]
+[Epoch 1/3] [Batch 150/185] [loss: 4.816963] [Spoofed Label: 30/32] [Desired Label: 17/32]
+[Epoch 1/3] [Val: 0.817321]
+[Epoch 2/3] [Batch 0/185] [loss: 3.587376] [Spoofed Label: 30/32] [Desired Label: 29/32]
+[Epoch 2/3] [Batch 50/185] [loss: 3.860020] [Spoofed Label: 31/32] [Desired Label: 25/32]
+[Epoch 2/3] [Batch 100/185] [loss: 3.326540] [Spoofed Label: 29/32] [Desired Label: 24/32]
+[Epoch 2/3] [Batch 150/185] [loss: 3.208814] [Spoofed Label: 29/32] [Desired Label: 25/32]
+[Epoch 2/3] [Val: 0.852503]
+CUDA is available. Using CUDA.
+lr: %f 0.006981941664133501
+weight_decay: %f 0.0014288277646536133
+gan_weight_decay: %f 0.014774900482076508
+[Epoch 0/3] [Batch 0/185] [loss: 17.118822] [Spoofed Label: 21/32] [Desired Label: 1/32]
+[Epoch 0/3] [Batch 50/185] [loss: 7.984249] [Spoofed Label: 26/32] [Desired Label: 13/32]
+[Epoch 0/3] [Batch 100/185] [loss: 5.902721] [Spoofed Label: 28/32] [Desired Label: 19/32]
+[Epoch 0/3] [Batch 150/185] [loss: 4.564568] [Spoofed Label: 30/32] [Desired Label: 25/32]
+[Epoch 0/3] [Val: 0.765900]
+[Epoch 1/3] [Batch 0/185] [loss: 5.191465] [Spoofed Label: 31/32] [Desired Label: 23/32]
+[Epoch 1/3] [Batch 50/185] [loss: 3.750527] [Spoofed Label: 30/32] [Desired Label: 28/32]
+[Epoch 1/3] [Batch 100/185] [loss: 4.046717] [Spoofed Label: 32/32] [Desired Label: 24/32]
+[Epoch 1/3] [Batch 150/185] [loss: 3.756377] [Spoofed Label: 30/32] [Desired Label: 25/32]
+[Epoch 1/3] [Val: 0.765223]
+[Epoch 2/3] [Batch 0/185] [loss: 3.253318] [Spoofed Label: 31/32] [Desired Label: 26/32]
+[Epoch 2/3] [Batch 50/185] [loss: 3.464885] [Spoofed Label: 27/32] [Desired Label: 24/32]
+[Epoch 2/3] [Batch 100/185] [loss: 3.859467] [Spoofed Label: 29/32] [Desired Label: 21/32]
+[Epoch 2/3] [Batch 150/185] [loss: 3.761847] [Spoofed Label: 29/32] [Desired Label: 23/32]
+[Epoch 2/3] [Val: 0.764547]
+CUDA is available. Using CUDA.
+lr: %f 0.005442547329029078
+weight_decay: %f 0.0012468783280061226
+gan_weight_decay: %f 0.012939414983904246
+[Epoch 0/3] [Batch 0/185] [loss: 15.132902] [Spoofed Label: 25/32] [Desired Label: 0/32]
+[Epoch 0/3] [Batch 50/185] [loss: 7.435919] [Spoofed Label: 29/32] [Desired Label: 28/32]
+[Epoch 0/3] [Batch 100/185] [loss: 5.744723] [Spoofed Label: 26/32] [Desired Label: 17/32]
+[Epoch 0/3] [Batch 150/185] [loss: 4.705456] [Spoofed Label: 29/32] [Desired Label: 28/32]
+[Epoch 0/3] [Val: 0.753045]
+[Epoch 1/3] [Batch 0/185] [loss: 4.608482] [Spoofed Label: 30/32] [Desired Label: 27/32]
+[Epoch 1/3] [Batch 50/185] [loss: 4.016249] [Spoofed Label: 29/32] [Desired Label: 29/32]
+[Epoch 1/3] [Batch 100/185] [loss: 3.371824] [Spoofed Label: 32/32] [Desired Label: 30/32]
+[Epoch 1/3] [Batch 150/185] [loss: 3.401485] [Spoofed Label: 31/32] [Desired Label: 28/32]
+[Epoch 1/3] [Val: 0.774019]
+[Epoch 2/3] [Batch 0/185] [loss: 3.338716] [Spoofed Label: 28/32] [Desired Label: 27/32]
+[Epoch 2/3] [Batch 50/185] [loss: 3.124327] [Spoofed Label: 30/32] [Desired Label: 27/32]
+[Epoch 2/3] [Batch 100/185] [loss: 3.031718] [Spoofed Label: 32/32] [Desired Label: 27/32]
+[Epoch 2/3] [Batch 150/185] [loss: 3.161550] [Spoofed Label: 32/32] [Desired Label: 28/32]
+[Epoch 2/3] [Val: 0.778078]
+CUDA is available. Using CUDA.
+lr: %f 0.007700461304618897
+weight_decay: %f 0.0016752798927578175
+gan_weight_decay: %f 0.015316873314985118
+[Epoch 0/3] [Batch 0/185] [loss: 17.977676] [Spoofed Label: 25/32] [Desired Label: 1/32]
+[Epoch 0/3] [Batch 50/185] [loss: 9.882360] [Spoofed Label: 31/32] [Desired Label: 26/32]
+[Epoch 0/3] [Batch 100/185] [loss: 6.115124] [Spoofed Label: 28/32] [Desired Label: 21/32]
+[Epoch 0/3] [Batch 150/185] [loss: 4.470632] [Spoofed Label: 29/32] [Desired Label: 27/32]
+[Epoch 0/3] [Val: 0.803112]
+[Epoch 1/3] [Batch 0/185] [loss: 4.422054] [Spoofed Label: 30/32] [Desired Label: 25/32]
+[Epoch 1/3] [Batch 50/185] [loss: 3.685410] [Spoofed Label: 30/32] [Desired Label: 28/32]
+[Epoch 1/3] [Batch 100/185] [loss: 4.295797] [Spoofed Label: 29/32] [Desired Label: 18/32]
+[Epoch 1/3] [Batch 150/185] [loss: 3.665790] [Spoofed Label: 30/32] [Desired Label: 22/32]
+[Epoch 1/3] [Val: 0.748309]
+[Epoch 2/3] [Batch 0/185] [loss: 3.356865] [Spoofed Label: 30/32] [Desired Label: 26/32]
+[Epoch 2/3] [Batch 50/185] [loss: 3.267982] [Spoofed Label: 29/32] [Desired Label: 29/32]
+[Epoch 2/3] [Batch 100/185] [loss: 3.098212] [Spoofed Label: 31/32] [Desired Label: 25/32]
+[Epoch 2/3] [Batch 150/185] [loss: 3.556505] [Spoofed Label: 30/32] [Desired Label: 23/32]
+[Epoch 2/3] [Val: 0.772666]
+CUDA is available. Using CUDA.
+lr: %f 0.006892674996114111
+weight_decay: %f 0.001012526205419791
+gan_weight_decay: %f 0.016107491703351833
+[Epoch 0/3] [Batch 0/185] [loss: 18.365601] [Spoofed Label: 23/32] [Desired Label: 1/32]
+[Epoch 0/3] [Batch 50/185] [loss: 10.875049] [Spoofed Label: 29/32] [Desired Label: 24/32]
+[Epoch 0/3] [Batch 100/185] [loss: 7.702676] [Spoofed Label: 31/32] [Desired Label: 26/32]
+[Epoch 0/3] [Batch 150/185] [loss: 4.992743] [Spoofed Label: 31/32] [Desired Label: 24/32]
+[Epoch 0/3] [Val: 0.798376]
+[Epoch 1/3] [Batch 0/185] [loss: 4.721957] [Spoofed Label: 30/32] [Desired Label: 26/32]
+[Epoch 1/3] [Batch 50/185] [loss: 4.129728] [Spoofed Label: 30/32] [Desired Label: 26/32]
+[Epoch 1/3] [Batch 100/185] [loss: 3.894196] [Spoofed Label: 29/32] [Desired Label: 29/32]
+[Epoch 1/3] [Batch 150/185] [loss: 3.763169] [Spoofed Label: 29/32] [Desired Label: 26/32]
+[Epoch 1/3] [Val: 0.759811]
+[Epoch 2/3] [Batch 0/185] [loss: 3.763267] [Spoofed Label: 29/32] [Desired Label: 25/32]
+[Epoch 2/3] [Batch 50/185] [loss: 4.401546] [Spoofed Label: 30/32] [Desired Label: 22/32]
+[Epoch 2/3] [Batch 100/185] [loss: 3.328864] [Spoofed Label: 31/32] [Desired Label: 29/32]
+[Epoch 2/3] [Batch 150/185] [loss: 3.934540] [Spoofed Label: 30/32] [Desired Label: 22/32]
+[Epoch 2/3] [Val: 0.773342]
+CUDA is available. Using CUDA.
+lr: %f 0.008500527703233377
+weight_decay: %f 0.002543634858819844
+gan_weight_decay: %f 0.013476202820447076
+[Epoch 0/3] [Batch 0/185] [loss: 16.189827] [Spoofed Label: 25/32] [Desired Label: 0/32]
+[Epoch 0/3] [Batch 50/185] [loss: 7.355175] [Spoofed Label: 32/32] [Desired Label: 20/32]
+[Epoch 0/3] [Batch 100/185] [loss: 5.068495] [Spoofed Label: 31/32] [Desired Label: 26/32]
+[Epoch 0/3] [Batch 150/185] [loss: 4.995945] [Spoofed Label: 28/32] [Desired Label: 21/32]
+[Epoch 0/3] [Val: 0.743572]
+[Epoch 1/3] [Batch 0/185] [loss: 4.119574] [Spoofed Label: 29/32] [Desired Label: 25/32]
+[Epoch 1/3] [Batch 50/185] [loss: 3.858665] [Spoofed Label: 27/32] [Desired Label: 22/32]
+[Epoch 1/3] [Batch 100/185] [loss: 3.566349] [Spoofed Label: 31/32] [Desired Label: 24/32]
+[Epoch 1/3] [Batch 150/185] [loss: 3.231244] [Spoofed Label: 30/32] [Desired Label: 26/32]
+[Epoch 1/3] [Val: 0.805819]
+[Epoch 2/3] [Batch 0/185] [loss: 3.187540] [Spoofed Label: 31/32] [Desired Label: 30/32]
+[Epoch 2/3] [Batch 50/185] [loss: 3.640012] [Spoofed Label: 31/32] [Desired Label: 22/32]
+[Epoch 2/3] [Batch 100/185] [loss: 3.382177] [Spoofed Label: 28/32] [Desired Label: 23/32]
+[Epoch 2/3] [Batch 150/185] [loss: 3.203934] [Spoofed Label: 31/32] [Desired Label: 29/32]
+[Epoch 2/3] [Val: 0.769283]
+CUDA is available. Using CUDA.
+lr: %f 0.006121119721278866
+weight_decay: %f 0.0012511780096717282
+gan_weight_decay: %f 0.017049533404052037
+[Epoch 0/3] [Batch 0/185] [loss: 18.940304] [Spoofed Label: 22/32] [Desired Label: 1/32]
+[Epoch 0/3] [Batch 50/185] [loss: 8.717556] [Spoofed Label: 29/32] [Desired Label: 15/32]
+[Epoch 0/3] [Batch 100/185] [loss: 6.874468] [Spoofed Label: 28/32] [Desired Label: 23/32]
+[Epoch 0/3] [Batch 150/185] [loss: 5.887540] [Spoofed Label: 31/32] [Desired Label: 29/32]
+[Epoch 0/3] [Val: 0.740189]
+[Epoch 1/3] [Batch 0/185] [loss: 5.008976] [Spoofed Label: 29/32] [Desired Label: 23/32]
+[Epoch 1/3] [Batch 50/185] [loss: 4.807555] [Spoofed Label: 31/32] [Desired Label: 25/32]
+[Epoch 1/3] [Batch 100/185] [loss: 4.659667] [Spoofed Label: 31/32] [Desired Label: 28/32]
+[Epoch 1/3] [Batch 150/185] [loss: 4.079478] [Spoofed Label: 32/32] [Desired Label: 25/32]
+[Epoch 1/3] [Val: 0.736130]
+[Epoch 2/3] [Batch 0/185] [loss: 3.575299] [Spoofed Label: 31/32] [Desired Label: 31/32]
+[Epoch 2/3] [Batch 50/185] [loss: 4.137398] [Spoofed Label: 28/32] [Desired Label: 25/32]
+[Epoch 2/3] [Batch 100/185] [loss: 3.729094] [Spoofed Label: 29/32] [Desired Label: 26/32]
+[Epoch 2/3] [Batch 150/185] [loss: 4.215710] [Spoofed Label: 26/32] [Desired Label: 23/32]
+[Epoch 2/3] [Val: 0.739513]
+CUDA is available. Using CUDA.
+lr: %f 0.008254234709809672
+weight_decay: %f 0.0016351709467690594
+gan_weight_decay: %f 0.011957280683555675
+[Epoch 0/3] [Batch 0/185] [loss: 14.875380] [Spoofed Label: 23/32] [Desired Label: 1/32]
+[Epoch 0/3] [Batch 50/185] [loss: 7.396570] [Spoofed Label: 28/32] [Desired Label: 16/32]
+[Epoch 0/3] [Batch 100/185] [loss: 5.022547] [Spoofed Label: 31/32] [Desired Label: 23/32]
+[Epoch 0/3] [Batch 150/185] [loss: 4.096813] [Spoofed Label: 27/32] [Desired Label: 28/32]
+[Epoch 0/3] [Val: 0.792963]
+[Epoch 1/3] [Batch 0/185] [loss: 3.751767] [Spoofed Label: 30/32] [Desired Label: 26/32]
+[Epoch 1/3] [Batch 50/185] [loss: 3.801132] [Spoofed Label: 31/32] [Desired Label: 23/32]
+[Epoch 1/3] [Batch 100/185] [loss: 3.284048] [Spoofed Label: 27/32] [Desired Label: 23/32]
+[Epoch 1/3] [Batch 150/185] [loss: 2.977775] [Spoofed Label: 30/32] [Desired Label: 28/32]
+[Epoch 1/3] [Val: 0.846414]
+[Epoch 2/3] [Batch 0/185] [loss: 3.825842] [Spoofed Label: 30/32] [Desired Label: 22/32]
+[Epoch 2/3] [Batch 50/185] [loss: 3.355819] [Spoofed Label: 29/32] [Desired Label: 25/32]
+[Epoch 2/3] [Batch 100/185] [loss: 3.197164] [Spoofed Label: 28/32] [Desired Label: 28/32]
+[Epoch 2/3] [Batch 150/185] [loss: 3.402521] [Spoofed Label: 32/32] [Desired Label: 23/32]
+[Epoch 2/3] [Val: 0.851827]
+CUDA is available. Using CUDA.
+lr: %f 0.0038860799058736285
+weight_decay: %f 0.002710097779681944
+gan_weight_decay: %f 0.009223901029916132
+[Epoch 0/3] [Batch 0/185] [loss: 12.951378] [Spoofed Label: 24/32] [Desired Label: 1/32]
+[Epoch 0/3] [Batch 50/185] [loss: 5.233598] [Spoofed Label: 32/32] [Desired Label: 31/32]
+[Epoch 0/3] [Batch 100/185] [loss: 3.830683] [Spoofed Label: 30/32] [Desired Label: 28/32]
+[Epoch 0/3] [Batch 150/185] [loss: 3.145727] [Spoofed Label: 32/32] [Desired Label: 30/32]
+[Epoch 0/3] [Val: 0.837618]
+[Epoch 1/3] [Batch 0/185] [loss: 3.235073] [Spoofed Label: 30/32] [Desired Label: 29/32]
+[Epoch 1/3] [Batch 50/185] [loss: 2.963983] [Spoofed Label: 31/32] [Desired Label: 25/32]
+[Epoch 1/3] [Batch 100/185] [loss: 2.922344] [Spoofed Label: 32/32] [Desired Label: 28/32]
+[Epoch 1/3] [Batch 150/185] [loss: 3.268665] [Spoofed Label: 31/32] [Desired Label: 27/32]
+[Epoch 1/3] [Val: 0.904601]
+[Epoch 2/3] [Batch 0/185] [loss: 2.948289] [Spoofed Label: 31/32] [Desired Label: 28/32]
+[Epoch 2/3] [Batch 50/185] [loss: 3.228600] [Spoofed Label: 29/32] [Desired Label: 28/32]
+[Epoch 2/3] [Batch 100/185] [loss: 2.869608] [Spoofed Label: 31/32] [Desired Label: 27/32]
+[Epoch 2/3] [Batch 150/185] [loss: 2.908588] [Spoofed Label: 32/32] [Desired Label: 25/32]
+[Epoch 2/3] [Val: 0.874831]
+CUDA is available. Using CUDA.
+lr: %f 0.007100824973370943
+weight_decay: %f 0.0021987249747836978
+gan_weight_decay: %f 0.011701310285745356
+[Epoch 0/3] [Batch 0/185] [loss: 14.671608] [Spoofed Label: 24/32] [Desired Label: 2/32]
+[Epoch 0/3] [Batch 50/185] [loss: 7.358537] [Spoofed Label: 19/32] [Desired Label: 4/32]
+[Epoch 0/3] [Batch 100/185] [loss: 4.255397] [Spoofed Label: 30/32] [Desired Label: 27/32]
+[Epoch 0/3] [Batch 150/185] [loss: 4.319928] [Spoofed Label: 32/32] [Desired Label: 27/32]
+[Epoch 0/3] [Val: 0.721245]
+[Epoch 1/3] [Batch 0/185] [loss: 4.649173] [Spoofed Label: 30/32] [Desired Label: 26/32]
+[Epoch 1/3] [Batch 50/185] [loss: 3.568265] [Spoofed Label: 31/32] [Desired Label: 25/32]
+[Epoch 1/3] [Batch 100/185] [loss: 3.270237] [Spoofed Label: 31/32] [Desired Label: 25/32]
+[Epoch 1/3] [Batch 150/185] [loss: 3.126112] [Spoofed Label: 29/32] [Desired Label: 28/32]
+[Epoch 1/3] [Val: 0.832206]
+[Epoch 2/3] [Batch 0/185] [loss: 2.909749] [Spoofed Label: 32/32] [Desired Label: 30/32]
+[Epoch 2/3] [Batch 50/185] [loss: 3.204655] [Spoofed Label: 30/32] [Desired Label: 27/32]
+[Epoch 2/3] [Batch 100/185] [loss: 3.023897] [Spoofed Label: 29/32] [Desired Label: 25/32]
+[Epoch 2/3] [Batch 150/185] [loss: 2.739221] [Spoofed Label: 30/32] [Desired Label: 27/32]
+[Epoch 2/3] [Val: 0.861299]
+CUDA is available. Using CUDA.
+lr: %f 0.001707383420009652
+weight_decay: %f 0.001334334392540108
+gan_weight_decay: %f 0.01991207109341726
+[Epoch 0/3] [Batch 0/185] [loss: 21.443310] [Spoofed Label: 25/32] [Desired Label: 0/32]
+[Epoch 0/3] [Batch 50/185] [loss: 9.135788] [Spoofed Label: 31/32] [Desired Label: 25/32]
+[Epoch 0/3] [Batch 100/185] [loss: 7.299270] [Spoofed Label: 31/32] [Desired Label: 27/32]
+[Epoch 0/3] [Batch 150/185] [loss: 6.124454] [Spoofed Label: 31/32] [Desired Label: 24/32]
+[Epoch 0/3] [Val: 0.686739]
+[Epoch 1/3] [Batch 0/185] [loss: 7.489995] [Spoofed Label: 30/32] [Desired Label: 22/32]
+[Epoch 1/3] [Batch 50/185] [loss: 6.078949] [Spoofed Label: 30/32] [Desired Label: 27/32]
+[Epoch 1/3] [Batch 100/185] [loss: 5.870569] [Spoofed Label: 28/32] [Desired Label: 18/32]
+[Epoch 1/3] [Batch 150/185] [loss: 5.445925] [Spoofed Label: 26/32] [Desired Label: 26/32]
+[Epoch 1/3] [Val: 0.710419]
+[Epoch 2/3] [Batch 0/185] [loss: 5.357714] [Spoofed Label: 30/32] [Desired Label: 30/32]
+[Epoch 2/3] [Batch 50/185] [loss: 5.609894] [Spoofed Label: 29/32] [Desired Label: 21/32]
+[Epoch 2/3] [Batch 100/185] [loss: 5.361499] [Spoofed Label: 32/32] [Desired Label: 26/32]
+[Epoch 2/3] [Batch 150/185] [loss: 5.070858] [Spoofed Label: 29/32] [Desired Label: 18/32]
+[Epoch 2/3] [Val: 0.692828]
+CUDA is available. Using CUDA.
+lr: %f 0.008147129469372894
+weight_decay: %f 0.0017704694838971426
+gan_weight_decay: %f 0.016614479685199773
+[Epoch 0/3] [Batch 0/185] [loss: 19.030403] [Spoofed Label: 23/32] [Desired Label: 0/32]
+[Epoch 0/3] [Batch 50/185] [loss: 9.254233] [Spoofed Label: 26/32] [Desired Label: 15/32]
+[Epoch 0/3] [Batch 100/185] [loss: 5.653747] [Spoofed Label: 30/32] [Desired Label: 22/32]
+[Epoch 0/3] [Batch 150/185] [loss: 4.699374] [Spoofed Label: 27/32] [Desired Label: 23/32]
+[Epoch 0/3] [Val: 0.723951]
+[Epoch 1/3] [Batch 0/185] [loss: 4.525245] [Spoofed Label: 28/32] [Desired Label: 28/32]
+[Epoch 1/3] [Batch 50/185] [loss: 3.900258] [Spoofed Label: 26/32] [Desired Label: 25/32]
+[Epoch 1/3] [Batch 100/185] [loss: 4.139153] [Spoofed Label: 27/32] [Desired Label: 23/32]
+[Epoch 1/3] [Batch 150/185] [loss: 3.914101] [Spoofed Label: 30/32] [Desired Label: 21/32]
+[Epoch 1/3] [Val: 0.742219]
+[Epoch 2/3] [Batch 0/185] [loss: 3.917756] [Spoofed Label: 30/32] [Desired Label: 22/32]
+[Epoch 2/3] [Batch 50/185] [loss: 4.322100] [Spoofed Label: 31/32] [Desired Label: 20/32]
+[Epoch 2/3] [Batch 100/185] [loss: 3.704474] [Spoofed Label: 29/32] [Desired Label: 24/32]
+[Epoch 2/3] [Batch 150/185] [loss: 3.843249] [Spoofed Label: 29/32] [Desired Label: 22/32]
+[Epoch 2/3] [Val: 0.753721]
+CUDA is available. Using CUDA.
+lr: %f 0.008783575533755897
+weight_decay: %f 0.0017603923799878393
+gan_weight_decay: %f 0.016874369731159446
+[Epoch 0/3] [Batch 0/185] [loss: 18.854160] [Spoofed Label: 26/32] [Desired Label: 1/32]
+[Epoch 0/3] [Batch 50/185] [loss: 10.114978] [Spoofed Label: 30/32] [Desired Label: 22/32]
+[Epoch 0/3] [Batch 100/185] [loss: 6.246696] [Spoofed Label: 29/32] [Desired Label: 16/32]
+[Epoch 0/3] [Batch 150/185] [loss: 4.532626] [Spoofed Label: 29/32] [Desired Label: 23/32]
+[Epoch 0/3] [Val: 0.662382]
+[Epoch 1/3] [Batch 0/185] [loss: 4.634373] [Spoofed Label: 30/32] [Desired Label: 24/32]
+[Epoch 1/3] [Batch 50/185] [loss: 3.489675] [Spoofed Label: 29/32] [Desired Label: 25/32]
+[Epoch 1/3] [Batch 100/185] [loss: 4.021911] [Spoofed Label: 27/32] [Desired Label: 23/32]
+[Epoch 1/3] [Batch 150/185] [loss: 3.971754] [Spoofed Label: 28/32] [Desired Label: 23/32]
+[Epoch 1/3] [Val: 0.692828]
+[Epoch 2/3] [Batch 0/185] [loss: 3.653691] [Spoofed Label: 27/32] [Desired Label: 25/32]
+[Epoch 2/3] [Batch 50/185] [loss: 3.744846] [Spoofed Label: 26/32] [Desired Label: 21/32]
+[Epoch 2/3] [Batch 100/185] [loss: 3.607846] [Spoofed Label: 31/32] [Desired Label: 26/32]
+[Epoch 2/3] [Batch 150/185] [loss: 4.010474] [Spoofed Label: 29/32] [Desired Label: 24/32]
+[Epoch 2/3] [Val: 0.727334]
+CUDA is available. Using CUDA.
+lr: %f 0.008666445540695043
+weight_decay: %f 0.0018097402419496784
+gan_weight_decay: %f 0.017193892174304903
+[Epoch 0/3] [Batch 0/185] [loss: 19.220272] [Spoofed Label: 23/32] [Desired Label: 0/32]
+[Epoch 0/3] [Batch 50/185] [loss: 8.864450] [Spoofed Label: 29/32] [Desired Label: 16/32]
+[Epoch 0/3] [Batch 100/185] [loss: 6.318569] [Spoofed Label: 30/32] [Desired Label: 19/32]
+[Epoch 0/3] [Batch 150/185] [loss: 5.828226] [Spoofed Label: 23/32] [Desired Label: 21/32]
+[Epoch 0/3] [Val: 0.778755]
+[Epoch 1/3] [Batch 0/185] [loss: 4.845261] [Spoofed Label: 31/32] [Desired Label: 22/32]
+[Epoch 1/3] [Batch 50/185] [loss: 4.544610] [Spoofed Label: 25/32] [Desired Label: 18/32]
+[Epoch 1/3] [Batch 100/185] [loss: 4.007976] [Spoofed Label: 32/32] [Desired Label: 26/32]
+[Epoch 1/3] [Batch 150/185] [loss: 4.257119] [Spoofed Label: 30/32] [Desired Label: 23/32]
+[Epoch 1/3] [Val: 0.730717]
+[Epoch 2/3] [Batch 0/185] [loss: 3.860699] [Spoofed Label: 31/32] [Desired Label: 26/32]
+[Epoch 2/3] [Batch 50/185] [loss: 3.752921] [Spoofed Label: 32/32] [Desired Label: 26/32]
+[Epoch 2/3] [Batch 100/185] [loss: 3.994605] [Spoofed Label: 31/32] [Desired Label: 26/32]
+[Epoch 2/3] [Batch 150/185] [loss: 4.181171] [Spoofed Label: 27/32] [Desired Label: 20/32]
+[Epoch 2/3] [Val: 0.719215]
+CUDA is available. Using CUDA.
+lr: %f 0.009433281703994833
+weight_decay: %f 0.0018576717705146414
+gan_weight_decay: %f 0.01740735319320023
+[Epoch 0/3] [Batch 0/185] [loss: 19.201435] [Spoofed Label: 25/32] [Desired Label: 2/32]
+[Epoch 0/3] [Batch 50/185] [loss: 12.655363] [Spoofed Label: 30/32] [Desired Label: 13/32]
+[Epoch 0/3] [Batch 100/185] [loss: 7.919780] [Spoofed Label: 29/32] [Desired Label: 23/32]
+[Epoch 0/3] [Batch 150/185] [loss: 4.512513] [Spoofed Label: 31/32] [Desired Label: 27/32]
+[Epoch 0/3] [Val: 0.675237]
+[Epoch 1/3] [Batch 0/185] [loss: 4.201554] [Spoofed Label: 27/32] [Desired Label: 27/32]
+[Epoch 1/3] [Batch 50/185] [loss: 4.285655] [Spoofed Label: 31/32] [Desired Label: 19/32]
+[Epoch 1/3] [Batch 100/185] [loss: 4.433445] [Spoofed Label: 30/32] [Desired Label: 20/32]
+[Epoch 1/3] [Batch 150/185] [loss: 3.606625] [Spoofed Label: 31/32] [Desired Label: 29/32]
+[Epoch 1/3] [Val: 0.664411]
+[Epoch 2/3] [Batch 0/185] [loss: 4.850743] [Spoofed Label: 27/32] [Desired Label: 18/32]
+[Epoch 2/3] [Batch 50/185] [loss: 3.945216] [Spoofed Label: 30/32] [Desired Label: 22/32]
+[Epoch 2/3] [Batch 100/185] [loss: 3.963555] [Spoofed Label: 32/32] [Desired Label: 23/32]
+[Epoch 2/3] [Batch 150/185] [loss: 4.182173] [Spoofed Label: 27/32] [Desired Label: 20/32]
+[Epoch 2/3] [Val: 0.671854]
+CUDA is available. Using CUDA.
+lr: %f 0.008639773024429762
+weight_decay: %f 0.0020863448853954223
+gan_weight_decay: %f 0.01697270479137285
+[Epoch 0/3] [Batch 0/185] [loss: 19.336365] [Spoofed Label: 21/32] [Desired Label: 0/32]
+[Epoch 0/3] [Batch 50/185] [loss: 8.639709] [Spoofed Label: 31/32] [Desired Label: 12/32]
+[Epoch 0/3] [Batch 100/185] [loss: 6.344362] [Spoofed Label: 25/32] [Desired Label: 14/32]
+[Epoch 0/3] [Batch 150/185] [loss: 5.873650] [Spoofed Label: 30/32] [Desired Label: 21/32]
+[Epoch 0/3] [Val: 0.660352]
+[Epoch 1/3] [Batch 0/185] [loss: 4.545789] [Spoofed Label: 30/32] [Desired Label: 26/32]
+[Epoch 1/3] [Batch 50/185] [loss: 4.676133] [Spoofed Label: 31/32] [Desired Label: 21/32]
+[Epoch 1/3] [Batch 100/185] [loss: 4.521905] [Spoofed Label: 28/32] [Desired Label: 19/32]
+[Epoch 1/3] [Batch 150/185] [loss: 4.310889] [Spoofed Label: 30/32] [Desired Label: 20/32]
+[Epoch 1/3] [Val: 0.684032]
+[Epoch 2/3] [Batch 0/185] [loss: 4.089856] [Spoofed Label: 31/32] [Desired Label: 24/32]
+[Epoch 2/3] [Batch 50/185] [loss: 3.890701] [Spoofed Label: 29/32] [Desired Label: 25/32]
+[Epoch 2/3] [Batch 100/185] [loss: 4.093351] [Spoofed Label: 27/32] [Desired Label: 22/32]
+[Epoch 2/3] [Batch 150/185] [loss: 4.035652] [Spoofed Label: 29/32] [Desired Label: 24/32]
+[Epoch 2/3] [Val: 0.695535]
+CUDA is available. Using CUDA.
+lr: %f 0.009010179561879087
+weight_decay: %f 0.0029588680437033017
+gan_weight_decay: %f 0.017847802789113416
+[Epoch 0/3] [Batch 0/185] [loss: 19.512302] [Spoofed Label: 25/32] [Desired Label: 0/32]
+[Epoch 0/3] [Batch 50/185] [loss: 8.363817] [Spoofed Label: 31/32] [Desired Label: 24/32]
+[Epoch 0/3] [Batch 100/185] [loss: 5.727753] [Spoofed Label: 29/32] [Desired Label: 18/32]
+[Epoch 0/3] [Batch 150/185] [loss: 4.884840] [Spoofed Label: 30/32] [Desired Label: 24/32]
+[Epoch 0/3] [Val: 0.672530]
+[Epoch 1/3] [Batch 0/185] [loss: 4.493093] [Spoofed Label: 31/32] [Desired Label: 21/32]
+[Epoch 1/3] [Batch 50/185] [loss: 3.926422] [Spoofed Label: 25/32] [Desired Label: 20/32]
+[Epoch 1/3] [Batch 100/185] [loss: 4.163187] [Spoofed Label: 29/32] [Desired Label: 20/32]
+[Epoch 1/3] [Batch 150/185] [loss: 3.869169] [Spoofed Label: 31/32] [Desired Label: 24/32]
+[Epoch 1/3] [Val: 0.669147]
+[Epoch 2/3] [Batch 0/185] [loss: 4.074748] [Spoofed Label: 31/32] [Desired Label: 20/32]
+[Epoch 2/3] [Batch 50/185] [loss: 4.092843] [Spoofed Label: 30/32] [Desired Label: 22/32]
+[Epoch 2/3] [Batch 100/185] [loss: 4.208260] [Spoofed Label: 29/32] [Desired Label: 21/32]
+[Epoch 2/3] [Batch 150/185] [loss: 3.876868] [Spoofed Label: 32/32] [Desired Label: 26/32]
+[Epoch 2/3] [Val: 0.733424]
+CUDA is available. Using CUDA.
+lr: %f 0.00977862961175777
+weight_decay: %f 0.0029435012603262222
+gan_weight_decay: %f 0.019913074813014735
+[Epoch 0/3] [Batch 0/185] [loss: 21.340673] [Spoofed Label: 24/32] [Desired Label: 0/32]
+[Epoch 0/3] [Batch 50/185] [loss: 9.521154] [Spoofed Label: 24/32] [Desired Label: 6/32]
+[Epoch 0/3] [Batch 100/185] [loss: 6.394405] [Spoofed Label: 30/32] [Desired Label: 24/32]
+[Epoch 0/3] [Batch 150/185] [loss: 5.503251] [Spoofed Label: 32/32] [Desired Label: 18/32]
+[Epoch 0/3] [Val: 0.580514]
+[Epoch 1/3] [Batch 0/185] [loss: 5.205480] [Spoofed Label: 28/32] [Desired Label: 17/32]
+[Epoch 1/3] [Batch 50/185] [loss: 4.642319] [Spoofed Label: 28/32] [Desired Label: 19/32]
+[Epoch 1/3] [Batch 100/185] [loss: 4.743218] [Spoofed Label: 26/32] [Desired Label: 18/32]
+[Epoch 1/3] [Batch 150/185] [loss: 4.001000] [Spoofed Label: 26/32] [Desired Label: 21/32]
+[Epoch 1/3] [Val: 0.604871]
+[Epoch 2/3] [Batch 0/185] [loss: 4.096327] [Spoofed Label: 28/32] [Desired Label: 18/32]
+[Epoch 2/3] [Batch 50/185] [loss: 4.454944] [Spoofed Label: 30/32] [Desired Label: 19/32]
+[Epoch 2/3] [Batch 100/185] [loss: 4.098113] [Spoofed Label: 28/32] [Desired Label: 24/32]
+[Epoch 2/3] [Batch 150/185] [loss: 4.765841] [Spoofed Label: 26/32] [Desired Label: 15/32]
+[Epoch 2/3] [Val: 0.613667]
+CUDA is available. Using CUDA.
+lr: %f 0.006972781296246966
+weight_decay: %f 0.0037557898769169035
+gan_weight_decay: %f 0.01337232354790344
+[Epoch 0/3] [Batch 0/185] [loss: 15.648460] [Spoofed Label: 30/32] [Desired Label: 2/32]
+[Epoch 0/3] [Batch 50/185] [loss: 7.263657] [Spoofed Label: 21/32] [Desired Label: 6/32]
+[Epoch 0/3] [Batch 100/185] [loss: 7.125123] [Spoofed Label: 28/32] [Desired Label: 19/32]
+[Epoch 0/3] [Batch 150/185] [loss: 5.057381] [Spoofed Label: 27/32] [Desired Label: 19/32]
+[Epoch 0/3] [Val: 0.718539]
+[Epoch 1/3] [Batch 0/185] [loss: 4.373286] [Spoofed Label: 29/32] [Desired Label: 24/32]
+[Epoch 1/3] [Batch 50/185] [loss: 3.835960] [Spoofed Label: 29/32] [Desired Label: 24/32]
+[Epoch 1/3] [Batch 100/185] [loss: 3.840785] [Spoofed Label: 29/32] [Desired Label: 23/32]
+[Epoch 1/3] [Batch 150/185] [loss: 3.505334] [Spoofed Label: 29/32] [Desired Label: 25/32]
+[Epoch 1/3] [Val: 0.802436]
+[Epoch 2/3] [Batch 0/185] [loss: 3.763143] [Spoofed Label: 29/32] [Desired Label: 26/32]
+[Epoch 2/3] [Batch 50/185] [loss: 3.701551] [Spoofed Label: 28/32] [Desired Label: 22/32]
+[Epoch 2/3] [Batch 100/185] [loss: 3.464778] [Spoofed Label: 30/32] [Desired Label: 26/32]
+[Epoch 2/3] [Batch 150/185] [loss: 3.459051] [Spoofed Label: 29/32] [Desired Label: 24/32]
+[Epoch 2/3] [Val: 0.786198]
+CUDA is available. Using CUDA.
+lr: %f 0.009785576478155478
+weight_decay: %f 0.0024562617257100038
+gan_weight_decay: %f 0.019726978899039935
+[Epoch 0/3] [Batch 0/185] [loss: 20.544979] [Spoofed Label: 24/32] [Desired Label: 2/32]
+[Epoch 0/3] [Batch 50/185] [loss: 9.464650] [Spoofed Label: 28/32] [Desired Label: 19/32]
+[Epoch 0/3] [Batch 100/185] [loss: 6.065629] [Spoofed Label: 32/32] [Desired Label: 25/32]
+[Epoch 0/3] [Batch 150/185] [loss: 5.603157] [Spoofed Label: 29/32] [Desired Label: 20/32]
+[Epoch 0/3] [Val: 0.546008]
+[Epoch 1/3] [Batch 0/185] [loss: 5.555513] [Spoofed Label: 28/32] [Desired Label: 14/32]
+[Epoch 1/3] [Batch 50/185] [loss: 4.825625] [Spoofed Label: 27/32] [Desired Label: 17/32]
+[Epoch 1/3] [Batch 100/185] [loss: 4.813126] [Spoofed Label: 26/32] [Desired Label: 15/32]
+[Epoch 1/3] [Batch 150/185] [loss: 4.407538] [Spoofed Label: 28/32] [Desired Label: 21/32]
+[Epoch 1/3] [Val: 0.610284]
+[Epoch 2/3] [Batch 0/185] [loss: 4.764035] [Spoofed Label: 24/32] [Desired Label: 18/32]
+[Epoch 2/3] [Batch 50/185] [loss: 4.801483] [Spoofed Label: 29/32] [Desired Label: 19/32]
+[Epoch 2/3] [Batch 100/185] [loss: 4.863707] [Spoofed Label: 30/32] [Desired Label: 18/32]
+[Epoch 2/3] [Batch 150/185] [loss: 4.501844] [Spoofed Label: 27/32] [Desired Label: 20/32]
+[Epoch 2/3] [Val: 0.581867]
+CUDA is available. Using CUDA.
+lr: %f 0.004941992204472101
+weight_decay: %f 0.002015080985077648
+gan_weight_decay: %f 0.011940102700084481
+[Epoch 0/3] [Batch 0/185] [loss: 15.223726] [Spoofed Label: 25/32] [Desired Label: 1/32]
+[Epoch 0/3] [Batch 50/185] [loss: 7.642044] [Spoofed Label: 31/32] [Desired Label: 26/32]
+[Epoch 0/3] [Batch 100/185] [loss: 4.001145] [Spoofed Label: 29/32] [Desired Label: 25/32]
+[Epoch 0/3] [Batch 150/185] [loss: 4.651088] [Spoofed Label: 27/32] [Desired Label: 24/32]
+[Epoch 0/3] [Val: 0.730717]
+[Epoch 1/3] [Batch 0/185] [loss: 4.722388] [Spoofed Label: 30/32] [Desired Label: 20/32]
+[Epoch 1/3] [Batch 50/185] [loss: 4.219854] [Spoofed Label: 30/32] [Desired Label: 26/32]
+[Epoch 1/3] [Batch 100/185] [loss: 3.294733] [Spoofed Label: 29/32] [Desired Label: 31/32]
+[Epoch 1/3] [Batch 150/185] [loss: 3.311584] [Spoofed Label: 30/32] [Desired Label: 30/32]
+[Epoch 1/3] [Val: 0.789581]
+[Epoch 2/3] [Batch 0/185] [loss: 3.172232] [Spoofed Label: 30/32] [Desired Label: 25/32]
+[Epoch 2/3] [Batch 50/185] [loss: 3.298247] [Spoofed Label: 30/32] [Desired Label: 26/32]
+[Epoch 2/3] [Batch 100/185] [loss: 3.117581] [Spoofed Label: 29/32] [Desired Label: 26/32]
+[Epoch 2/3] [Batch 150/185] [loss: 2.989944] [Spoofed Label: 32/32] [Desired Label: 27/32]
+[Epoch 2/3] [Val: 0.830176]
+CUDA is available. Using CUDA.
+lr: %f 0.009997797336373475
+weight_decay: %f 0.003247371778383366
+gan_weight_decay: %f 0.0176399691831339
+[Epoch 0/3] [Batch 0/185] [loss: 19.375660] [Spoofed Label: 23/32] [Desired Label: 1/32]
+[Epoch 0/3] [Batch 50/185] [loss: 10.559825] [Spoofed Label: 22/32] [Desired Label: 6/32]
+[Epoch 0/3] [Batch 100/185] [loss: 6.468916] [Spoofed Label: 26/32] [Desired Label: 22/32]
+[Epoch 0/3] [Batch 150/185] [loss: 4.802415] [Spoofed Label: 27/32] [Desired Label: 22/32]
+[Epoch 0/3] [Val: 0.684709]
+[Epoch 1/3] [Batch 0/185] [loss: 4.085319] [Spoofed Label: 31/32] [Desired Label: 27/32]
+[Epoch 1/3] [Batch 50/185] [loss: 5.006468] [Spoofed Label: 29/32] [Desired Label: 15/32]
+[Epoch 1/3] [Batch 100/185] [loss: 4.282609] [Spoofed Label: 29/32] [Desired Label: 20/32]
+[Epoch 1/3] [Batch 150/185] [loss: 4.380209] [Spoofed Label: 28/32] [Desired Label: 19/32]
+[Epoch 1/3] [Val: 0.690122]
+[Epoch 2/3] [Batch 0/185] [loss: 4.017611] [Spoofed Label: 29/32] [Desired Label: 25/32]
+[Epoch 2/3] [Batch 50/185] [loss: 4.048112] [Spoofed Label: 28/32] [Desired Label: 23/32]
+[Epoch 2/3] [Batch 100/185] [loss: 3.840466] [Spoofed Label: 31/32] [Desired Label: 24/32]
+[Epoch 2/3] [Batch 150/185] [loss: 3.805521] [Spoofed Label: 31/32] [Desired Label: 27/32]
+[Epoch 2/3] [Val: 0.722598]
+CUDA is available. Using CUDA.
+lr: %f 0.0072389331927907325
+weight_decay: %f 0.002975652079030814
+gan_weight_decay: %f 0.01819696056525749
+[Epoch 0/3] [Batch 0/185] [loss: 19.511318] [Spoofed Label: 25/32] [Desired Label: 3/32]
+[Epoch 0/3] [Batch 50/185] [loss: 10.467668] [Spoofed Label: 30/32] [Desired Label: 25/32]
+[Epoch 0/3] [Batch 100/185] [loss: 6.446519] [Spoofed Label: 29/32] [Desired Label: 19/32]
+[Epoch 0/3] [Batch 150/185] [loss: 5.372098] [Spoofed Label: 32/32] [Desired Label: 28/32]
+[Epoch 0/3] [Val: 0.732747]
+[Epoch 1/3] [Batch 0/185] [loss: 4.702221] [Spoofed Label: 27/32] [Desired Label: 26/32]
+[Epoch 1/3] [Batch 50/185] [loss: 4.772807] [Spoofed Label: 27/32] [Desired Label: 17/32]
+[Epoch 1/3] [Batch 100/185] [loss: 4.157327] [Spoofed Label: 31/32] [Desired Label: 22/32]
+[Epoch 1/3] [Batch 150/185] [loss: 4.696103] [Spoofed Label: 26/32] [Desired Label: 17/32]
+[Epoch 1/3] [Val: 0.699594]
+[Epoch 2/3] [Batch 0/185] [loss: 3.817269] [Spoofed Label: 32/32] [Desired Label: 22/32]
+[Epoch 2/3] [Batch 50/185] [loss: 3.881226] [Spoofed Label: 29/32] [Desired Label: 26/32]
+[Epoch 2/3] [Batch 100/185] [loss: 4.773118] [Spoofed Label: 25/32] [Desired Label: 17/32]
+[Epoch 2/3] [Batch 150/185] [loss: 4.118825] [Spoofed Label: 29/32] [Desired Label: 22/32]
+[Epoch 2/3] [Val: 0.774019]
+CUDA is available. Using CUDA.
+lr: %f 0.008469826713592981
+weight_decay: %f 0.002884548301072182
+gan_weight_decay: %f 0.01988418869705868
+[Epoch 0/3] [Batch 0/185] [loss: 21.566063] [Spoofed Label: 24/32] [Desired Label: 0/32]
+[Epoch 0/3] [Batch 50/185] [loss: 8.889321] [Spoofed Label: 31/32] [Desired Label: 16/32]
+[Epoch 0/3] [Batch 100/185] [loss: 7.642962] [Spoofed Label: 27/32] [Desired Label: 12/32]
+[Epoch 0/3] [Batch 150/185] [loss: 5.945953] [Spoofed Label: 28/32] [Desired Label: 23/32]
+[Epoch 0/3] [Val: 0.630582]
+[Epoch 1/3] [Batch 0/185] [loss: 4.871277] [Spoofed Label: 28/32] [Desired Label: 22/32]
+[Epoch 1/3] [Batch 50/185] [loss: 4.821396] [Spoofed Label: 30/32] [Desired Label: 22/32]
+[Epoch 1/3] [Batch 100/185] [loss: 4.248887] [Spoofed Label: 29/32] [Desired Label: 22/32]
+[Epoch 1/3] [Batch 150/185] [loss: 5.128010] [Spoofed Label: 28/32] [Desired Label: 15/32]
+[Epoch 1/3] [Val: 0.631935]
+[Epoch 2/3] [Batch 0/185] [loss: 4.220260] [Spoofed Label: 28/32] [Desired Label: 23/32]
+[Epoch 2/3] [Batch 50/185] [loss: 4.945630] [Spoofed Label: 29/32] [Desired Label: 19/32]
+[Epoch 2/3] [Batch 100/185] [loss: 4.088247] [Spoofed Label: 29/32] [Desired Label: 22/32]
+[Epoch 2/3] [Batch 150/185] [loss: 4.364494] [Spoofed Label: 31/32] [Desired Label: 22/32]
+[Epoch 2/3] [Val: 0.674560]
+CUDA is available. Using CUDA.
+lr: %f 0.007882282942107363
+weight_decay: %f 0.0023337454620941563
+gan_weight_decay: %f 0.01387797823407166
+[Epoch 0/3] [Batch 0/185] [loss: 16.317911] [Spoofed Label: 25/32] [Desired Label: 0/32]
+[Epoch 0/3] [Batch 50/185] [loss: 9.558249] [Spoofed Label: 30/32] [Desired Label: 21/32]
+[Epoch 0/3] [Batch 100/185] [loss: 5.304485] [Spoofed Label: 29/32] [Desired Label: 27/32]
+[Epoch 0/3] [Batch 150/185] [loss: 4.548921] [Spoofed Label: 30/32] [Desired Label: 24/32]
+[Epoch 0/3] [Val: 0.751691]
+[Epoch 1/3] [Batch 0/185] [loss: 4.483922] [Spoofed Label: 30/32] [Desired Label: 23/32]
+[Epoch 1/3] [Batch 50/185] [loss: 4.623405] [Spoofed Label: 30/32] [Desired Label: 17/32]
+[Epoch 1/3] [Batch 100/185] [loss: 3.698105] [Spoofed Label: 26/32] [Desired Label: 19/32]
+[Epoch 1/3] [Batch 150/185] [loss: 3.359659] [Spoofed Label: 29/32] [Desired Label: 26/32]
+[Epoch 1/3] [Val: 0.759134]
+[Epoch 2/3] [Batch 0/185] [loss: 3.688082] [Spoofed Label: 31/32] [Desired Label: 22/32]
+[Epoch 2/3] [Batch 50/185] [loss: 3.317496] [Spoofed Label: 29/32] [Desired Label: 28/32]
+[Epoch 2/3] [Batch 100/185] [loss: 3.339622] [Spoofed Label: 30/32] [Desired Label: 29/32]
+[Epoch 2/3] [Batch 150/185] [loss: 3.323152] [Spoofed Label: 32/32] [Desired Label: 25/32]
+[Epoch 2/3] [Val: 0.794317]
+CUDA is available. Using CUDA.
+lr: %f 0.0065492581047742835
+weight_decay: %f 0.004732353682154473
+gan_weight_decay: %f 0.019262413775920067
+[Epoch 0/3] [Batch 0/185] [loss: 20.852364] [Spoofed Label: 25/32] [Desired Label: 1/32]
+[Epoch 0/3] [Batch 50/185] [loss: 9.746624] [Spoofed Label: 26/32] [Desired Label: 12/32]
+[Epoch 0/3] [Batch 100/185] [loss: 7.473975] [Spoofed Label: 30/32] [Desired Label: 19/32]
+[Epoch 0/3] [Batch 150/185] [loss: 5.785572] [Spoofed Label: 29/32] [Desired Label: 19/32]
+[Epoch 0/3] [Val: 0.612314]
+[Epoch 1/3] [Batch 0/185] [loss: 5.700952] [Spoofed Label: 27/32] [Desired Label: 16/32]
+[Epoch 1/3] [Batch 50/185] [loss: 4.320022] [Spoofed Label: 32/32] [Desired Label: 25/32]
+[Epoch 1/3] [Batch 100/185] [loss: 4.443853] [Spoofed Label: 28/32] [Desired Label: 19/32]
+[Epoch 1/3] [Batch 150/185] [loss: 4.424592] [Spoofed Label: 32/32] [Desired Label: 23/32]
+[Epoch 1/3] [Val: 0.658999]
+[Epoch 2/3] [Batch 0/185] [loss: 4.366700] [Spoofed Label: 26/32] [Desired Label: 21/32]
+[Epoch 2/3] [Batch 50/185] [loss: 3.999942] [Spoofed Label: 31/32] [Desired Label: 27/32]
+[Epoch 2/3] [Batch 100/185] [loss: 4.156700] [Spoofed Label: 31/32] [Desired Label: 25/32]
+[Epoch 2/3] [Batch 150/185] [loss: 4.172786] [Spoofed Label: 27/32] [Desired Label: 24/32]
+[Epoch 2/3] [Val: 0.732070]
+CUDA is available. Using CUDA.
+lr: %f 0.006125297237382811
+weight_decay: %f 0.0019907342639079307
+gan_weight_decay: %f 0.01386532899244943
+[Epoch 0/3] [Batch 0/185] [loss: 16.162014] [Spoofed Label: 25/32] [Desired Label: 0/32]
+[Epoch 0/3] [Batch 50/185] [loss: 10.026929] [Spoofed Label: 32/32] [Desired Label: 26/32]
+[Epoch 0/3] [Batch 100/185] [loss: 6.968028] [Spoofed Label: 31/32] [Desired Label: 26/32]
+[Epoch 0/3] [Batch 150/185] [loss: 5.123212] [Spoofed Label: 30/32] [Desired Label: 19/32]
+[Epoch 0/3] [Val: 0.765900]
+[Epoch 1/3] [Batch 0/185] [loss: 4.598878] [Spoofed Label: 27/32] [Desired Label: 25/32]
+[Epoch 1/3] [Batch 50/185] [loss: 4.003467] [Spoofed Label: 29/32] [Desired Label: 25/32]
+[Epoch 1/3] [Batch 100/185] [loss: 3.513842] [Spoofed Label: 32/32] [Desired Label: 27/32]
+[Epoch 1/3] [Batch 150/185] [loss: 3.562386] [Spoofed Label: 30/32] [Desired Label: 25/32]
+[Epoch 1/3] [Val: 0.820027]
+[Epoch 2/3] [Batch 0/185] [loss: 3.353174] [Spoofed Label: 31/32] [Desired Label: 29/32]
+[Epoch 2/3] [Batch 50/185] [loss: 3.338318] [Spoofed Label: 32/32] [Desired Label: 27/32]
+[Epoch 2/3] [Batch 100/185] [loss: 3.262886] [Spoofed Label: 31/32] [Desired Label: 28/32]
+[Epoch 2/3] [Batch 150/185] [loss: 3.428472] [Spoofed Label: 32/32] [Desired Label: 23/32]
+[Epoch 2/3] [Val: 0.826116]
+CUDA is available. Using CUDA.
+lr: %f 0.008710174864980037
+weight_decay: %f 0.0026347112702727322
+gan_weight_decay: %f 0.01695961317728829
+[Epoch 0/3] [Batch 0/185] [loss: 19.781912] [Spoofed Label: 19/32] [Desired Label: 1/32]
+[Epoch 0/3] [Batch 50/185] [loss: 8.164381] [Spoofed Label: 23/32] [Desired Label: 8/32]
+[Epoch 0/3] [Batch 100/185] [loss: 7.263503] [Spoofed Label: 30/32] [Desired Label: 19/32]
+[Epoch 0/3] [Batch 150/185] [loss: 5.987977] [Spoofed Label: 28/32] [Desired Label: 16/32]
+[Epoch 0/3] [Val: 0.658322]
+[Epoch 1/3] [Batch 0/185] [loss: 5.278000] [Spoofed Label: 28/32] [Desired Label: 19/32]
+[Epoch 1/3] [Batch 50/185] [loss: 4.391964] [Spoofed Label: 30/32] [Desired Label: 22/32]
+[Epoch 1/3] [Batch 100/185] [loss: 4.166865] [Spoofed Label: 29/32] [Desired Label: 23/32]
+[Epoch 1/3] [Batch 150/185] [loss: 4.034291] [Spoofed Label: 27/32] [Desired Label: 17/32]
+[Epoch 1/3] [Val: 0.688769]
+[Epoch 2/3] [Batch 0/185] [loss: 3.940765] [Spoofed Label: 28/32] [Desired Label: 23/32]
+[Epoch 2/3] [Batch 50/185] [loss: 4.629255] [Spoofed Label: 30/32] [Desired Label: 16/32]
+[Epoch 2/3] [Batch 100/185] [loss: 3.939479] [Spoofed Label: 26/32] [Desired Label: 22/32]
+[Epoch 2/3] [Batch 150/185] [loss: 4.412524] [Spoofed Label: 28/32] [Desired Label: 19/32]
+[Epoch 2/3] [Val: 0.693505]
+CUDA is available. Using CUDA.
+lr: %f 0.007556979134428116
+weight_decay: %f 0.0021312756566520792
+gan_weight_decay: %f 0.010691299307371052
+[Epoch 0/3] [Batch 0/185] [loss: 14.343703] [Spoofed Label: 27/32] [Desired Label: 1/32]
+[Epoch 0/3] [Batch 50/185] [loss: 8.180281] [Spoofed Label: 30/32] [Desired Label: 25/32]
+[Epoch 0/3] [Batch 100/185] [loss: 5.528373] [Spoofed Label: 30/32] [Desired Label: 26/32]
+[Epoch 0/3] [Batch 150/185] [loss: 3.790668] [Spoofed Label: 29/32] [Desired Label: 26/32]
+[Epoch 0/3] [Val: 0.806495]
+[Epoch 1/3] [Batch 0/185] [loss: 3.489362] [Spoofed Label: 30/32] [Desired Label: 24/32]
+[Epoch 1/3] [Batch 50/185] [loss: 3.003967] [Spoofed Label: 32/32] [Desired Label: 27/32]
+[Epoch 1/3] [Batch 100/185] [loss: 2.825345] [Spoofed Label: 31/32] [Desired Label: 28/32]
+[Epoch 1/3] [Batch 150/185] [loss: 2.886122] [Spoofed Label: 28/32] [Desired Label: 25/32]
+[Epoch 1/3] [Val: 0.801083]
+[Epoch 2/3] [Batch 0/185] [loss: 2.801998] [Spoofed Label: 30/32] [Desired Label: 26/32]
+[Epoch 2/3] [Batch 50/185] [loss: 3.175938] [Spoofed Label: 31/32] [Desired Label: 25/32]
+[Epoch 2/3] [Batch 100/185] [loss: 2.632938] [Spoofed Label: 28/32] [Desired Label: 26/32]
+[Epoch 2/3] [Batch 150/185] [loss: 3.284936] [Spoofed Label: 29/32] [Desired Label: 23/32]
+[Epoch 2/3] [Val: 0.840325]
+CUDA is available. Using CUDA.
+lr: %f 0.005169691883937342
+weight_decay: %f 0.0018177896686402903
+gan_weight_decay: %f 0.012508849429978415
+[Epoch 0/3] [Batch 0/185] [loss: 15.516880] [Spoofed Label: 23/32] [Desired Label: 1/32]
+[Epoch 0/3] [Batch 50/185] [loss: 7.141247] [Spoofed Label: 30/32] [Desired Label: 29/32]
+[Epoch 0/3] [Batch 100/185] [loss: 5.403749] [Spoofed Label: 25/32] [Desired Label: 20/32]
+[Epoch 0/3] [Batch 150/185] [loss: 4.080940] [Spoofed Label: 27/32] [Desired Label: 27/32]
+[Epoch 0/3] [Val: 0.767253]
+[Epoch 1/3] [Batch 0/185] [loss: 5.286426] [Spoofed Label: 29/32] [Desired Label: 14/32]
+[Epoch 1/3] [Batch 50/185] [loss: 3.588372] [Spoofed Label: 29/32] [Desired Label: 28/32]
+[Epoch 1/3] [Batch 100/185] [loss: 3.666883] [Spoofed Label: 29/32] [Desired Label: 27/32]
+[Epoch 1/3] [Batch 150/185] [loss: 4.144392] [Spoofed Label: 30/32] [Desired Label: 23/32]
+[Epoch 1/3] [Val: 0.827470]
+[Epoch 2/3] [Batch 0/185] [loss: 3.473624] [Spoofed Label: 29/32] [Desired Label: 26/32]
+[Epoch 2/3] [Batch 50/185] [loss: 3.669583] [Spoofed Label: 32/32] [Desired Label: 24/32]
+[Epoch 2/3] [Batch 100/185] [loss: 3.024022] [Spoofed Label: 29/32] [Desired Label: 27/32]
+[Epoch 2/3] [Batch 150/185] [loss: 2.753013] [Spoofed Label: 30/32] [Desired Label: 32/32]
+[Epoch 2/3] [Val: 0.824763]
+CUDA is available. Using CUDA.
+lr: %f 0.005634340320725267
+weight_decay: %f 0.003883510372651491
+gan_weight_decay: %f 0.01974050462067401
+[Epoch 0/3] [Batch 0/185] [loss: 21.015526] [Spoofed Label: 28/32] [Desired Label: 3/32]
+[Epoch 0/3] [Batch 50/185] [loss: 8.787087] [Spoofed Label: 29/32] [Desired Label: 21/32]
+[Epoch 0/3] [Batch 100/185] [loss: 8.681334] [Spoofed Label: 27/32] [Desired Label: 3/32]
+[Epoch 0/3] [Batch 150/185] [loss: 6.432236] [Spoofed Label: 29/32] [Desired Label: 19/32]
+[Epoch 0/3] [Val: 0.626522]
+[Epoch 1/3] [Batch 0/185] [loss: 6.059200] [Spoofed Label: 26/32] [Desired Label: 20/32]
+[Epoch 1/3] [Batch 50/185] [loss: 5.298719] [Spoofed Label: 30/32] [Desired Label: 22/32]
+[Epoch 1/3] [Batch 100/185] [loss: 5.370695] [Spoofed Label: 28/32] [Desired Label: 24/32]
+[Epoch 1/3] [Batch 150/185] [loss: 5.087917] [Spoofed Label: 26/32] [Desired Label: 17/32]
+[Epoch 1/3] [Val: 0.673884]
+[Epoch 2/3] [Batch 0/185] [loss: 4.728972] [Spoofed Label: 28/32] [Desired Label: 22/32]
+[Epoch 2/3] [Batch 50/185] [loss: 5.232231] [Spoofed Label: 28/32] [Desired Label: 14/32]
+[Epoch 2/3] [Batch 100/185] [loss: 4.804622] [Spoofed Label: 29/32] [Desired Label: 23/32]
+[Epoch 2/3] [Batch 150/185] [loss: 4.546792] [Spoofed Label: 27/32] [Desired Label: 23/32]
+[Epoch 2/3] [Val: 0.709066]
+CUDA is available. Using CUDA.
+lr: %f 0.008878530844195605
+weight_decay: %f 0.0030885268303400618
+gan_weight_decay: %f 0.01719104026907716
+[Epoch 0/3] [Batch 0/185] [loss: 19.390036] [Spoofed Label: 24/32] [Desired Label: 1/32]
+[Epoch 0/3] [Batch 50/185] [loss: 9.040084] [Spoofed Label: 30/32] [Desired Label: 21/32]
+[Epoch 0/3] [Batch 100/185] [loss: 5.930231] [Spoofed Label: 30/32] [Desired Label: 21/32]
+[Epoch 0/3] [Batch 150/185] [loss: 4.517018] [Spoofed Label: 30/32] [Desired Label: 24/32]
+[Epoch 0/3] [Val: 0.687415]
+[Epoch 1/3] [Batch 0/185] [loss: 4.952762] [Spoofed Label: 32/32] [Desired Label: 23/32]
+[Epoch 1/3] [Batch 50/185] [loss: 4.473327] [Spoofed Label: 26/32] [Desired Label: 20/32]
+[Epoch 1/3] [Batch 100/185] [loss: 4.449975] [Spoofed Label: 29/32] [Desired Label: 23/32]
+[Epoch 1/3] [Batch 150/185] [loss: 4.442411] [Spoofed Label: 29/32] [Desired Label: 20/32]
+[Epoch 1/3] [Val: 0.723275]
+[Epoch 2/3] [Batch 0/185] [loss: 4.277980] [Spoofed Label: 31/32] [Desired Label: 23/32]
+[Epoch 2/3] [Batch 50/185] [loss: 3.919457] [Spoofed Label: 32/32] [Desired Label: 26/32]
+[Epoch 2/3] [Batch 100/185] [loss: 4.178198] [Spoofed Label: 29/32] [Desired Label: 24/32]
+[Epoch 2/3] [Batch 150/185] [loss: 4.159944] [Spoofed Label: 30/32] [Desired Label: 26/32]
+[Epoch 2/3] [Val: 0.739513]
+CUDA is available. Using CUDA.
+lr: %f 0.009245825313219377
+weight_decay: %f 0.00291560624260546
+gan_weight_decay: %f 0.014516213008744854
+[Epoch 0/3] [Batch 0/185] [loss: 17.261444] [Spoofed Label: 23/32] [Desired Label: 0/32]
+[Epoch 0/3] [Batch 50/185] [loss: 7.579065] [Spoofed Label: 28/32] [Desired Label: 19/32]
+[Epoch 0/3] [Batch 100/185] [loss: 4.678994] [Spoofed Label: 31/32] [Desired Label: 26/32]
+[Epoch 0/3] [Batch 150/185] [loss: 4.240660] [Spoofed Label: 31/32] [Desired Label: 23/32]
+[Epoch 0/3] [Val: 0.656969]
+[Epoch 1/3] [Batch 0/185] [loss: 4.079101] [Spoofed Label: 28/32] [Desired Label: 20/32]
+[Epoch 1/3] [Batch 50/185] [loss: 3.638442] [Spoofed Label: 30/32] [Desired Label: 23/32]
+[Epoch 1/3] [Batch 100/185] [loss: 3.798106] [Spoofed Label: 27/32] [Desired Label: 20/32]
+[Epoch 1/3] [Batch 150/185] [loss: 3.750652] [Spoofed Label: 30/32] [Desired Label: 21/32]
+[Epoch 1/3] [Val: 0.782815]
+[Epoch 2/3] [Batch 0/185] [loss: 3.472908] [Spoofed Label: 30/32] [Desired Label: 27/32]
+[Epoch 2/3] [Batch 50/185] [loss: 4.049651] [Spoofed Label: 27/32] [Desired Label: 20/32]
+[Epoch 2/3] [Batch 100/185] [loss: 3.500899] [Spoofed Label: 29/32] [Desired Label: 27/32]
+[Epoch 2/3] [Batch 150/185] [loss: 3.602023] [Spoofed Label: 28/32] [Desired Label: 25/32]
+[Epoch 2/3] [Val: 0.768606]
+CUDA is available. Using CUDA.
+lr: %f 0.00782561240257385
+weight_decay: %f 0.003564249564635793
+gan_weight_decay: %f 0.01806447820920064
+[Epoch 0/3] [Batch 0/185] [loss: 19.997320] [Spoofed Label: 27/32] [Desired Label: 1/32]
+[Epoch 0/3] [Batch 50/185] [loss: 9.622078] [Spoofed Label: 21/32] [Desired Label: 4/32]
+[Epoch 0/3] [Batch 100/185] [loss: 6.037893] [Spoofed Label: 26/32] [Desired Label: 14/32]
+[Epoch 0/3] [Batch 150/185] [loss: 4.849004] [Spoofed Label: 28/32] [Desired Label: 23/32]
+[Epoch 0/3] [Val: 0.656969]
+[Epoch 1/3] [Batch 0/185] [loss: 4.857947] [Spoofed Label: 32/32] [Desired Label: 25/32]
+[Epoch 1/3] [Batch 50/185] [loss: 4.514268] [Spoofed Label: 29/32] [Desired Label: 23/32]
+[Epoch 1/3] [Batch 100/185] [loss: 4.424604] [Spoofed Label: 32/32] [Desired Label: 25/32]
+[Epoch 1/3] [Batch 150/185] [loss: 4.336390] [Spoofed Label: 29/32] [Desired Label: 21/32]
+[Epoch 1/3] [Val: 0.718539]
+[Epoch 2/3] [Batch 0/185] [loss: 4.048530] [Spoofed Label: 27/32] [Desired Label: 22/32]
+[Epoch 2/3] [Batch 50/185] [loss: 4.300011] [Spoofed Label: 27/32] [Desired Label: 20/32]
+[Epoch 2/3] [Batch 100/185] [loss: 3.968957] [Spoofed Label: 30/32] [Desired Label: 26/32]
+[Epoch 2/3] [Batch 150/185] [loss: 3.677064] [Spoofed Label: 31/32] [Desired Label: 29/32]
+[Epoch 2/3] [Val: 0.786874]
+CUDA is available. Using CUDA.
+lr: %f 0.0066392494940231
+weight_decay: %f 0.004261768755779847
+gan_weight_decay: %f 0.016132403277395412
+[Epoch 0/3] [Batch 0/185] [loss: 18.021568] [Spoofed Label: 22/32] [Desired Label: 2/32]
+[Epoch 0/3] [Batch 50/185] [loss: 7.639899] [Spoofed Label: 28/32] [Desired Label: 11/32]
+[Epoch 0/3] [Batch 100/185] [loss: 6.445749] [Spoofed Label: 29/32] [Desired Label: 13/32]
+[Epoch 0/3] [Batch 150/185] [loss: 5.214911] [Spoofed Label: 31/32] [Desired Label: 26/32]
+[Epoch 0/3] [Val: 0.719215]
+[Epoch 1/3] [Batch 0/185] [loss: 5.164077] [Spoofed Label: 32/32] [Desired Label: 20/32]
+[Epoch 1/3] [Batch 50/185] [loss: 4.655394] [Spoofed Label: 27/32] [Desired Label: 19/32]
+[Epoch 1/3] [Batch 100/185] [loss: 4.723160] [Spoofed Label: 30/32] [Desired Label: 24/32]
+[Epoch 1/3] [Batch 150/185] [loss: 4.243564] [Spoofed Label: 28/32] [Desired Label: 23/32]
+[Epoch 1/3] [Val: 0.779432]
+[Epoch 2/3] [Batch 0/185] [loss: 4.343727] [Spoofed Label: 30/32] [Desired Label: 23/32]
+[Epoch 2/3] [Batch 50/185] [loss: 3.838044] [Spoofed Label: 30/32] [Desired Label: 26/32]
+[Epoch 2/3] [Batch 100/185] [loss: 3.943768] [Spoofed Label: 28/32] [Desired Label: 26/32]
+[Epoch 2/3] [Batch 150/185] [loss: 3.759988] [Spoofed Label: 29/32] [Desired Label: 26/32]
+[Epoch 2/3] [Val: 0.757781]
+CUDA is available. Using CUDA.
+lr: %f 0.008968738130398135
+weight_decay: %f 0.0029055831599461386
+gan_weight_decay: %f 0.014723632489176589
+[Epoch 0/3] [Batch 0/185] [loss: 16.838772] [Spoofed Label: 19/32] [Desired Label: 2/32]
+[Epoch 0/3] [Batch 50/185] [loss: 8.615629] [Spoofed Label: 31/32] [Desired Label: 17/32]
+[Epoch 0/3] [Batch 100/185] [loss: 5.297515] [Spoofed Label: 28/32] [Desired Label: 26/32]
+[Epoch 0/3] [Batch 150/185] [loss: 4.679091] [Spoofed Label: 29/32] [Desired Label: 18/32]
+[Epoch 0/3] [Val: 0.666441]
+[Epoch 1/3] [Batch 0/185] [loss: 4.436946] [Spoofed Label: 26/32] [Desired Label: 21/32]
+[Epoch 1/3] [Batch 50/185] [loss: 3.788230] [Spoofed Label: 32/32] [Desired Label: 26/32]
+[Epoch 1/3] [Batch 100/185] [loss: 3.486603] [Spoofed Label: 30/32] [Desired Label: 27/32]
+[Epoch 1/3] [Batch 150/185] [loss: 3.585712] [Spoofed Label: 28/32] [Desired Label: 27/32]
+[Epoch 1/3] [Val: 0.770636]
+[Epoch 2/3] [Batch 0/185] [loss: 3.485629] [Spoofed Label: 30/32] [Desired Label: 25/32]
+[Epoch 2/3] [Batch 50/185] [loss: 3.759691] [Spoofed Label: 27/32] [Desired Label: 22/32]
+[Epoch 2/3] [Batch 100/185] [loss: 4.115358] [Spoofed Label: 26/32] [Desired Label: 18/32]
+[Epoch 2/3] [Batch 150/185] [loss: 3.738921] [Spoofed Label: 30/32] [Desired Label: 26/32]
+[Epoch 2/3] [Val: 0.809878]
+CUDA is available. Using CUDA.
+lr: %f 0.009958261934252366
+weight_decay: %f 0.003286928982986794
+gan_weight_decay: %f 0.01807785927946245
+[Epoch 0/3] [Batch 0/185] [loss: 19.317108] [Spoofed Label: 27/32] [Desired Label: 2/32]
+[Epoch 0/3] [Batch 50/185] [loss: 11.009587] [Spoofed Label: 28/32] [Desired Label: 12/32]
+[Epoch 0/3] [Batch 100/185] [loss: 5.853158] [Spoofed Label: 27/32] [Desired Label: 23/32]
+[Epoch 0/3] [Batch 150/185] [loss: 5.495181] [Spoofed Label: 30/32] [Desired Label: 17/32]
+[Epoch 0/3] [Val: 0.645467]
+[Epoch 1/3] [Batch 0/185] [loss: 4.485508] [Spoofed Label: 31/32] [Desired Label: 23/32]
+[Epoch 1/3] [Batch 50/185] [loss: 4.437834] [Spoofed Label: 28/32] [Desired Label: 19/32]
+[Epoch 1/3] [Batch 100/185] [loss: 4.250895] [Spoofed Label: 25/32] [Desired Label: 22/32]
+[Epoch 1/3] [Batch 150/185] [loss: 4.033897] [Spoofed Label: 32/32] [Desired Label: 28/32]
+[Epoch 1/3] [Val: 0.706360]
+[Epoch 2/3] [Batch 0/185] [loss: 4.593020] [Spoofed Label: 30/32] [Desired Label: 23/32]
+[Epoch 2/3] [Batch 50/185] [loss: 4.143858] [Spoofed Label: 29/32] [Desired Label: 21/32]
+[Epoch 2/3] [Batch 100/185] [loss: 3.957849] [Spoofed Label: 30/32] [Desired Label: 23/32]
+[Epoch 2/3] [Batch 150/185] [loss: 4.059108] [Spoofed Label: 28/32] [Desired Label: 21/32]
+[Epoch 2/3] [Val: 0.728011]
+CUDA is available. Using CUDA.
+lr: %f 0.008072756051365435
+weight_decay: %f 0.0024686489844101024
+gan_weight_decay: %f 0.01571525206095059
+[Epoch 0/3] [Batch 0/185] [loss: 17.636284] [Spoofed Label: 25/32] [Desired Label: 2/32]
+[Epoch 0/3] [Batch 50/185] [loss: 7.702527] [Spoofed Label: 28/32] [Desired Label: 13/32]
+[Epoch 0/3] [Batch 100/185] [loss: 6.420599] [Spoofed Label: 29/32] [Desired Label: 18/32]
+[Epoch 0/3] [Batch 150/185] [loss: 5.344967] [Spoofed Label: 27/32] [Desired Label: 22/32]
+[Epoch 0/3] [Val: 0.683356]
+[Epoch 1/3] [Batch 0/185] [loss: 4.764922] [Spoofed Label: 29/32] [Desired Label: 22/32]
+[Epoch 1/3] [Batch 50/185] [loss: 4.490165] [Spoofed Label: 29/32] [Desired Label: 24/32]
+[Epoch 1/3] [Batch 100/185] [loss: 3.585005] [Spoofed Label: 32/32] [Desired Label: 26/32]
+[Epoch 1/3] [Batch 150/185] [loss: 3.909569] [Spoofed Label: 30/32] [Desired Label: 26/32]
+[Epoch 1/3] [Val: 0.761840]
+[Epoch 2/3] [Batch 0/185] [loss: 4.395039] [Spoofed Label: 30/32] [Desired Label: 20/32]
+[Epoch 2/3] [Batch 50/185] [loss: 3.995637] [Spoofed Label: 28/32] [Desired Label: 21/32]
+[Epoch 2/3] [Batch 100/185] [loss: 3.527733] [Spoofed Label: 30/32] [Desired Label: 25/32]
+[Epoch 2/3] [Batch 150/185] [loss: 3.861876] [Spoofed Label: 29/32] [Desired Label: 24/32]
+[Epoch 2/3] [Val: 0.740866]
+CUDA is available. Using CUDA.
+lr: %f 0.005920811782391378
+weight_decay: %f 0.0023378852986444673
+gan_weight_decay: %f 0.01270517162902898
+[Epoch 0/3] [Batch 0/185] [loss: 15.395317] [Spoofed Label: 26/32] [Desired Label: 3/32]
+[Epoch 0/3] [Batch 50/185] [loss: 7.869080] [Spoofed Label: 28/32] [Desired Label: 27/32]
+[Epoch 0/3] [Batch 100/185] [loss: 6.925159] [Spoofed Label: 29/32] [Desired Label: 23/32]
+[Epoch 0/3] [Batch 150/185] [loss: 4.669127] [Spoofed Label: 24/32] [Desired Label: 19/32]
+[Epoch 0/3] [Val: 0.786198]
+[Epoch 1/3] [Batch 0/185] [loss: 3.823056] [Spoofed Label: 31/32] [Desired Label: 26/32]
+[Epoch 1/3] [Batch 50/185] [loss: 3.829944] [Spoofed Label: 31/32] [Desired Label: 22/32]
+[Epoch 1/3] [Batch 100/185] [loss: 3.758980] [Spoofed Label: 30/32] [Desired Label: 24/32]
+[Epoch 1/3] [Batch 150/185] [loss: 3.558860] [Spoofed Label: 32/32] [Desired Label: 25/32]
+[Epoch 1/3] [Val: 0.825440]
+[Epoch 2/3] [Batch 0/185] [loss: 3.318426] [Spoofed Label: 30/32] [Desired Label: 28/32]
+[Epoch 2/3] [Batch 50/185] [loss: 3.211605] [Spoofed Label: 31/32] [Desired Label: 27/32]
+[Epoch 2/3] [Batch 100/185] [loss: 3.517979] [Spoofed Label: 32/32] [Desired Label: 23/32]
+[Epoch 2/3] [Batch 150/185] [loss: 3.050215] [Spoofed Label: 29/32] [Desired Label: 28/32]
+[Epoch 2/3] [Val: 0.834235]
+CUDA is available. Using CUDA.
+lr: %f 0.006673522570266628
+weight_decay: %f 0.002717846476594378
+gan_weight_decay: %f 0.01993475843555552
+[Epoch 0/3] [Batch 0/185] [loss: 20.920544] [Spoofed Label: 29/32] [Desired Label: 2/32]
+[Epoch 0/3] [Batch 50/185] [loss: 10.731117] [Spoofed Label: 31/32] [Desired Label: 24/32]
+[Epoch 0/3] [Batch 100/185] [loss: 7.538938] [Spoofed Label: 30/32] [Desired Label: 22/32]
+[Epoch 0/3] [Batch 150/185] [loss: 6.810491] [Spoofed Label: 29/32] [Desired Label: 20/32]
+[Epoch 0/3] [Val: 0.748985]
+[Epoch 1/3] [Batch 0/185] [loss: 5.370862] [Spoofed Label: 31/32] [Desired Label: 25/32]
+[Epoch 1/3] [Batch 50/185] [loss: 4.801764] [Spoofed Label: 27/32] [Desired Label: 19/32]
+[Epoch 1/3] [Batch 100/185] [loss: 4.547795] [Spoofed Label: 29/32] [Desired Label: 21/32]
+[Epoch 1/3] [Batch 150/185] [loss: 4.504274] [Spoofed Label: 28/32] [Desired Label: 25/32]
+[Epoch 1/3] [Val: 0.678620]
+[Epoch 2/3] [Batch 0/185] [loss: 4.636510] [Spoofed Label: 29/32] [Desired Label: 19/32]
+[Epoch 2/3] [Batch 50/185] [loss: 4.756772] [Spoofed Label: 29/32] [Desired Label: 23/32]
+[Epoch 2/3] [Batch 100/185] [loss: 4.440769] [Spoofed Label: 31/32] [Desired Label: 23/32]
+[Epoch 2/3] [Batch 150/185] [loss: 4.303089] [Spoofed Label: 29/32] [Desired Label: 24/32]
+[Epoch 2/3] [Val: 0.696211]
+CUDA is available. Using CUDA.
+lr: %f 0.007625452363895742
+weight_decay: %f 0.0015952880283397058
+gan_weight_decay: %f 0.014355170095424438
+[Epoch 0/3] [Batch 0/185] [loss: 16.937042] [Spoofed Label: 22/32] [Desired Label: 1/32]
+[Epoch 0/3] [Batch 50/185] [loss: 9.032799] [Spoofed Label: 28/32] [Desired Label: 20/32]
+[Epoch 0/3] [Batch 100/185] [loss: 6.333523] [Spoofed Label: 25/32] [Desired Label: 15/32]
+[Epoch 0/3] [Batch 150/185] [loss: 4.499873] [Spoofed Label: 30/32] [Desired Label: 27/32]
+[Epoch 0/3] [Val: 0.719215]
+[Epoch 1/3] [Batch 0/185] [loss: 5.078213] [Spoofed Label: 28/32] [Desired Label: 18/32]
+[Epoch 1/3] [Batch 50/185] [loss: 3.685223] [Spoofed Label: 31/32] [Desired Label: 27/32]
+[Epoch 1/3] [Batch 100/185] [loss: 3.301140] [Spoofed Label: 28/32] [Desired Label: 26/32]
+[Epoch 1/3] [Batch 150/185] [loss: 3.805379] [Spoofed Label: 31/32] [Desired Label: 21/32]
+[Epoch 1/3] [Val: 0.732747]
+[Epoch 2/3] [Batch 0/185] [loss: 3.513376] [Spoofed Label: 30/32] [Desired Label: 24/32]
+[Epoch 2/3] [Batch 50/185] [loss: 3.407961] [Spoofed Label: 28/32] [Desired Label: 24/32]
+[Epoch 2/3] [Batch 100/185] [loss: 3.280375] [Spoofed Label: 29/32] [Desired Label: 26/32]
+[Epoch 2/3] [Batch 150/185] [loss: 3.597058] [Spoofed Label: 31/32] [Desired Label: 23/32]
+[Epoch 2/3] [Val: 0.736130]
+CUDA is available. Using CUDA.
+lr: %f 0.009816604175637136
+weight_decay: %f 0.0034028909696544795
+gan_weight_decay: %f 0.01806788539003692
+[Epoch 0/3] [Batch 0/185] [loss: 19.340212] [Spoofed Label: 22/32] [Desired Label: 2/32]
+[Epoch 0/3] [Batch 50/185] [loss: 8.545315] [Spoofed Label: 30/32] [Desired Label: 21/32]
+[Epoch 0/3] [Batch 100/185] [loss: 5.991368] [Spoofed Label: 28/32] [Desired Label: 25/32]
+[Epoch 0/3] [Batch 150/185] [loss: 4.643026] [Spoofed Label: 30/32] [Desired Label: 24/32]
+[Epoch 0/3] [Val: 0.654263]
+[Epoch 1/3] [Batch 0/185] [loss: 4.125990] [Spoofed Label: 32/32] [Desired Label: 27/32]
+[Epoch 1/3] [Batch 50/185] [loss: 4.159060] [Spoofed Label: 26/32] [Desired Label: 23/32]
+[Epoch 1/3] [Batch 100/185] [loss: 4.186980] [Spoofed Label: 31/32] [Desired Label: 21/32]
+[Epoch 1/3] [Batch 150/185] [loss: 4.341487] [Spoofed Label: 30/32] [Desired Label: 21/32]
+[Epoch 1/3] [Val: 0.725304]
+[Epoch 2/3] [Batch 0/185] [loss: 4.046008] [Spoofed Label: 31/32] [Desired Label: 24/32]
+[Epoch 2/3] [Batch 50/185] [loss: 4.132779] [Spoofed Label: 31/32] [Desired Label: 23/32]
+[Epoch 2/3] [Batch 100/185] [loss: 3.903956] [Spoofed Label: 30/32] [Desired Label: 26/32]
+[Epoch 2/3] [Batch 150/185] [loss: 4.376534] [Spoofed Label: 28/32] [Desired Label: 22/32]
+[Epoch 2/3] [Val: 0.759811]
+CUDA is available. Using CUDA.
+lr: %f 0.008498725945222621
+weight_decay: %f 0.0031642960738190503
+gan_weight_decay: %f 0.01588587366110634
+[Epoch 0/3] [Batch 0/185] [loss: 18.283659] [Spoofed Label: 23/32] [Desired Label: 1/32]
+[Epoch 0/3] [Batch 50/185] [loss: 8.101194] [Spoofed Label: 30/32] [Desired Label: 21/32]
+[Epoch 0/3] [Batch 100/185] [loss: 5.914343] [Spoofed Label: 31/32] [Desired Label: 20/32]
+[Epoch 0/3] [Batch 150/185] [loss: 4.578942] [Spoofed Label: 30/32] [Desired Label: 24/32]
+[Epoch 0/3] [Val: 0.660352]
+[Epoch 1/3] [Batch 0/185] [loss: 5.836018] [Spoofed Label: 30/32] [Desired Label: 23/32]
+[Epoch 1/3] [Batch 50/185] [loss: 3.703747] [Spoofed Label: 31/32] [Desired Label: 26/32]
+[Epoch 1/3] [Batch 100/185] [loss: 4.292599] [Spoofed Label: 29/32] [Desired Label: 19/32]
+[Epoch 1/3] [Batch 150/185] [loss: 4.000418] [Spoofed Label: 30/32] [Desired Label: 20/32]
+[Epoch 1/3] [Val: 0.755751]
+[Epoch 2/3] [Batch 0/185] [loss: 3.843775] [Spoofed Label: 31/32] [Desired Label: 27/32]
+[Epoch 2/3] [Batch 50/185] [loss: 4.437818] [Spoofed Label: 26/32] [Desired Label: 18/32]
+[Epoch 2/3] [Batch 100/185] [loss: 3.858831] [Spoofed Label: 29/32] [Desired Label: 23/32]
+[Epoch 2/3] [Batch 150/185] [loss: 4.136229] [Spoofed Label: 29/32] [Desired Label: 24/32]
+[Epoch 2/3] [Val: 0.732747]
+CUDA is available. Using CUDA.
+lr: %f 0.009015529261724716
+weight_decay: %f 0.0027684605000701267
+gan_weight_decay: %f 0.018507695209447016
+[Epoch 0/3] [Batch 0/185] [loss: 19.727797] [Spoofed Label: 19/32] [Desired Label: 1/32]
+[Epoch 0/3] [Batch 50/185] [loss: 8.717938] [Spoofed Label: 31/32] [Desired Label: 22/32]
+[Epoch 0/3] [Batch 100/185] [loss: 6.843330] [Spoofed Label: 27/32] [Desired Label: 19/32]
+[Epoch 0/3] [Batch 150/185] [loss: 5.595782] [Spoofed Label: 25/32] [Desired Label: 18/32]
+[Epoch 0/3] [Val: 0.716509]
+[Epoch 1/3] [Batch 0/185] [loss: 4.660480] [Spoofed Label: 27/32] [Desired Label: 26/32]
+[Epoch 1/3] [Batch 50/185] [loss: 4.947495] [Spoofed Label: 31/32] [Desired Label: 21/32]
+[Epoch 1/3] [Batch 100/185] [loss: 4.549643] [Spoofed Label: 29/32] [Desired Label: 18/32]
+[Epoch 1/3] [Batch 150/185] [loss: 4.393269] [Spoofed Label: 30/32] [Desired Label: 20/32]
+[Epoch 1/3] [Val: 0.696211]
+[Epoch 2/3] [Batch 0/185] [loss: 3.765791] [Spoofed Label: 31/32] [Desired Label: 27/32]
+[Epoch 2/3] [Batch 50/185] [loss: 4.605769] [Spoofed Label: 31/32] [Desired Label: 19/32]
+[Epoch 2/3] [Batch 100/185] [loss: 4.069726] [Spoofed Label: 31/32] [Desired Label: 22/32]
+[Epoch 2/3] [Batch 150/185] [loss: 3.995666] [Spoofed Label: 31/32] [Desired Label: 23/32]
+[Epoch 2/3] [Val: 0.686739]
+CUDA is available. Using CUDA.
+lr: %f 0.007288927798759677
+weight_decay: %f 0.002220771070358557
+gan_weight_decay: %f 0.018401718346472924
+[Epoch 0/3] [Batch 0/185] [loss: 20.223261] [Spoofed Label: 25/32] [Desired Label: 0/32]
+[Epoch 0/3] [Batch 50/185] [loss: 9.149086] [Spoofed Label: 30/32] [Desired Label: 24/32]
+[Epoch 0/3] [Batch 100/185] [loss: 8.678748] [Spoofed Label: 30/32] [Desired Label: 15/32]
+[Epoch 0/3] [Batch 150/185] [loss: 5.457257] [Spoofed Label: 29/32] [Desired Label: 24/32]
+[Epoch 0/3] [Val: 0.635318]
+[Epoch 1/3] [Batch 0/185] [loss: 5.832162] [Spoofed Label: 28/32] [Desired Label: 21/32]
+[Epoch 1/3] [Batch 50/185] [loss: 4.897945] [Spoofed Label: 31/32] [Desired Label: 18/32]
+[Epoch 1/3] [Batch 100/185] [loss: 3.992485] [Spoofed Label: 32/32] [Desired Label: 24/32]
+[Epoch 1/3] [Batch 150/185] [loss: 4.302991] [Spoofed Label: 27/32] [Desired Label: 22/32]
+[Epoch 1/3] [Val: 0.670501]
+[Epoch 2/3] [Batch 0/185] [loss: 4.233663] [Spoofed Label: 29/32] [Desired Label: 21/32]
+[Epoch 2/3] [Batch 50/185] [loss: 4.253846] [Spoofed Label: 25/32] [Desired Label: 20/32]
+[Epoch 2/3] [Batch 100/185] [loss: 4.028682] [Spoofed Label: 32/32] [Desired Label: 21/32]
+[Epoch 2/3] [Batch 150/185] [loss: 4.126787] [Spoofed Label: 29/32] [Desired Label: 24/32]
+[Epoch 2/3] [Val: 0.679973]
+CUDA is available. Using CUDA.
+lr: %f 0.00729654671647773
+weight_decay: %f 0.00222049870194006
+gan_weight_decay: %f 0.01645889158404412
+[Epoch 0/3] [Batch 0/185] [loss: 18.652836] [Spoofed Label: 27/32] [Desired Label: 1/32]
+[Epoch 0/3] [Batch 50/185] [loss: 8.786127] [Spoofed Label: 31/32] [Desired Label: 27/32]
+[Epoch 0/3] [Batch 100/185] [loss: 6.083457] [Spoofed Label: 27/32] [Desired Label: 16/32]
+[Epoch 0/3] [Batch 150/185] [loss: 5.171468] [Spoofed Label: 31/32] [Desired Label: 23/32]
+[Epoch 0/3] [Val: 0.742896]
+[Epoch 1/3] [Batch 0/185] [loss: 4.855013] [Spoofed Label: 27/32] [Desired Label: 26/32]
+[Epoch 1/3] [Batch 50/185] [loss: 4.459680] [Spoofed Label: 30/32] [Desired Label: 24/32]
+[Epoch 1/3] [Batch 100/185] [loss: 4.371443] [Spoofed Label: 30/32] [Desired Label: 22/32]
+[Epoch 1/3] [Batch 150/185] [loss: 3.464159] [Spoofed Label: 29/32] [Desired Label: 28/32]
+[Epoch 1/3] [Val: 0.705007]
+[Epoch 2/3] [Batch 0/185] [loss: 3.774036] [Spoofed Label: 29/32] [Desired Label: 27/32]
+[Epoch 2/3] [Batch 50/185] [loss: 3.536280] [Spoofed Label: 29/32] [Desired Label: 25/32]
+[Epoch 2/3] [Batch 100/185] [loss: 3.464227] [Spoofed Label: 32/32] [Desired Label: 29/32]
+[Epoch 2/3] [Batch 150/185] [loss: 3.798105] [Spoofed Label: 28/32] [Desired Label: 23/32]
+[Epoch 2/3] [Val: 0.732747]
+CUDA is available. Using CUDA.
+lr: %f 0.006472443029457153
+weight_decay: %f 0.0019816538733740457
+gan_weight_decay: %f 0.014480472780950838
+[Epoch 0/3] [Batch 0/185] [loss: 16.660099] [Spoofed Label: 22/32] [Desired Label: 2/32]
+[Epoch 0/3] [Batch 50/185] [loss: 9.227466] [Spoofed Label: 31/32] [Desired Label: 24/32]
+[Epoch 0/3] [Batch 100/185] [loss: 6.982559] [Spoofed Label: 30/32] [Desired Label: 24/32]
+[Epoch 0/3] [Batch 150/185] [loss: 5.141968] [Spoofed Label: 30/32] [Desired Label: 20/32]
+[Epoch 0/3] [Val: 0.774696]
+[Epoch 1/3] [Batch 0/185] [loss: 3.973248] [Spoofed Label: 28/32] [Desired Label: 29/32]
+[Epoch 1/3] [Batch 50/185] [loss: 3.772305] [Spoofed Label: 30/32] [Desired Label: 27/32]
+[Epoch 1/3] [Batch 100/185] [loss: 3.194170] [Spoofed Label: 32/32] [Desired Label: 30/32]
+[Epoch 1/3] [Batch 150/185] [loss: 3.403671] [Spoofed Label: 32/32] [Desired Label: 26/32]
+[Epoch 1/3] [Val: 0.755074]
+[Epoch 2/3] [Batch 0/185] [loss: 3.478417] [Spoofed Label: 31/32] [Desired Label: 26/32]
+[Epoch 2/3] [Batch 50/185] [loss: 3.214096] [Spoofed Label: 29/32] [Desired Label: 24/32]
+[Epoch 2/3] [Batch 100/185] [loss: 3.605257] [Spoofed Label: 30/32] [Desired Label: 22/32]
+[Epoch 2/3] [Batch 150/185] [loss: 3.159759] [Spoofed Label: 31/32] [Desired Label: 28/32]
+[Epoch 2/3] [Val: 0.787551]
+CUDA is available. Using CUDA.
+lr: %f 0.00580480762750442
+weight_decay: %f 0.001726229170023628
+gan_weight_decay: %f 0.018483213473190107
+[Epoch 0/3] [Batch 0/185] [loss: 19.405222] [Spoofed Label: 26/32] [Desired Label: 0/32]
+[Epoch 0/3] [Batch 50/185] [loss: 10.183831] [Spoofed Label: 29/32] [Desired Label: 25/32]
+[Epoch 0/3] [Batch 100/185] [loss: 6.667953] [Spoofed Label: 29/32] [Desired Label: 13/32]
+[Epoch 0/3] [Batch 150/185] [loss: 7.271872] [Spoofed Label: 26/32] [Desired Label: 10/32]
+[Epoch 0/3] [Val: 0.753045]
+[Epoch 1/3] [Batch 0/185] [loss: 5.203493] [Spoofed Label: 31/32] [Desired Label: 25/32]
+[Epoch 1/3] [Batch 50/185] [loss: 4.809833] [Spoofed Label: 28/32] [Desired Label: 25/32]
+[Epoch 1/3] [Batch 100/185] [loss: 4.435272] [Spoofed Label: 30/32] [Desired Label: 24/32]
+[Epoch 1/3] [Batch 150/185] [loss: 4.262920] [Spoofed Label: 30/32] [Desired Label: 28/32]
+[Epoch 1/3] [Val: 0.746955]
+[Epoch 2/3] [Batch 0/185] [loss: 4.479221] [Spoofed Label: 29/32] [Desired Label: 24/32]
+[Epoch 2/3] [Batch 50/185] [loss: 3.945852] [Spoofed Label: 29/32] [Desired Label: 24/32]
+[Epoch 2/3] [Batch 100/185] [loss: 4.476412] [Spoofed Label: 28/32] [Desired Label: 19/32]
+[Epoch 2/3] [Batch 150/185] [loss: 4.332053] [Spoofed Label: 27/32] [Desired Label: 25/32]
+[Epoch 2/3] [Val: 0.750338]
+CUDA is available. Using CUDA.
+lr: %f 0.005568753026608543
+weight_decay: %f 0.0015312621060890623
+gan_weight_decay: %f 0.015718293582572717
+[Epoch 0/3] [Batch 0/185] [loss: 17.548143] [Spoofed Label: 20/32] [Desired Label: 4/32]
+[Epoch 0/3] [Batch 50/185] [loss: 7.245248] [Spoofed Label: 31/32] [Desired Label: 27/32]
+[Epoch 0/3] [Batch 100/185] [loss: 6.208751] [Spoofed Label: 23/32] [Desired Label: 13/32]
+[Epoch 0/3] [Batch 150/185] [loss: 6.099373] [Spoofed Label: 31/32] [Desired Label: 26/32]
+[Epoch 0/3] [Val: 0.661028]
+[Epoch 1/3] [Batch 0/185] [loss: 5.023541] [Spoofed Label: 30/32] [Desired Label: 21/32]
+[Epoch 1/3] [Batch 50/185] [loss: 4.412915] [Spoofed Label: 28/32] [Desired Label: 24/32]
+[Epoch 1/3] [Batch 100/185] [loss: 4.441572] [Spoofed Label: 31/32] [Desired Label: 23/32]
+[Epoch 1/3] [Batch 150/185] [loss: 3.922333] [Spoofed Label: 31/32] [Desired Label: 25/32]
+[Epoch 1/3] [Val: 0.764547]
+[Epoch 2/3] [Batch 0/185] [loss: 3.885204] [Spoofed Label: 31/32] [Desired Label: 28/32]
+[Epoch 2/3] [Batch 50/185] [loss: 3.645645] [Spoofed Label: 31/32] [Desired Label: 26/32]
+[Epoch 2/3] [Batch 100/185] [loss: 4.338204] [Spoofed Label: 31/32] [Desired Label: 20/32]
+[Epoch 2/3] [Batch 150/185] [loss: 3.490505] [Spoofed Label: 31/32] [Desired Label: 27/32]
+[Epoch 2/3] [Val: 0.713802]
+CUDA is available. Using CUDA.
+lr: %f 0.007350939678117694
+weight_decay: %f 0.0017817426538736432
+gan_weight_decay: %f 0.018736472622320418
+[Epoch 0/3] [Batch 0/185] [loss: 19.913279] [Spoofed Label: 22/32] [Desired Label: 2/32]
+[Epoch 0/3] [Batch 50/185] [loss: 7.908998] [Spoofed Label: 25/32] [Desired Label: 15/32]
+[Epoch 0/3] [Batch 100/185] [loss: 6.788971] [Spoofed Label: 31/32] [Desired Label: 20/32]
+[Epoch 0/3] [Batch 150/185] [loss: 5.263789] [Spoofed Label: 31/32] [Desired Label: 24/32]
+[Epoch 0/3] [Val: 0.688092]
+[Epoch 1/3] [Batch 0/185] [loss: 5.365074] [Spoofed Label: 29/32] [Desired Label: 23/32]
+[Epoch 1/3] [Batch 50/185] [loss: 4.817391] [Spoofed Label: 29/32] [Desired Label: 21/32]
+[Epoch 1/3] [Batch 100/185] [loss: 4.464070] [Spoofed Label: 26/32] [Desired Label: 22/32]
+[Epoch 1/3] [Batch 150/185] [loss: 4.584156] [Spoofed Label: 29/32] [Desired Label: 20/32]
+[Epoch 1/3] [Val: 0.702977]
+[Epoch 2/3] [Batch 0/185] [loss: 4.297956] [Spoofed Label: 31/32] [Desired Label: 23/32]
+[Epoch 2/3] [Batch 50/185] [loss: 4.255960] [Spoofed Label: 29/32] [Desired Label: 23/32]
+[Epoch 2/3] [Batch 100/185] [loss: 4.473002] [Spoofed Label: 29/32] [Desired Label: 20/32]
+[Epoch 2/3] [Batch 150/185] [loss: 4.330223] [Spoofed Label: 29/32] [Desired Label: 23/32]
+[Epoch 2/3] [Val: 0.699594]
+CUDA is available. Using CUDA.
+lr: %f 0.008248634334170089
+weight_decay: %f 0.0017216691634606267
+gan_weight_decay: %f 0.018720255350413776
+[Epoch 0/3] [Batch 0/185] [loss: 19.948032] [Spoofed Label: 24/32] [Desired Label: 2/32]
+[Epoch 0/3] [Batch 50/185] [loss: 8.834770] [Spoofed Label: 30/32] [Desired Label: 23/32]
+[Epoch 0/3] [Batch 100/185] [loss: 6.856042] [Spoofed Label: 27/32] [Desired Label: 20/32]
+[Epoch 0/3] [Batch 150/185] [loss: 5.997733] [Spoofed Label: 23/32] [Desired Label: 20/32]
+[Epoch 0/3] [Val: 0.711096]
+[Epoch 1/3] [Batch 0/185] [loss: 4.654938] [Spoofed Label: 31/32] [Desired Label: 28/32]
+[Epoch 1/3] [Batch 50/185] [loss: 4.978204] [Spoofed Label: 29/32] [Desired Label: 22/32]
+[Epoch 1/3] [Batch 100/185] [loss: 5.008866] [Spoofed Label: 28/32] [Desired Label: 17/32]
+[Epoch 1/3] [Batch 150/185] [loss: 4.289980] [Spoofed Label: 31/32] [Desired Label: 24/32]
+[Epoch 1/3] [Val: 0.702300]
+[Epoch 2/3] [Batch 0/185] [loss: 3.747365] [Spoofed Label: 29/32] [Desired Label: 29/32]
+[Epoch 2/3] [Batch 50/185] [loss: 3.952462] [Spoofed Label: 31/32] [Desired Label: 26/32]
+[Epoch 2/3] [Batch 100/185] [loss: 3.994590] [Spoofed Label: 28/32] [Desired Label: 22/32]
+[Epoch 2/3] [Batch 150/185] [loss: 4.164425] [Spoofed Label: 30/32] [Desired Label: 25/32]
+[Epoch 2/3] [Val: 0.698241]
+CUDA is available. Using CUDA.
+lr: %f 0.007157498273407384
+weight_decay: %f 0.0013831434161915874
+gan_weight_decay: %f 0.019943837033562214
+[Epoch 0/3] [Batch 0/185] [loss: 21.467384] [Spoofed Label: 22/32] [Desired Label: 1/32]
+[Epoch 0/3] [Batch 50/185] [loss: 9.102237] [Spoofed Label: 28/32] [Desired Label: 9/32]
+[Epoch 0/3] [Batch 100/185] [loss: 8.550897] [Spoofed Label: 29/32] [Desired Label: 21/32]
+[Epoch 0/3] [Batch 150/185] [loss: 6.488628] [Spoofed Label: 31/32] [Desired Label: 21/32]
+[Epoch 0/3] [Val: 0.745602]
+[Epoch 1/3] [Batch 0/185] [loss: 5.962358] [Spoofed Label: 31/32] [Desired Label: 26/32]
+[Epoch 1/3] [Batch 50/185] [loss: 4.698600] [Spoofed Label: 29/32] [Desired Label: 19/32]
+[Epoch 1/3] [Batch 100/185] [loss: 4.618327] [Spoofed Label: 26/32] [Desired Label: 20/32]
+[Epoch 1/3] [Batch 150/185] [loss: 4.962317] [Spoofed Label: 30/32] [Desired Label: 21/32]
+[Epoch 1/3] [Val: 0.688769]
+[Epoch 2/3] [Batch 0/185] [loss: 4.269180] [Spoofed Label: 32/32] [Desired Label: 27/32]
+[Epoch 2/3] [Batch 50/185] [loss: 4.442342] [Spoofed Label: 27/32] [Desired Label: 22/32]
+[Epoch 2/3] [Batch 100/185] [loss: 3.886596] [Spoofed Label: 30/32] [Desired Label: 28/32]
+[Epoch 2/3] [Batch 150/185] [loss: 4.210739] [Spoofed Label: 28/32] [Desired Label: 24/32]
+[Epoch 2/3] [Val: 0.703654]
+CUDA is available. Using CUDA.
+lr: %f 0.00717318748494294
+weight_decay: %f 0.0017956127066962179
+gan_weight_decay: %f 0.019926488027235057
+[Epoch 0/3] [Batch 0/185] [loss: 20.793653] [Spoofed Label: 29/32] [Desired Label: 2/32]
+[Epoch 0/3] [Batch 50/185] [loss: 8.801170] [Spoofed Label: 30/32] [Desired Label: 12/32]
+[Epoch 0/3] [Batch 100/185] [loss: 6.668030] [Spoofed Label: 30/32] [Desired Label: 22/32]
+[Epoch 0/3] [Batch 150/185] [loss: 6.359150] [Spoofed Label: 32/32] [Desired Label: 22/32]
+[Epoch 0/3] [Val: 0.684032]
+[Epoch 1/3] [Batch 0/185] [loss: 5.870555] [Spoofed Label: 30/32] [Desired Label: 22/32]
+[Epoch 1/3] [Batch 50/185] [loss: 4.824382] [Spoofed Label: 32/32] [Desired Label: 21/32]
+[Epoch 1/3] [Batch 100/185] [loss: 4.408964] [Spoofed Label: 31/32] [Desired Label: 23/32]
+[Epoch 1/3] [Batch 150/185] [loss: 4.167706] [Spoofed Label: 27/32] [Desired Label: 22/32]
+[Epoch 1/3] [Val: 0.703654]
+[Epoch 2/3] [Batch 0/185] [loss: 4.287396] [Spoofed Label: 31/32] [Desired Label: 23/32]
+[Epoch 2/3] [Batch 50/185] [loss: 4.235559] [Spoofed Label: 28/32] [Desired Label: 24/32]
+[Epoch 2/3] [Batch 100/185] [loss: 4.292879] [Spoofed Label: 27/32] [Desired Label: 20/32]
+[Epoch 2/3] [Batch 150/185] [loss: 3.788545] [Spoofed Label: 29/32] [Desired Label: 27/32]
+[Epoch 2/3] [Val: 0.709066]
+CUDA is available. Using CUDA.
+lr: %f 0.006259606803781181
+weight_decay: %f 0.001879268830820416
+gan_weight_decay: %f 0.0166477773547419
+[Epoch 0/3] [Batch 0/185] [loss: 18.161224] [Spoofed Label: 22/32] [Desired Label: 2/32]
+[Epoch 0/3] [Batch 50/185] [loss: 10.576386] [Spoofed Label: 30/32] [Desired Label: 20/32]
+[Epoch 0/3] [Batch 100/185] [loss: 5.731307] [Spoofed Label: 30/32] [Desired Label: 27/32]
+[Epoch 0/3] [Batch 150/185] [loss: 4.682933] [Spoofed Label: 31/32] [Desired Label: 26/32]
+[Epoch 0/3] [Val: 0.707713]
+[Epoch 1/3] [Batch 0/185] [loss: 5.087636] [Spoofed Label: 27/32] [Desired Label: 23/32]
+[Epoch 1/3] [Batch 50/185] [loss: 4.791677] [Spoofed Label: 31/32] [Desired Label: 25/32]
+[Epoch 1/3] [Batch 100/185] [loss: 4.414653] [Spoofed Label: 30/32] [Desired Label: 22/32]
+[Epoch 1/3] [Batch 150/185] [loss: 3.763206] [Spoofed Label: 30/32] [Desired Label: 27/32]
+[Epoch 1/3] [Val: 0.740189]
+[Epoch 2/3] [Batch 0/185] [loss: 3.549825] [Spoofed Label: 31/32] [Desired Label: 28/32]
+[Epoch 2/3] [Batch 50/185] [loss: 3.825722] [Spoofed Label: 30/32] [Desired Label: 24/32]
+[Epoch 2/3] [Batch 100/185] [loss: 3.771835] [Spoofed Label: 30/32] [Desired Label: 23/32]
+[Epoch 2/3] [Batch 150/185] [loss: 3.640740] [Spoofed Label: 31/32] [Desired Label: 23/32]
+[Epoch 2/3] [Val: 0.746279]
+CUDA is available. Using CUDA.
+lr: %f 0.008049819640040113
+weight_decay: %f 0.0021907570611309174
+gan_weight_decay: %f 0.019990158325608225
+[Epoch 0/3] [Batch 0/185] [loss: 20.747852] [Spoofed Label: 22/32] [Desired Label: 2/32]
+[Epoch 0/3] [Batch 50/185] [loss: 8.078619] [Spoofed Label: 28/32] [Desired Label: 18/32]
+[Epoch 0/3] [Batch 100/185] [loss: 8.018703] [Spoofed Label: 30/32] [Desired Label: 17/32]
+[Epoch 0/3] [Batch 150/185] [loss: 6.569585] [Spoofed Label: 27/32] [Desired Label: 21/32]
+[Epoch 0/3] [Val: 0.645467]
+[Epoch 1/3] [Batch 0/185] [loss: 5.066388] [Spoofed Label: 29/32] [Desired Label: 22/32]
+[Epoch 1/3] [Batch 50/185] [loss: 5.060089] [Spoofed Label: 32/32] [Desired Label: 24/32]
+[Epoch 1/3] [Batch 100/185] [loss: 4.821025] [Spoofed Label: 31/32] [Desired Label: 24/32]
+[Epoch 1/3] [Batch 150/185] [loss: 4.166536] [Spoofed Label: 28/32] [Desired Label: 24/32]
+[Epoch 1/3] [Val: 0.702300]
+[Epoch 2/3] [Batch 0/185] [loss: 3.964872] [Spoofed Label: 29/32] [Desired Label: 25/32]
+[Epoch 2/3] [Batch 50/185] [loss: 4.367792] [Spoofed Label: 27/32] [Desired Label: 21/32]
+[Epoch 2/3] [Batch 100/185] [loss: 3.848431] [Spoofed Label: 32/32] [Desired Label: 26/32]
+[Epoch 2/3] [Batch 150/185] [loss: 4.984913] [Spoofed Label: 28/32] [Desired Label: 16/32]
+[Epoch 2/3] [Val: 0.684709]
+CUDA is available. Using CUDA.
+lr: %f 0.006771473218475831
+weight_decay: %f 0.0022214524036778456
+gan_weight_decay: %f 0.01850534032925636
+[Epoch 0/3] [Batch 0/185] [loss: 19.984858] [Spoofed Label: 25/32] [Desired Label: 0/32]
+[Epoch 0/3] [Batch 50/185] [loss: 10.104661] [Spoofed Label: 31/32] [Desired Label: 23/32]
+[Epoch 0/3] [Batch 100/185] [loss: 7.025857] [Spoofed Label: 30/32] [Desired Label: 17/32]
+[Epoch 0/3] [Batch 150/185] [loss: 5.654142] [Spoofed Label: 30/32] [Desired Label: 26/32]
+[Epoch 0/3] [Val: 0.715832]
+[Epoch 1/3] [Batch 0/185] [loss: 5.567965] [Spoofed Label: 29/32] [Desired Label: 22/32]
+[Epoch 1/3] [Batch 50/185] [loss: 4.265491] [Spoofed Label: 27/32] [Desired Label: 24/32]
+[Epoch 1/3] [Batch 100/185] [loss: 4.886252] [Spoofed Label: 29/32] [Desired Label: 23/32]
+[Epoch 1/3] [Batch 150/185] [loss: 4.513183] [Spoofed Label: 24/32] [Desired Label: 17/32]
+[Epoch 1/3] [Val: 0.713802]
+[Epoch 2/3] [Batch 0/185] [loss: 4.407743] [Spoofed Label: 30/32] [Desired Label: 20/32]
+[Epoch 2/3] [Batch 50/185] [loss: 4.370355] [Spoofed Label: 27/32] [Desired Label: 22/32]
+[Epoch 2/3] [Batch 100/185] [loss: 4.471081] [Spoofed Label: 30/32] [Desired Label: 19/32]
+[Epoch 2/3] [Batch 150/185] [loss: 4.432906] [Spoofed Label: 27/32] [Desired Label: 18/32]
+[Epoch 2/3] [Val: 0.742896]
+CUDA is available. Using CUDA.
+lr: %f 0.008034568435986603
+weight_decay: %f 0.0025625604523804987
+gan_weight_decay: %f 0.018976723771511612
+[Epoch 0/3] [Batch 0/185] [loss: 20.406605] [Spoofed Label: 26/32] [Desired Label: 1/32]
+[Epoch 0/3] [Batch 50/185] [loss: 10.044683] [Spoofed Label: 30/32] [Desired Label: 22/32]
+[Epoch 0/3] [Batch 100/185] [loss: 7.106119] [Spoofed Label: 29/32] [Desired Label: 20/32]
+[Epoch 0/3] [Batch 150/185] [loss: 5.931299] [Spoofed Label: 30/32] [Desired Label: 23/32]
+[Epoch 0/3] [Val: 0.606225]
+[Epoch 1/3] [Batch 0/185] [loss: 6.554684] [Spoofed Label: 26/32] [Desired Label: 20/32]
+[Epoch 1/3] [Batch 50/185] [loss: 4.529355] [Spoofed Label: 28/32] [Desired Label: 24/32]
+[Epoch 1/3] [Batch 100/185] [loss: 4.811976] [Spoofed Label: 23/32] [Desired Label: 17/32]
+[Epoch 1/3] [Batch 150/185] [loss: 4.583278] [Spoofed Label: 31/32] [Desired Label: 20/32]
+[Epoch 1/3] [Val: 0.642760]
+[Epoch 2/3] [Batch 0/185] [loss: 4.136630] [Spoofed Label: 28/32] [Desired Label: 22/32]
+[Epoch 2/3] [Batch 50/185] [loss: 4.774781] [Spoofed Label: 29/32] [Desired Label: 17/32]
+[Epoch 2/3] [Batch 100/185] [loss: 4.328900] [Spoofed Label: 30/32] [Desired Label: 20/32]
+[Epoch 2/3] [Batch 150/185] [loss: 4.199204] [Spoofed Label: 30/32] [Desired Label: 22/32]
+[Epoch 2/3] [Val: 0.650203]
+CUDA is available. Using CUDA.
+lr: %f 0.005978952022009381
+weight_decay: %f 0.0015825752794470132
+gan_weight_decay: %f 0.01635545877743975
+[Epoch 0/3] [Batch 0/185] [loss: 17.679142] [Spoofed Label: 25/32] [Desired Label: 0/32]
+[Epoch 0/3] [Batch 50/185] [loss: 10.783583] [Spoofed Label: 28/32] [Desired Label: 18/32]
+[Epoch 0/3] [Batch 100/185] [loss: 5.832046] [Spoofed Label: 27/32] [Desired Label: 16/32]
+[Epoch 0/3] [Batch 150/185] [loss: 6.017880] [Spoofed Label: 30/32] [Desired Label: 26/32]
+[Epoch 0/3] [Val: 0.646820]
+[Epoch 1/3] [Batch 0/185] [loss: 5.415029] [Spoofed Label: 31/32] [Desired Label: 23/32]
+[Epoch 1/3] [Batch 50/185] [loss: 4.736401] [Spoofed Label: 29/32] [Desired Label: 22/32]
+[Epoch 1/3] [Batch 100/185] [loss: 4.649396] [Spoofed Label: 31/32] [Desired Label: 27/32]
+[Epoch 1/3] [Batch 150/185] [loss: 3.987448] [Spoofed Label: 28/32] [Desired Label: 27/32]
+[Epoch 1/3] [Val: 0.761840]
+[Epoch 2/3] [Batch 0/185] [loss: 4.084835] [Spoofed Label: 31/32] [Desired Label: 24/32]
+[Epoch 2/3] [Batch 50/185] [loss: 4.209849] [Spoofed Label: 28/32] [Desired Label: 22/32]
+[Epoch 2/3] [Batch 100/185] [loss: 3.580528] [Spoofed Label: 30/32] [Desired Label: 28/32]
+[Epoch 2/3] [Batch 150/185] [loss: 3.814120] [Spoofed Label: 29/32] [Desired Label: 23/32]
+[Epoch 2/3] [Val: 0.765223]
+CUDA is available. Using CUDA.
+lr: %f 0.007229180855243938
+weight_decay: %f 0.002110131549634189
+gan_weight_decay: %f 0.013730268306248015
+[Epoch 0/3] [Batch 0/185] [loss: 16.207241] [Spoofed Label: 26/32] [Desired Label: 1/32]
+[Epoch 0/3] [Batch 50/185] [loss: 6.710703] [Spoofed Label: 29/32] [Desired Label: 17/32]
+[Epoch 0/3] [Batch 100/185] [loss: 7.132991] [Spoofed Label: 27/32] [Desired Label: 10/32]
+[Epoch 0/3] [Batch 150/185] [loss: 5.242935] [Spoofed Label: 30/32] [Desired Label: 23/32]
+[Epoch 0/3] [Val: 0.753045]
+[Epoch 1/3] [Batch 0/185] [loss: 4.536040] [Spoofed Label: 25/32] [Desired Label: 20/32]
+[Epoch 1/3] [Batch 50/185] [loss: 4.346587] [Spoofed Label: 31/32] [Desired Label: 21/32]
+[Epoch 1/3] [Batch 100/185] [loss: 3.496094] [Spoofed Label: 30/32] [Desired Label: 25/32]
+[Epoch 1/3] [Batch 150/185] [loss: 3.462916] [Spoofed Label: 30/32] [Desired Label: 26/32]
+[Epoch 1/3] [Val: 0.763870]
+[Epoch 2/3] [Batch 0/185] [loss: 3.483984] [Spoofed Label: 30/32] [Desired Label: 26/32]
+[Epoch 2/3] [Batch 50/185] [loss: 3.869205] [Spoofed Label: 28/32] [Desired Label: 23/32]
+[Epoch 2/3] [Batch 100/185] [loss: 3.265806] [Spoofed Label: 30/32] [Desired Label: 26/32]
+[Epoch 2/3] [Batch 150/185] [loss: 3.063334] [Spoofed Label: 31/32] [Desired Label: 27/32]
+[Epoch 2/3] [Val: 0.811231]
+CUDA is available. Using CUDA.
+lr: %f 0.007758963064754175
+weight_decay: %f 0.0016667345118595168
+gan_weight_decay: %f 0.015183873383141531
+[Epoch 0/3] [Batch 0/185] [loss: 17.825274] [Spoofed Label: 25/32] [Desired Label: 0/32]
+[Epoch 0/3] [Batch 50/185] [loss: 11.344567] [Spoofed Label: 31/32] [Desired Label: 25/32]
+[Epoch 0/3] [Batch 100/185] [loss: 5.816448] [Spoofed Label: 31/32] [Desired Label: 20/32]
+[Epoch 0/3] [Batch 150/185] [loss: 4.723667] [Spoofed Label: 27/32] [Desired Label: 26/32]
+[Epoch 0/3] [Val: 0.688092]
+[Epoch 1/3] [Batch 0/185] [loss: 4.970824] [Spoofed Label: 29/32] [Desired Label: 25/32]
+[Epoch 1/3] [Batch 50/185] [loss: 4.575505] [Spoofed Label: 29/32] [Desired Label: 21/32]
+[Epoch 1/3] [Batch 100/185] [loss: 4.031390] [Spoofed Label: 29/32] [Desired Label: 22/32]
+[Epoch 1/3] [Batch 150/185] [loss: 3.565682] [Spoofed Label: 27/32] [Desired Label: 27/32]
+[Epoch 1/3] [Val: 0.701624]
+[Epoch 2/3] [Batch 0/185] [loss: 3.340852] [Spoofed Label: 30/32] [Desired Label: 29/32]
+[Epoch 2/3] [Batch 50/185] [loss: 3.680825] [Spoofed Label: 30/32] [Desired Label: 24/32]
+[Epoch 2/3] [Batch 100/185] [loss: 4.065884] [Spoofed Label: 29/32] [Desired Label: 22/32]
+[Epoch 2/3] [Batch 150/185] [loss: 3.574600] [Spoofed Label: 30/32] [Desired Label: 24/32]
+[Epoch 2/3] [Val: 0.700947]
+CUDA is available. Using CUDA.
+lr: %f 0.0051019572468487895
+weight_decay: %f 0.0019235424203519163
+gan_weight_decay: %f 0.019969965549627076
+[Epoch 0/3] [Batch 0/185] [loss: 21.060364] [Spoofed Label: 24/32] [Desired Label: 1/32]
+[Epoch 0/3] [Batch 50/185] [loss: 9.373772] [Spoofed Label: 28/32] [Desired Label: 11/32]
+[Epoch 0/3] [Batch 100/185] [loss: 8.063361] [Spoofed Label: 29/32] [Desired Label: 27/32]
+[Epoch 0/3] [Batch 150/185] [loss: 7.077976] [Spoofed Label: 31/32] [Desired Label: 25/32]
+[Epoch 0/3] [Val: 0.627199]
+[Epoch 1/3] [Batch 0/185] [loss: 6.037376] [Spoofed Label: 29/32] [Desired Label: 24/32]
+[Epoch 1/3] [Batch 50/185] [loss: 5.916340] [Spoofed Label: 28/32] [Desired Label: 21/32]
+[Epoch 1/3] [Batch 100/185] [loss: 5.381945] [Spoofed Label: 25/32] [Desired Label: 19/32]
+[Epoch 1/3] [Batch 150/185] [loss: 4.731691] [Spoofed Label: 32/32] [Desired Label: 22/32]
+[Epoch 1/3] [Val: 0.725981]
+[Epoch 2/3] [Batch 0/185] [loss: 4.837996] [Spoofed Label: 28/32] [Desired Label: 24/32]
+[Epoch 2/3] [Batch 50/185] [loss: 5.058992] [Spoofed Label: 28/32] [Desired Label: 17/32]
+[Epoch 2/3] [Batch 100/185] [loss: 4.667537] [Spoofed Label: 30/32] [Desired Label: 24/32]
+[Epoch 2/3] [Batch 150/185] [loss: 4.780640] [Spoofed Label: 28/32] [Desired Label: 20/32]
+[Epoch 2/3] [Val: 0.720568]
+CUDA is available. Using CUDA.
+lr: %f 0.008237707006350401
+weight_decay: %f 0.0018171753650047201
+gan_weight_decay: %f 0.017850307966771096
+[Epoch 0/3] [Batch 0/185] [loss: 19.704939] [Spoofed Label: 29/32] [Desired Label: 1/32]
+[Epoch 0/3] [Batch 50/185] [loss: 11.785846] [Spoofed Label: 26/32] [Desired Label: 19/32]
+[Epoch 0/3] [Batch 100/185] [loss: 6.718975] [Spoofed Label: 27/32] [Desired Label: 21/32]
+[Epoch 0/3] [Batch 150/185] [loss: 5.598853] [Spoofed Label: 30/32] [Desired Label: 22/32]
+[Epoch 0/3] [Val: 0.734777]
+[Epoch 1/3] [Batch 0/185] [loss: 4.494106] [Spoofed Label: 29/32] [Desired Label: 22/32]
+[Epoch 1/3] [Batch 50/185] [loss: 4.376751] [Spoofed Label: 28/32] [Desired Label: 18/32]
+[Epoch 1/3] [Batch 100/185] [loss: 3.925067] [Spoofed Label: 31/32] [Desired Label: 24/32]
+[Epoch 1/3] [Batch 150/185] [loss: 4.024296] [Spoofed Label: 30/32] [Desired Label: 22/32]
+[Epoch 1/3] [Val: 0.753721]
+[Epoch 2/3] [Batch 0/185] [loss: 3.944366] [Spoofed Label: 29/32] [Desired Label: 25/32]
+[Epoch 2/3] [Batch 50/185] [loss: 3.923144] [Spoofed Label: 30/32] [Desired Label: 25/32]
+[Epoch 2/3] [Batch 100/185] [loss: 4.511023] [Spoofed Label: 26/32] [Desired Label: 20/32]
+[Epoch 2/3] [Batch 150/185] [loss: 4.047246] [Spoofed Label: 28/32] [Desired Label: 23/32]
+[Epoch 2/3] [Val: 0.753721]
+CUDA is available. Using CUDA.
+lr: %f 0.00812079955617062
+weight_decay: %f 0.0017536074833839064
+gan_weight_decay: %f 0.018309279225922737
+[Epoch 0/3] [Batch 0/185] [loss: 19.469803] [Spoofed Label: 18/32] [Desired Label: 1/32]
+[Epoch 0/3] [Batch 50/185] [loss: 8.759490] [Spoofed Label: 27/32] [Desired Label: 11/32]
+[Epoch 0/3] [Batch 100/185] [loss: 6.910275] [Spoofed Label: 29/32] [Desired Label: 20/32]
+[Epoch 0/3] [Batch 150/185] [loss: 5.206892] [Spoofed Label: 31/32] [Desired Label: 22/32]
+[Epoch 0/3] [Val: 0.673884]
+[Epoch 1/3] [Batch 0/185] [loss: 5.130872] [Spoofed Label: 28/32] [Desired Label: 22/32]
+[Epoch 1/3] [Batch 50/185] [loss: 4.472363] [Spoofed Label: 29/32] [Desired Label: 24/32]
+[Epoch 1/3] [Batch 100/185] [loss: 4.175208] [Spoofed Label: 32/32] [Desired Label: 22/32]
+[Epoch 1/3] [Batch 150/185] [loss: 4.403450] [Spoofed Label: 29/32] [Desired Label: 19/32]
+[Epoch 1/3] [Val: 0.688769]
+[Epoch 2/3] [Batch 0/185] [loss: 4.077044] [Spoofed Label: 28/32] [Desired Label: 24/32]
+[Epoch 2/3] [Batch 50/185] [loss: 4.319542] [Spoofed Label: 28/32] [Desired Label: 20/32]
+[Epoch 2/3] [Batch 100/185] [loss: 3.881450] [Spoofed Label: 31/32] [Desired Label: 27/32]
+[Epoch 2/3] [Batch 150/185] [loss: 4.408580] [Spoofed Label: 26/32] [Desired Label: 18/32]
+[Epoch 2/3] [Val: 0.698917]
+CUDA is available. Using CUDA.
+lr: %f 0.009247510612662225
+weight_decay: %f 0.002431535513215184
+gan_weight_decay: %f 0.01721438695533112
+[Epoch 0/3] [Batch 0/185] [loss: 19.627739] [Spoofed Label: 25/32] [Desired Label: 0/32]
+[Epoch 0/3] [Batch 50/185] [loss: 8.802416] [Spoofed Label: 31/32] [Desired Label: 25/32]
+[Epoch 0/3] [Batch 100/185] [loss: 5.671585] [Spoofed Label: 32/32] [Desired Label: 23/32]
+[Epoch 0/3] [Batch 150/185] [loss: 4.366464] [Spoofed Label: 31/32] [Desired Label: 22/32]
+[Epoch 0/3] [Val: 0.729364]
+[Epoch 1/3] [Batch 0/185] [loss: 4.530218] [Spoofed Label: 31/32] [Desired Label: 25/32]
+[Epoch 1/3] [Batch 50/185] [loss: 3.587088] [Spoofed Label: 31/32] [Desired Label: 29/32]
+[Epoch 1/3] [Batch 100/185] [loss: 4.269110] [Spoofed Label: 29/32] [Desired Label: 21/32]
+[Epoch 1/3] [Batch 150/185] [loss: 4.020607] [Spoofed Label: 28/32] [Desired Label: 24/32]
+[Epoch 1/3] [Val: 0.709743]
+[Epoch 2/3] [Batch 0/185] [loss: 4.072087] [Spoofed Label: 32/32] [Desired Label: 21/32]
+[Epoch 2/3] [Batch 50/185] [loss: 3.851876] [Spoofed Label: 30/32] [Desired Label: 25/32]
+[Epoch 2/3] [Batch 100/185] [loss: 4.127000] [Spoofed Label: 31/32] [Desired Label: 22/32]
+[Epoch 2/3] [Batch 150/185] [loss: 3.866206] [Spoofed Label: 29/32] [Desired Label: 24/32]
+[Epoch 2/3] [Val: 0.702977]
+CUDA is available. Using CUDA.
+lr: %f 0.009478425512690408
+weight_decay: %f 0.0024019779068320283
+gan_weight_decay: %f 0.01726150317601781
+[Epoch 0/3] [Batch 0/185] [loss: 19.393278] [Spoofed Label: 25/32] [Desired Label: 0/32]
+[Epoch 0/3] [Batch 50/185] [loss: 8.536235] [Spoofed Label: 30/32] [Desired Label: 23/32]
+[Epoch 0/3] [Batch 100/185] [loss: 5.740237] [Spoofed Label: 29/32] [Desired Label: 26/32]
+[Epoch 0/3] [Batch 150/185] [loss: 4.769351] [Spoofed Label: 28/32] [Desired Label: 22/32]
+[Epoch 0/3] [Val: 0.684032]
+[Epoch 1/3] [Batch 0/185] [loss: 4.446053] [Spoofed Label: 28/32] [Desired Label: 21/32]
+[Epoch 1/3] [Batch 50/185] [loss: 4.340508] [Spoofed Label: 27/32] [Desired Label: 19/32]
+[Epoch 1/3] [Batch 100/185] [loss: 3.984808] [Spoofed Label: 31/32] [Desired Label: 23/32]
+[Epoch 1/3] [Batch 150/185] [loss: 3.816139] [Spoofed Label: 30/32] [Desired Label: 25/32]
+[Epoch 1/3] [Val: 0.706360]
+[Epoch 2/3] [Batch 0/185] [loss: 4.109377] [Spoofed Label: 30/32] [Desired Label: 23/32]
+[Epoch 2/3] [Batch 50/185] [loss: 3.746697] [Spoofed Label: 31/32] [Desired Label: 22/32]
+[Epoch 2/3] [Batch 100/185] [loss: 4.137613] [Spoofed Label: 28/32] [Desired Label: 23/32]
+[Epoch 2/3] [Batch 150/185] [loss: 3.857722] [Spoofed Label: 30/32] [Desired Label: 22/32]
+[Epoch 2/3] [Val: 0.760487]
+CUDA is available. Using CUDA.
+lr: %f 0.006779647791920745
+weight_decay: %f 0.002072689638679498
+gan_weight_decay: %f 0.018593006352716664
+[Epoch 0/3] [Batch 0/185] [loss: 19.759165] [Spoofed Label: 25/32] [Desired Label: 2/32]
+[Epoch 0/3] [Batch 50/185] [loss: 8.983873] [Spoofed Label: 27/32] [Desired Label: 19/32]
+[Epoch 0/3] [Batch 100/185] [loss: 6.578688] [Spoofed Label: 32/32] [Desired Label: 22/32]
+[Epoch 0/3] [Batch 150/185] [loss: 5.843588] [Spoofed Label: 31/32] [Desired Label: 19/32]
+[Epoch 0/3] [Val: 0.678620]
+[Epoch 1/3] [Batch 0/185] [loss: 5.247414] [Spoofed Label: 30/32] [Desired Label: 21/32]
+[Epoch 1/3] [Batch 50/185] [loss: 5.007603] [Spoofed Label: 31/32] [Desired Label: 25/32]
+[Epoch 1/3] [Batch 100/185] [loss: 4.155600] [Spoofed Label: 29/32] [Desired Label: 26/32]
+[Epoch 1/3] [Batch 150/185] [loss: 4.588989] [Spoofed Label: 29/32] [Desired Label: 19/32]
+[Epoch 1/3] [Val: 0.675913]
+[Epoch 2/3] [Batch 0/185] [loss: 4.417892] [Spoofed Label: 29/32] [Desired Label: 21/32]
+[Epoch 2/3] [Batch 50/185] [loss: 4.350295] [Spoofed Label: 31/32] [Desired Label: 22/32]
+[Epoch 2/3] [Batch 100/185] [loss: 4.345258] [Spoofed Label: 28/32] [Desired Label: 22/32]
+[Epoch 2/3] [Batch 150/185] [loss: 3.925084] [Spoofed Label: 30/32] [Desired Label: 24/32]
+[Epoch 2/3] [Val: 0.667118]
+CUDA is available. Using CUDA.
+lr: %f 0.009276890119153655
+weight_decay: %f 0.0022491857438357195
+gan_weight_decay: %f 0.015557628929440865
+[Epoch 0/3] [Batch 0/185] [loss: 17.851372] [Spoofed Label: 27/32] [Desired Label: 1/32]
+[Epoch 0/3] [Batch 50/185] [loss: 10.019109] [Spoofed Label: 32/32] [Desired Label: 24/32]
+[Epoch 0/3] [Batch 100/185] [loss: 5.382121] [Spoofed Label: 30/32] [Desired Label: 22/32]
+[Epoch 0/3] [Batch 150/185] [loss: 4.460820] [Spoofed Label: 30/32] [Desired Label: 23/32]
+[Epoch 0/3] [Val: 0.694181]
+[Epoch 1/3] [Batch 0/185] [loss: 3.968148] [Spoofed Label: 29/32] [Desired Label: 25/32]
+[Epoch 1/3] [Batch 50/185] [loss: 3.645412] [Spoofed Label: 31/32] [Desired Label: 22/32]
+[Epoch 1/3] [Batch 100/185] [loss: 3.715685] [Spoofed Label: 31/32] [Desired Label: 25/32]
+[Epoch 1/3] [Batch 150/185] [loss: 4.155606] [Spoofed Label: 28/32] [Desired Label: 20/32]
+[Epoch 1/3] [Val: 0.721245]
+[Epoch 2/3] [Batch 0/185] [loss: 3.853222] [Spoofed Label: 29/32] [Desired Label: 20/32]
+[Epoch 2/3] [Batch 50/185] [loss: 3.919915] [Spoofed Label: 29/32] [Desired Label: 19/32]
+[Epoch 2/3] [Batch 100/185] [loss: 3.381567] [Spoofed Label: 30/32] [Desired Label: 25/32]
+[Epoch 2/3] [Batch 150/185] [loss: 3.807912] [Spoofed Label: 31/32] [Desired Label: 25/32]
+[Epoch 2/3] [Val: 0.762517]
+CUDA is available. Using CUDA.
+lr: %f 0.0076014145123193474
+weight_decay: %f 0.0025335829178837776
+gan_weight_decay: %f 0.017694639551636457
+[Epoch 0/3] [Batch 0/185] [loss: 19.288704] [Spoofed Label: 23/32] [Desired Label: 1/32]
+[Epoch 0/3] [Batch 50/185] [loss: 9.493532] [Spoofed Label: 25/32] [Desired Label: 3/32]
+[Epoch 0/3] [Batch 100/185] [loss: 7.572213] [Spoofed Label: 31/32] [Desired Label: 23/32]
+[Epoch 0/3] [Batch 150/185] [loss: 4.721199] [Spoofed Label: 30/32] [Desired Label: 21/32]
+[Epoch 0/3] [Val: 0.709066]
+[Epoch 1/3] [Batch 0/185] [loss: 5.399571] [Spoofed Label: 32/32] [Desired Label: 21/32]
+[Epoch 1/3] [Batch 50/185] [loss: 4.620413] [Spoofed Label: 29/32] [Desired Label: 20/32]
+[Epoch 1/3] [Batch 100/185] [loss: 4.335230] [Spoofed Label: 29/32] [Desired Label: 21/32]
+[Epoch 1/3] [Batch 150/185] [loss: 3.949309] [Spoofed Label: 31/32] [Desired Label: 28/32]
+[Epoch 1/3] [Val: 0.692828]
+[Epoch 2/3] [Batch 0/185] [loss: 4.193376] [Spoofed Label: 29/32] [Desired Label: 21/32]
+[Epoch 2/3] [Batch 50/185] [loss: 4.119906] [Spoofed Label: 26/32] [Desired Label: 24/32]
+[Epoch 2/3] [Batch 100/185] [loss: 3.809386] [Spoofed Label: 29/32] [Desired Label: 26/32]
+[Epoch 2/3] [Batch 150/185] [loss: 3.942521] [Spoofed Label: 30/32] [Desired Label: 25/32]
+[Epoch 2/3] [Val: 0.717185]
+CUDA is available. Using CUDA.
+lr: %f 0.008401388391706191
+weight_decay: %f 0.0019500141229110476
+gan_weight_decay: %f 0.01294667056056249
+[Epoch 0/3] [Batch 0/185] [loss: 16.396317] [Spoofed Label: 27/32] [Desired Label: 0/32]
+[Epoch 0/3] [Batch 50/185] [loss: 8.704766] [Spoofed Label: 30/32] [Desired Label: 24/32]
+[Epoch 0/3] [Batch 100/185] [loss: 4.823761] [Spoofed Label: 29/32] [Desired Label: 26/32]
+[Epoch 0/3] [Batch 150/185] [loss: 4.411607] [Spoofed Label: 28/32] [Desired Label: 26/32]
+[Epoch 0/3] [Val: 0.762517]
+[Epoch 1/3] [Batch 0/185] [loss: 3.611959] [Spoofed Label: 29/32] [Desired Label: 25/32]
+[Epoch 1/3] [Batch 50/185] [loss: 3.600642] [Spoofed Label: 31/32] [Desired Label: 24/32]
+[Epoch 1/3] [Batch 100/185] [loss: 3.487315] [Spoofed Label: 29/32] [Desired Label: 22/32]
+[Epoch 1/3] [Batch 150/185] [loss: 2.994802] [Spoofed Label: 28/32] [Desired Label: 25/32]
+[Epoch 1/3] [Val: 0.771313]
+[Epoch 2/3] [Batch 0/185] [loss: 3.217084] [Spoofed Label: 30/32] [Desired Label: 24/32]
+[Epoch 2/3] [Batch 50/185] [loss: 3.538460] [Spoofed Label: 28/32] [Desired Label: 24/32]
+[Epoch 2/3] [Batch 100/185] [loss: 2.897402] [Spoofed Label: 30/32] [Desired Label: 28/32]
+[Epoch 2/3] [Batch 150/185] [loss: 3.126004] [Spoofed Label: 29/32] [Desired Label: 28/32]
+[Epoch 2/3] [Val: 0.794317]
+CUDA is available. Using CUDA.
+lr: %f 0.006370630753712439
+weight_decay: %f 0.0023668085191501237
+gan_weight_decay: %f 0.01892642473778166
+[Epoch 0/3] [Batch 0/185] [loss: 19.855656] [Spoofed Label: 22/32] [Desired Label: 1/32]
+[Epoch 0/3] [Batch 50/185] [loss: 10.166830] [Spoofed Label: 28/32] [Desired Label: 19/32]
+[Epoch 0/3] [Batch 100/185] [loss: 6.834942] [Spoofed Label: 26/32] [Desired Label: 17/32]
+[Epoch 0/3] [Batch 150/185] [loss: 5.316489] [Spoofed Label: 28/32] [Desired Label: 20/32]
+[Epoch 0/3] [Val: 0.625169]
+[Epoch 1/3] [Batch 0/185] [loss: 8.328362] [Spoofed Label: 29/32] [Desired Label: 18/32]
+[Epoch 1/3] [Batch 50/185] [loss: 5.022480] [Spoofed Label: 31/32] [Desired Label: 24/32]
+[Epoch 1/3] [Batch 100/185] [loss: 4.300313] [Spoofed Label: 31/32] [Desired Label: 25/32]
+[Epoch 1/3] [Batch 150/185] [loss: 4.190042] [Spoofed Label: 32/32] [Desired Label: 25/32]
+[Epoch 1/3] [Val: 0.725981]
+[Epoch 2/3] [Batch 0/185] [loss: 4.183966] [Spoofed Label: 28/32] [Desired Label: 22/32]
+[Epoch 2/3] [Batch 50/185] [loss: 4.071883] [Spoofed Label: 31/32] [Desired Label: 23/32]
+[Epoch 2/3] [Batch 100/185] [loss: 4.466677] [Spoofed Label: 30/32] [Desired Label: 21/32]
+[Epoch 2/3] [Batch 150/185] [loss: 3.974363] [Spoofed Label: 29/32] [Desired Label: 23/32]
+[Epoch 2/3] [Val: 0.719892]
+Study statistics:
+  Number of finished trials:  100
+  Number of pruned trials:  0
+  Number of complete trials:  100
+Best trial:
+  Value:  4.662035280489363e-05
+  Params:
+    lr: 0.00717318748494294
+    weight_decay: 0.0017956127066962179
+    gan_weight_decay: 0.019926488027235057
+    num_epochs: 3
+(pytorch) sanchit@node-0:/external/pytorch/repo$
