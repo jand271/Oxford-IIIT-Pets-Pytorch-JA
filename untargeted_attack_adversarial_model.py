@@ -1,6 +1,11 @@
 ################################################################################
 #                                                                              #
-# Adversarial noise generator for producing quasi-imperceptible perturbations. #
+# Adversarial noise generator for producing quasi-imperceptible perturbations  #
+# (modifications to an image) for an untargeted attack (the goal of the        #
+# adversarial model is to help produce adversarial noise, which when added to  # 
+# images, created images that humans have a hard time telling apart from the   #
+# original images but they fool a ResNet50 model pretrained on the             #
+# Oxford-IIIT pets dataset.                                                    #               
 #                                                                              #
 # This code runs hyperparameter tuning trials to find the best possible        #
 # configuration wherein our objective function (validation set accuracy of the #
@@ -15,7 +20,31 @@
 # Authors: Sanchit Jain <sanchit@stanford.edu>,                                #
 #          Jason Anderson <jand271@stanford.edu>                               #
 #                                                                              #
+# Other credits: Cheng Chang <chc012@stanford.edu> provided useful advice      #
+#                                                                              #
 # Usage: Run python untargeted_attack_adversarial_model.py --help              #
+#                                                                              #
+#                                                                              #
+# Copyright 2023 Sanchit Jain, Jason Anderson, Cheng Chang                     #
+#                                                                              #
+# Permission is hereby granted, free of charge, to any person obtaining a copy #
+# of this software and associated documentation files (the “Software”), to     #
+# deal in the Software without restriction, including without limitation the   #
+# rights to use, copy, modify, merge, publish, distribute, sublicense, and/or  #
+# sell copies of the Software, and to permit persons to whom the Software is   #
+# furnished to do so, subject to the following conditions:                     #
+#                                                                              #
+# The above copyright notice and this permission notice shall be included in   #
+# all copies or substantial portions of the Software.                          #
+#                                                                              #
+# THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND,              #
+# EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF           #
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO #
+# EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,        #
+# DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR        #
+# OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE    #
+# USE OR OTHER DEALINGS IN THE SOFTWARE.                                       #
+#                                                                              #
 #                                                                              #
 ################################################################################
 
@@ -135,10 +164,11 @@ def train(trial):
 
     if known_config_mode:
         # We know this config to perform well (minimal adversarial perturbation with
-        # reasonable misclassification accuracy)
-        lr = trial.suggest_float("lr", 0.0008490532908377003, 0.0008490532908377003, log=True)
-        weight_decay = trial.suggest_float("weight_decay", 0.018128854482948858, 0.018128854482948858, log=True)
-        norm_weight_decay = trial.suggest_float("norm_weight_decay", 0.04947776147536436, 0.04947776147536436, log=True)
+        # reasonable misclassification accuracy). Gathered from 100 trials on an
+        # Nvidia V100 GPU
+        lr = 0.0008490532908377003
+        weight_decay = 0.018128854482948858
+        norm_weight_decay = 0.04947776147536436
     else:
         lr = trial.suggest_float("lr", 5e-4, 1e-2, log=True)
         weight_decay = trial.suggest_float("weight_decay", 1e-3, 5e-2, log=True)
@@ -264,8 +294,8 @@ if __name__ == '__main__':
     args, _ = parser.parse_known_args()
     display_validation_set_images = args.display_validation_set_images
     display_training_set_images = args.display_training_set_images
-    num_epochs_per_trial = args.num_epochs
-    display_every_num_epochs = args.display_every_num_epochs
+    num_epochs_per_trial = int(args.num_epochs)
+    display_every_num_epochs = int(args.display_every_num_epochs)
     if args.known_config_mode:
         display_validation_set_images = True
         known_config_mode = True
