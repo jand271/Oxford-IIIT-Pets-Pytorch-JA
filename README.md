@@ -16,7 +16,6 @@ and they allow its use under the Attribution-ShareAlike 4.0 International licens
 so we are not sure why the author of the repo we forked the dataset from violated the terms of the Creative Commons License, 
 but added his own license instead without any attribution to the authors of the dataset (O. M. Parkhi, A. Vedaldi, A. Zisserman, C. V. Jawahar). 
 Nevertheless, we are retaining the license he had added, although we did not use any of his work.
-We also renamed the directory names to lowercase.
 
 
 ## Sections
