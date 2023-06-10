@@ -25,11 +25,11 @@ The generated images may not be same because Optuna may change the random seed, 
 
 `Perturbed image = Original image + Adversarial noise`
 
-| Original image        | Perturbed image that misclassified | Where are the perturbations|
+| Original image        | Perturbed image that misclassified | Location of perturbations|
 | ------------- |:------:|:---------:|
 | <img src="https://github.com/jand271/Oxford-IIIT-Pets-Pytorch-JA/blob/master/results/untargeted_adversarial_model/epoch_5_original_image_3.png">      | <img src="https://github.com/jand271/Oxford-IIIT-Pets-Pytorch-JA/blob/master/results/untargeted_adversarial_model/epoch_5_perturbed_image_3.png"> | The dog's nose |
 | <img src="https://github.com/jand271/Oxford-IIIT-Pets-Pytorch-JA/blob/master/results/untargeted_adversarial_model/epoch_5_original_image_10.png">      | <img src="https://github.com/jand271/Oxford-IIIT-Pets-Pytorch-JA/blob/master/results/untargeted_adversarial_model/epoch_5_perturbed_image_10.png"> | left paw |
-| <img src="https://github.com/jand271/Oxford-IIIT-Pets-Pytorch-JA/blob/master/results/untargeted_adversarial_model/epoch_5_original_image_63.png">      | <img src="https://github.com/jand271/Oxford-IIIT-Pets-Pytorch-JA/blob/master/results/untargeted_adversarial_model/epoch_5_perturbed_image_63.png"> | right side of the nose |
+| <img src="https://github.com/jand271/Oxford-IIIT-Pets-Pytorch-JA/blob/master/results/untargeted_adversarial_model/epoch_5_original_image_63.png">      | <img src="https://github.com/jand271/Oxford-IIIT-Pets-Pytorch-JA/blob/master/results/untargeted_adversarial_model/epoch_5_perturbed_image_63.png"> | left side of the nose |
 | <img src="https://github.com/jand271/Oxford-IIIT-Pets-Pytorch-JA/blob/master/results/untargeted_adversarial_model/epoch_5_original_image_84.png">      | <img src="https://github.com/jand271/Oxford-IIIT-Pets-Pytorch-JA/blob/master/results/untargeted_adversarial_model/epoch_5_perturbed_image_84.png"> | pink dots on the window |
 
 Note that only 4 of these images have tiny modifications that human eyes can perceive,
