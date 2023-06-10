@@ -1,5 +1,5 @@
 # Why is this repo a fork?
-While this repository is a fork, we only used the dataset from the original repository.
+While this repository is a fork, we only used the dataset from the parent repository.
 The [dataset](https://www.robots.ox.ac.uk/~vgg/data/pets/) actually created by Oxford researchers O. M. Parkhi, A. Vedaldi, A. Zisserman, C. V. Jawahar,
 and they allow its use under the [Creative Commons Attribution-ShareAlike 4.0 International license](https://creativecommons.org/licenses/by-sa/4.0/),
 so we are not sure why the author of the repo we forked the dataset from violated the terms of the license of the dataset
