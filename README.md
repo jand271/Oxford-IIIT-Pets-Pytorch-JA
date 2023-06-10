@@ -8,4 +8,4 @@ Nevertheless, we are retaining the license he had added, although we did not use
 
 
 ## Sections
-Because of the unique circumstances regarding this fork, we are moving the README to the Wiki instead.
+Because of the unique circumstances regarding this fork, we are moving the README to the [Wiki](https://github.com/jand271/Oxford-IIIT-Pets-Pytorch-JA/wiki) instead.
