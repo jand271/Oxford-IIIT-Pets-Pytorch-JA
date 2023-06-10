@@ -34,7 +34,7 @@ from common import load_model, load_images, inverse_transform, attempt_gpu_accel
 display_validation_set_images = False
 # display one batch at the end of each epoch
 display_training_set_images = False
-# number of epochs per trial (experiment with a unique hyper-parameter config)
+# number of epochs per "trial" (an experiment with a unique hyper-parameter config)
 num_epochs_per_trial = 5
 # display validation set images after every display_every_num_epochs epochs
 display_every_num_epochs = 5
@@ -81,6 +81,8 @@ def validate_test_set(
       device,
       epoch):
     correct = 0
+    # number of images we would print
+    num_images_printed = 0
     for (images, labels) in test_dataloader:
         images = images.to(device)
         labels = labels.to("cpu")
@@ -94,20 +96,21 @@ def validate_test_set(
 
             correct += torch.sum(torch.argmax(label_predicted, axis = 1) != labels).item()
 
-            if display_validation_set_images and epoch == display_every_num_epochs:
+            if display_validation_set_images and (epoch % display_every_num_epochs == 0):
                 for i in range(len(labels)):
                     if labels[i] != torch.argmax(label_predicted[i]):
-                        print("epoch_" + str(epoch) + "_perturbed_image_" + str(i))
+                        print("epoch_" + str(epoch) + "_perturbed_image_" + str(num_images_printed))
                         print(f'original label{labels[i]} : new label{torch.argmax(label_predicted[i])}')
                         plt.imshow(inverse_transform(images[i]))
-                        filename = "epoch_" + str(epoch) + "_original_image_" + str(i)
+                        filename = "epoch_" + str(epoch) + "_original_image_" + str(num_images_printed)
                         plt.savefig(filename)
                         plt.imshow(inverse_transform(images[i] + adversarial_noise[i]))
-                        filename = "epoch_" + str(epoch) + "_perturbed_image_" + str(i)
+                        filename = "epoch_" + str(epoch) + "_perturbed_image_" + str(num_images_printed)
                         plt.savefig(filename)
                         plt.imshow(inverse_transform(adversarial_noise[i]))
-                        filename = "epoch_" + str(epoch) + "_adversarial_noise_" + str(i)
+                        filename = "epoch_" + str(epoch) + "_adversarial_noise_" + str(num_images_printed)
                         plt.savefig(filename)
+                        num_images_printed += 1
     return correct / len(test_dataloader.dataset)
 
 
