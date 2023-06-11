@@ -56,7 +56,7 @@ from tqdm import tqdm
 import random
 
 from common import inverse_transform, load_model
-from try_nn_fgsm import AdversarialModel
+from targeted_attack_adversarial_generator import AdversarialModel
 
 class ResNetRegressor(nn.Module):
     def __init__(self, out_dim=224):
