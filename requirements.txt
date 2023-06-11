@@ -1,0 +1,9 @@
+pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118
+pip install optuna
+pip install timm
+pip install scipy
+pip install matplotlib
+pip install datasets
+pip install tqdm
+pip install logging
+pip install argparse
