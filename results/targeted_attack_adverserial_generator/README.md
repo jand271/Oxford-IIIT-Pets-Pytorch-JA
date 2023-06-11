@@ -17,7 +17,7 @@ Most of the perturbed images have readily human-perceptible perturbations that c
 ## How to reproduce this experiment
 Similar images can be reproduced by running the following
 ```
-python targeted_attack_adversarial_model.py --known_config_mode
+python targeted_attack_try_minimizing_perturbations.py --known_config_mode
 ```
 The generated images may not be same because Optuna may change the random seed, although we fixed a seed with `torch.manual_seed`.
 
