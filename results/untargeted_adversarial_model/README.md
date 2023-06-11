@@ -35,7 +35,7 @@ The generated images may not be same because Optuna may change the random seed, 
 Note that only 4 of these images have tiny modifications that human eyes can perceive,
 but some images do not have any perceptible perturbations whatsoever.
 
-However other such as the ones below have readily noticeable perturbation.
+However the ones below have readily noticeable perturbations.
 
 <img src="https://github.com/jand271/Oxford-IIIT-Pets-Pytorch-JA/blob/master/results/untargeted_adversarial_model/epoch_5_perturbed_image_57.png">
 
