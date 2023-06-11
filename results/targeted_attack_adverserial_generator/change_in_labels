@@ -1,0 +1,938 @@
+lr: 0.007173
+weight_decay: 0.001796
+norm_weight_decay: 0.019926
+[Epoch 1/5] [Batch 0/185] [loss: 20.532494] [Spoofed Labels: 6/32]
+[Epoch 1/5] [Batch 50/185] [loss: 9.427194] [Spoofed Labels: 10/32]
+[Epoch 1/5] [Batch 100/185] [loss: 7.978683] [Spoofed Labels: 21/32]
+[Epoch 1/5] [Batch 150/185] [loss: 6.322638] [Spoofed Labels: 26/32]
+[Epoch 1/5] [Validation accuracy: 0.641407]
+[Epoch 2/5] [Batch 0/185] [loss: 5.118467] [Spoofed Labels: 29/32]
+[Epoch 2/5] [Batch 50/185] [loss: 5.174474] [Spoofed Labels: 20/32]
+[Epoch 2/5] [Batch 100/185] [loss: 4.652668] [Spoofed Labels: 25/32]
+[Epoch 2/5] [Batch 150/185] [loss: 5.170465] [Spoofed Labels: 22/32]
+[Epoch 2/5] [Validation accuracy: 0.637348]
+[Epoch 3/5] [Batch 0/185] [loss: 5.101758] [Spoofed Labels: 22/32]
+[Epoch 3/5] [Batch 50/185] [loss: 4.106030] [Spoofed Labels: 29/32]
+[Epoch 3/5] [Batch 100/185] [loss: 4.527454] [Spoofed Labels: 21/32]
+[Epoch 3/5] [Batch 150/185] [loss: 4.439670] [Spoofed Labels: 26/32]
+[Epoch 3/5] [Validation accuracy: 0.631258]
+[Epoch 4/5] [Batch 0/185] [loss: 4.884923] [Spoofed Labels: 20/32]
+[Epoch 4/5] [Batch 50/185] [loss: 5.031651] [Spoofed Labels: 21/32]
+[Epoch 4/5] [Batch 100/185] [loss: 4.257406] [Spoofed Labels: 26/32]
+[Epoch 4/5] [Batch 150/185] [loss: 4.158749] [Spoofed Labels: 24/32]
+[Epoch 4/5] [Validation accuracy: 0.642084]
+[Epoch 5/5] [Batch 0/185] [loss: 4.290294] [Spoofed Labels: 24/32]
+[Epoch 5/5] [Batch 50/185] [loss: 4.360961] [Spoofed Labels: 23/32]
+[Epoch 5/5] [Batch 100/185] [loss: 4.527822] [Spoofed Labels: 23/32]
+[Epoch 5/5] [Batch 150/185] [loss: 4.077271] [Spoofed Labels: 20/32]
+targeted_attack_epoch_5_perturbed_image_0
+original label15 : new label0
+targeted_attack_epoch_5_perturbed_image_1
+original label35 : new label0
+targeted_attack_epoch_5_perturbed_image_2
+original label6 : new label0
+targeted_attack_epoch_5_perturbed_image_3
+original label13 : new label0
+targeted_attack_epoch_5_perturbed_image_4
+original label31 : new label0
+targeted_attack_epoch_5_perturbed_image_5
+original label22 : new label0
+targeted_attack_epoch_5_perturbed_image_6
+original label27 : new label0
+targeted_attack_epoch_5_perturbed_image_7
+original label25 : new label0
+targeted_attack_epoch_5_perturbed_image_8
+original label34 : new label1
+targeted_attack_epoch_5_perturbed_image_9
+original label13 : new label0
+targeted_attack_epoch_5_perturbed_image_10
+original label27 : new label0
+targeted_attack_epoch_5_perturbed_image_11
+original label21 : new label0
+targeted_attack_epoch_5_perturbed_image_12
+original label33 : new label0
+targeted_attack_epoch_5_perturbed_image_13
+original label33 : new label0
+targeted_attack_epoch_5_perturbed_image_14
+original label26 : new label0
+targeted_attack_epoch_5_perturbed_image_15
+original label6 : new label0
+targeted_attack_epoch_5_perturbed_image_16
+original label17 : new label0
+targeted_attack_epoch_5_perturbed_image_17
+original label26 : new label0
+targeted_attack_epoch_5_perturbed_image_18
+original label31 : new label0
+targeted_attack_epoch_5_perturbed_image_19
+original label23 : new label26
+targeted_attack_epoch_5_perturbed_image_20
+original label18 : new label0
+targeted_attack_epoch_5_perturbed_image_21
+original label33 : new label0
+targeted_attack_epoch_5_perturbed_image_22
+original label31 : new label0
+targeted_attack_epoch_5_perturbed_image_23
+original label18 : new label0
+targeted_attack_epoch_5_perturbed_image_24
+original label27 : new label0
+targeted_attack_epoch_5_perturbed_image_25
+original label17 : new label0
+targeted_attack_epoch_5_perturbed_image_26
+original label28 : new label0
+targeted_attack_epoch_5_perturbed_image_27
+original label6 : new label0
+targeted_attack_epoch_5_perturbed_image_28
+original label22 : new label0
+targeted_attack_epoch_5_perturbed_image_29
+original label12 : new label0
+targeted_attack_epoch_5_perturbed_image_30
+original label24 : new label0
+targeted_attack_epoch_5_perturbed_image_31
+original label7 : new label0
+targeted_attack_epoch_5_perturbed_image_32
+original label34 : new label33
+targeted_attack_epoch_5_perturbed_image_33
+original label34 : new label0
+targeted_attack_epoch_5_perturbed_image_34
+original label32 : new label0
+targeted_attack_epoch_5_perturbed_image_35
+original label29 : new label0
+targeted_attack_epoch_5_perturbed_image_36
+original label14 : new label0
+targeted_attack_epoch_5_perturbed_image_37
+original label13 : new label12
+targeted_attack_epoch_5_perturbed_image_38
+original label4 : new label0
+targeted_attack_epoch_5_perturbed_image_39
+original label7 : new label0
+targeted_attack_epoch_5_perturbed_image_40
+original label26 : new label0
+targeted_attack_epoch_5_perturbed_image_41
+original label28 : new label8
+targeted_attack_epoch_5_perturbed_image_42
+original label21 : new label0
+targeted_attack_epoch_5_perturbed_image_43
+original label21 : new label0
+targeted_attack_epoch_5_perturbed_image_44
+original label1 : new label0
+targeted_attack_epoch_5_perturbed_image_45
+original label16 : new label0
+targeted_attack_epoch_5_perturbed_image_46
+original label35 : new label0
+targeted_attack_epoch_5_perturbed_image_47
+original label34 : new label0
+targeted_attack_epoch_5_perturbed_image_48
+original label7 : new label0
+targeted_attack_epoch_5_perturbed_image_49
+original label14 : new label0
+targeted_attack_epoch_5_perturbed_image_50
+original label9 : new label0
+targeted_attack_epoch_5_perturbed_image_51
+original label15 : new label0
+targeted_attack_epoch_5_perturbed_image_52
+original label15 : new label0
+targeted_attack_epoch_5_perturbed_image_53
+original label2 : new label0
+targeted_attack_epoch_5_perturbed_image_54
+original label30 : new label0
+targeted_attack_epoch_5_perturbed_image_55
+original label7 : new label0
+targeted_attack_epoch_5_perturbed_image_56
+original label17 : new label0
+targeted_attack_epoch_5_perturbed_image_57
+original label2 : new label0
+targeted_attack_epoch_5_perturbed_image_58
+original label6 : new label0
+targeted_attack_epoch_5_perturbed_image_59
+original label18 : new label0
+targeted_attack_epoch_5_perturbed_image_60
+original label4 : new label0
+targeted_attack_epoch_5_perturbed_image_61
+original label10 : new label0
+targeted_attack_epoch_5_perturbed_image_62
+original label32 : new label0
+targeted_attack_epoch_5_perturbed_image_63
+original label18 : new label0
+targeted_attack_epoch_5_perturbed_image_64
+original label17 : new label0
+targeted_attack_epoch_5_perturbed_image_65
+original label12 : new label0
+targeted_attack_epoch_5_perturbed_image_66
+original label24 : new label0
+targeted_attack_epoch_5_perturbed_image_67
+original label25 : new label0
+targeted_attack_epoch_5_perturbed_image_68
+original label14 : new label0
+targeted_attack_epoch_5_perturbed_image_69
+original label27 : new label0
+targeted_attack_epoch_5_perturbed_image_70
+original label24 : new label0
+targeted_attack_epoch_5_perturbed_image_71
+original label9 : new label0
+targeted_attack_epoch_5_perturbed_image_72
+original label19 : new label0
+targeted_attack_epoch_5_perturbed_image_73
+original label15 : new label0
+targeted_attack_epoch_5_perturbed_image_74
+original label18 : new label0
+targeted_attack_epoch_5_perturbed_image_75
+original label30 : new label0
+targeted_attack_epoch_5_perturbed_image_76
+original label16 : new label0
+targeted_attack_epoch_5_perturbed_image_77
+original label16 : new label0
+targeted_attack_epoch_5_perturbed_image_78
+original label3 : new label0
+targeted_attack_epoch_5_perturbed_image_79
+original label16 : new label20
+targeted_attack_epoch_5_perturbed_image_80
+original label29 : new label0
+targeted_attack_epoch_5_perturbed_image_81
+original label17 : new label0
+targeted_attack_epoch_5_perturbed_image_82
+original label3 : new label0
+targeted_attack_epoch_5_perturbed_image_83
+original label17 : new label0
+targeted_attack_epoch_5_perturbed_image_84
+original label8 : new label1
+targeted_attack_epoch_5_perturbed_image_85
+original label29 : new label0
+targeted_attack_epoch_5_perturbed_image_86
+original label12 : new label0
+targeted_attack_epoch_5_perturbed_image_87
+original label23 : new label0
+targeted_attack_epoch_5_perturbed_image_88
+original label23 : new label0
+targeted_attack_epoch_5_perturbed_image_89
+original label12 : new label0
+targeted_attack_epoch_5_perturbed_image_90
+original label6 : new label0
+targeted_attack_epoch_5_perturbed_image_91
+original label29 : new label0
+targeted_attack_epoch_5_perturbed_image_92
+original label4 : new label0
+targeted_attack_epoch_5_perturbed_image_93
+original label16 : new label0
+targeted_attack_epoch_5_perturbed_image_94
+original label16 : new label20
+targeted_attack_epoch_5_perturbed_image_95
+original label3 : new label33
+targeted_attack_epoch_5_perturbed_image_96
+original label2 : new label0
+targeted_attack_epoch_5_perturbed_image_97
+original label7 : new label0
+targeted_attack_epoch_5_perturbed_image_98
+original label24 : new label0
+targeted_attack_epoch_5_perturbed_image_99
+original label35 : new label0
+targeted_attack_epoch_5_perturbed_image_100
+original label1 : new label0
+targeted_attack_epoch_5_perturbed_image_101
+original label10 : new label0
+targeted_attack_epoch_5_perturbed_image_102
+original label2 : new label0
+targeted_attack_epoch_5_perturbed_image_103
+original label13 : new label0
+targeted_attack_epoch_5_perturbed_image_104
+original label34 : new label0
+targeted_attack_epoch_5_perturbed_image_105
+original label21 : new label0
+targeted_attack_epoch_5_perturbed_image_106
+original label4 : new label0
+targeted_attack_epoch_5_perturbed_image_107
+original label5 : new label0
+targeted_attack_epoch_5_perturbed_image_108
+original label25 : new label8
+targeted_attack_epoch_5_perturbed_image_109
+original label10 : new label0
+targeted_attack_epoch_5_perturbed_image_110
+original label25 : new label0
+targeted_attack_epoch_5_perturbed_image_111
+original label1 : new label0
+targeted_attack_epoch_5_perturbed_image_112
+original label22 : new label0
+targeted_attack_epoch_5_perturbed_image_113
+original label18 : new label0
+targeted_attack_epoch_5_perturbed_image_114
+original label35 : new label0
+targeted_attack_epoch_5_perturbed_image_115
+original label22 : new label0
+targeted_attack_epoch_5_perturbed_image_116
+original label9 : new label0
+targeted_attack_epoch_5_perturbed_image_117
+original label28 : new label0
+targeted_attack_epoch_5_perturbed_image_118
+original label35 : new label0
+targeted_attack_epoch_5_perturbed_image_119
+original label3 : new label0
+targeted_attack_epoch_5_perturbed_image_120
+original label33 : new label0
+targeted_attack_epoch_5_perturbed_image_121
+original label13 : new label0
+targeted_attack_epoch_5_perturbed_image_122
+original label7 : new label0
+targeted_attack_epoch_5_perturbed_image_123
+original label1 : new label0
+targeted_attack_epoch_5_perturbed_image_124
+original label4 : new label0
+targeted_attack_epoch_5_perturbed_image_125
+original label9 : new label0
+targeted_attack_epoch_5_perturbed_image_126
+original label17 : new label4
+targeted_attack_epoch_5_perturbed_image_127
+original label1 : new label0
+targeted_attack_epoch_5_perturbed_image_128
+original label33 : new label0
+targeted_attack_epoch_5_perturbed_image_129
+original label36 : new label0
+targeted_attack_epoch_5_perturbed_image_130
+original label1 : new label33
+targeted_attack_epoch_5_perturbed_image_131
+original label8 : new label0
+targeted_attack_epoch_5_perturbed_image_132
+original label6 : new label0
+targeted_attack_epoch_5_perturbed_image_133
+original label7 : new label0
+targeted_attack_epoch_5_perturbed_image_134
+original label16 : new label0
+targeted_attack_epoch_5_perturbed_image_135
+original label1 : new label0
+targeted_attack_epoch_5_perturbed_image_136
+original label35 : new label0
+targeted_attack_epoch_5_perturbed_image_137
+original label11 : new label0
+targeted_attack_epoch_5_perturbed_image_138
+original label23 : new label0
+targeted_attack_epoch_5_perturbed_image_139
+original label32 : new label0
+targeted_attack_epoch_5_perturbed_image_140
+original label7 : new label0
+targeted_attack_epoch_5_perturbed_image_141
+original label12 : new label0
+targeted_attack_epoch_5_perturbed_image_142
+original label36 : new label5
+targeted_attack_epoch_5_perturbed_image_143
+original label20 : new label0
+targeted_attack_epoch_5_perturbed_image_144
+original label1 : new label33
+targeted_attack_epoch_5_perturbed_image_145
+original label7 : new label0
+targeted_attack_epoch_5_perturbed_image_146
+original label20 : new label0
+targeted_attack_epoch_5_perturbed_image_147
+original label29 : new label0
+targeted_attack_epoch_5_perturbed_image_148
+original label20 : new label0
+targeted_attack_epoch_5_perturbed_image_149
+original label3 : new label0
+targeted_attack_epoch_5_perturbed_image_150
+original label23 : new label0
+targeted_attack_epoch_5_perturbed_image_151
+original label12 : new label33
+targeted_attack_epoch_5_perturbed_image_152
+original label25 : new label0
+targeted_attack_epoch_5_perturbed_image_153
+original label3 : new label0
+targeted_attack_epoch_5_perturbed_image_154
+original label2 : new label0
+targeted_attack_epoch_5_perturbed_image_155
+original label15 : new label0
+targeted_attack_epoch_5_perturbed_image_156
+original label28 : new label0
+targeted_attack_epoch_5_perturbed_image_157
+original label9 : new label0
+targeted_attack_epoch_5_perturbed_image_158
+original label23 : new label0
+targeted_attack_epoch_5_perturbed_image_159
+original label31 : new label0
+targeted_attack_epoch_5_perturbed_image_160
+original label10 : new label0
+targeted_attack_epoch_5_perturbed_image_161
+original label26 : new label0
+targeted_attack_epoch_5_perturbed_image_162
+original label4 : new label0
+targeted_attack_epoch_5_perturbed_image_163
+original label34 : new label33
+targeted_attack_epoch_5_perturbed_image_164
+original label7 : new label0
+targeted_attack_epoch_5_perturbed_image_165
+original label29 : new label0
+targeted_attack_epoch_5_perturbed_image_166
+original label4 : new label0
+targeted_attack_epoch_5_perturbed_image_167
+original label12 : new label5
+targeted_attack_epoch_5_perturbed_image_168
+original label30 : new label0
+targeted_attack_epoch_5_perturbed_image_169
+original label25 : new label0
+targeted_attack_epoch_5_perturbed_image_170
+original label12 : new label0
+targeted_attack_epoch_5_perturbed_image_171
+original label35 : new label0
+targeted_attack_epoch_5_perturbed_image_172
+original label2 : new label33
+targeted_attack_epoch_5_perturbed_image_173
+original label18 : new label0
+targeted_attack_epoch_5_perturbed_image_174
+original label11 : new label0
+targeted_attack_epoch_5_perturbed_image_175
+original label30 : new label0
+targeted_attack_epoch_5_perturbed_image_176
+original label23 : new label0
+targeted_attack_epoch_5_perturbed_image_177
+original label18 : new label0
+targeted_attack_epoch_5_perturbed_image_178
+original label8 : new label1
+targeted_attack_epoch_5_perturbed_image_179
+original label22 : new label0
+targeted_attack_epoch_5_perturbed_image_180
+original label3 : new label0
+targeted_attack_epoch_5_perturbed_image_181
+original label9 : new label27
+targeted_attack_epoch_5_perturbed_image_182
+original label30 : new label0
+targeted_attack_epoch_5_perturbed_image_183
+original label23 : new label0
+targeted_attack_epoch_5_perturbed_image_184
+original label23 : new label20
+targeted_attack_epoch_5_perturbed_image_185
+original label17 : new label0
+targeted_attack_epoch_5_perturbed_image_186
+original label21 : new label0
+targeted_attack_epoch_5_perturbed_image_187
+original label9 : new label0
+targeted_attack_epoch_5_perturbed_image_188
+original label25 : new label0
+targeted_attack_epoch_5_perturbed_image_189
+original label9 : new label0
+targeted_attack_epoch_5_perturbed_image_190
+original label34 : new label0
+targeted_attack_epoch_5_perturbed_image_191
+original label9 : new label0
+targeted_attack_epoch_5_perturbed_image_192
+original label12 : new label4
+targeted_attack_epoch_5_perturbed_image_193
+original label11 : new label0
+targeted_attack_epoch_5_perturbed_image_194
+original label25 : new label0
+targeted_attack_epoch_5_perturbed_image_195
+original label9 : new label0
+targeted_attack_epoch_5_perturbed_image_196
+original label27 : new label0
+targeted_attack_epoch_5_perturbed_image_197
+original label23 : new label0
+targeted_attack_epoch_5_perturbed_image_198
+original label27 : new label0
+targeted_attack_epoch_5_perturbed_image_199
+original label20 : new label0
+targeted_attack_epoch_5_perturbed_image_200
+original label30 : new label20
+targeted_attack_epoch_5_perturbed_image_201
+original label1 : new label0
+targeted_attack_epoch_5_perturbed_image_202
+original label24 : new label0
+targeted_attack_epoch_5_perturbed_image_203
+original label10 : new label0
+targeted_attack_epoch_5_perturbed_image_204
+original label14 : new label0
+targeted_attack_epoch_5_perturbed_image_205
+original label12 : new label0
+targeted_attack_epoch_5_perturbed_image_206
+original label16 : new label0
+targeted_attack_epoch_5_perturbed_image_207
+original label3 : new label0
+targeted_attack_epoch_5_perturbed_image_208
+original label3 : new label0
+targeted_attack_epoch_5_perturbed_image_209
+original label15 : new label0
+targeted_attack_epoch_5_perturbed_image_210
+original label2 : new label0
+targeted_attack_epoch_5_perturbed_image_211
+original label20 : new label0
+targeted_attack_epoch_5_perturbed_image_212
+original label34 : new label0
+targeted_attack_epoch_5_perturbed_image_213
+original label22 : new label0
+targeted_attack_epoch_5_perturbed_image_214
+original label21 : new label0
+targeted_attack_epoch_5_perturbed_image_215
+original label21 : new label0
+targeted_attack_epoch_5_perturbed_image_216
+original label3 : new label0
+targeted_attack_epoch_5_perturbed_image_217
+original label35 : new label0
+targeted_attack_epoch_5_perturbed_image_218
+original label16 : new label0
+targeted_attack_epoch_5_perturbed_image_219
+original label26 : new label0
+targeted_attack_epoch_5_perturbed_image_220
+original label27 : new label0
+targeted_attack_epoch_5_perturbed_image_221
+original label23 : new label26
+targeted_attack_epoch_5_perturbed_image_222
+original label34 : new label0
+targeted_attack_epoch_5_perturbed_image_223
+original label24 : new label0
+targeted_attack_epoch_5_perturbed_image_224
+original label2 : new label0
+targeted_attack_epoch_5_perturbed_image_225
+original label14 : new label0
+targeted_attack_epoch_5_perturbed_image_226
+original label7 : new label0
+targeted_attack_epoch_5_perturbed_image_227
+original label30 : new label0
+targeted_attack_epoch_5_perturbed_image_228
+original label27 : new label0
+targeted_attack_epoch_5_perturbed_image_229
+original label27 : new label0
+targeted_attack_epoch_5_perturbed_image_230
+original label36 : new label0
+targeted_attack_epoch_5_perturbed_image_231
+original label30 : new label0
+targeted_attack_epoch_5_perturbed_image_232
+original label22 : new label0
+targeted_attack_epoch_5_perturbed_image_233
+original label6 : new label0
+targeted_attack_epoch_5_perturbed_image_234
+original label15 : new label0
+targeted_attack_epoch_5_perturbed_image_235
+original label36 : new label33
+targeted_attack_epoch_5_perturbed_image_236
+original label23 : new label20
+targeted_attack_epoch_5_perturbed_image_237
+original label27 : new label0
+targeted_attack_epoch_5_perturbed_image_238
+original label13 : new label0
+targeted_attack_epoch_5_perturbed_image_239
+original label23 : new label0
+targeted_attack_epoch_5_perturbed_image_240
+original label32 : new label0
+targeted_attack_epoch_5_perturbed_image_241
+original label19 : new label0
+targeted_attack_epoch_5_perturbed_image_242
+original label18 : new label0
+targeted_attack_epoch_5_perturbed_image_243
+original label18 : new label0
+targeted_attack_epoch_5_perturbed_image_244
+original label13 : new label0
+targeted_attack_epoch_5_perturbed_image_245
+original label22 : new label0
+targeted_attack_epoch_5_perturbed_image_246
+original label31 : new label0
+targeted_attack_epoch_5_perturbed_image_247
+original label24 : new label0
+targeted_attack_epoch_5_perturbed_image_248
+original label26 : new label0
+targeted_attack_epoch_5_perturbed_image_249
+original label20 : new label0
+targeted_attack_epoch_5_perturbed_image_250
+original label21 : new label0
+targeted_attack_epoch_5_perturbed_image_251
+original label27 : new label0
+targeted_attack_epoch_5_perturbed_image_252
+original label29 : new label0
+targeted_attack_epoch_5_perturbed_image_253
+original label10 : new label0
+targeted_attack_epoch_5_perturbed_image_254
+original label19 : new label0
+targeted_attack_epoch_5_perturbed_image_255
+original label14 : new label0
+targeted_attack_epoch_5_perturbed_image_256
+original label22 : new label0
+targeted_attack_epoch_5_perturbed_image_257
+original label10 : new label0
+targeted_attack_epoch_5_perturbed_image_258
+original label17 : new label26
+targeted_attack_epoch_5_perturbed_image_259
+original label27 : new label0
+targeted_attack_epoch_5_perturbed_image_260
+original label9 : new label0
+targeted_attack_epoch_5_perturbed_image_261
+original label35 : new label0
+targeted_attack_epoch_5_perturbed_image_262
+original label7 : new label0
+targeted_attack_epoch_5_perturbed_image_263
+original label18 : new label0
+targeted_attack_epoch_5_perturbed_image_264
+original label28 : new label0
+targeted_attack_epoch_5_perturbed_image_265
+original label27 : new label0
+targeted_attack_epoch_5_perturbed_image_266
+original label33 : new label0
+targeted_attack_epoch_5_perturbed_image_267
+original label22 : new label0
+targeted_attack_epoch_5_perturbed_image_268
+original label6 : new label0
+targeted_attack_epoch_5_perturbed_image_269
+original label16 : new label0
+targeted_attack_epoch_5_perturbed_image_270
+original label15 : new label0
+targeted_attack_epoch_5_perturbed_image_271
+original label32 : new label0
+targeted_attack_epoch_5_perturbed_image_272
+original label14 : new label0
+targeted_attack_epoch_5_perturbed_image_273
+original label6 : new label0
+targeted_attack_epoch_5_perturbed_image_274
+original label3 : new label0
+targeted_attack_epoch_5_perturbed_image_275
+original label15 : new label0
+targeted_attack_epoch_5_perturbed_image_276
+original label17 : new label0
+targeted_attack_epoch_5_perturbed_image_277
+original label29 : new label0
+targeted_attack_epoch_5_perturbed_image_278
+original label32 : new label0
+targeted_attack_epoch_5_perturbed_image_279
+original label4 : new label0
+targeted_attack_epoch_5_perturbed_image_280
+original label11 : new label0
+targeted_attack_epoch_5_perturbed_image_281
+original label35 : new label0
+targeted_attack_epoch_5_perturbed_image_282
+original label14 : new label0
+targeted_attack_epoch_5_perturbed_image_283
+original label28 : new label0
+targeted_attack_epoch_5_perturbed_image_284
+original label7 : new label0
+targeted_attack_epoch_5_perturbed_image_285
+original label34 : new label33
+targeted_attack_epoch_5_perturbed_image_286
+original label19 : new label0
+targeted_attack_epoch_5_perturbed_image_287
+original label6 : new label0
+targeted_attack_epoch_5_perturbed_image_288
+original label10 : new label0
+targeted_attack_epoch_5_perturbed_image_289
+original label30 : new label0
+targeted_attack_epoch_5_perturbed_image_290
+original label14 : new label0
+targeted_attack_epoch_5_perturbed_image_291
+original label30 : new label0
+targeted_attack_epoch_5_perturbed_image_292
+original label8 : new label0
+targeted_attack_epoch_5_perturbed_image_293
+original label35 : new label0
+targeted_attack_epoch_5_perturbed_image_294
+original label18 : new label20
+targeted_attack_epoch_5_perturbed_image_295
+original label26 : new label0
+targeted_attack_epoch_5_perturbed_image_296
+original label34 : new label0
+targeted_attack_epoch_5_perturbed_image_297
+original label3 : new label0
+targeted_attack_epoch_5_perturbed_image_298
+original label18 : new label0
+targeted_attack_epoch_5_perturbed_image_299
+original label9 : new label0
+targeted_attack_epoch_5_perturbed_image_300
+original label36 : new label0
+targeted_attack_epoch_5_perturbed_image_301
+original label13 : new label33
+targeted_attack_epoch_5_perturbed_image_302
+original label17 : new label0
+targeted_attack_epoch_5_perturbed_image_303
+original label9 : new label0
+targeted_attack_epoch_5_perturbed_image_304
+original label29 : new label0
+targeted_attack_epoch_5_perturbed_image_305
+original label21 : new label0
+targeted_attack_epoch_5_perturbed_image_306
+original label24 : new label0
+targeted_attack_epoch_5_perturbed_image_307
+original label36 : new label0
+targeted_attack_epoch_5_perturbed_image_308
+original label7 : new label0
+targeted_attack_epoch_5_perturbed_image_309
+original label1 : new label33
+targeted_attack_epoch_5_perturbed_image_310
+original label31 : new label0
+targeted_attack_epoch_5_perturbed_image_311
+original label36 : new label20
+targeted_attack_epoch_5_perturbed_image_312
+original label26 : new label0
+targeted_attack_epoch_5_perturbed_image_313
+original label2 : new label0
+targeted_attack_epoch_5_perturbed_image_314
+original label19 : new label0
+targeted_attack_epoch_5_perturbed_image_315
+original label27 : new label0
+targeted_attack_epoch_5_perturbed_image_316
+original label20 : new label0
+targeted_attack_epoch_5_perturbed_image_317
+original label34 : new label0
+targeted_attack_epoch_5_perturbed_image_318
+original label27 : new label0
+targeted_attack_epoch_5_perturbed_image_319
+original label21 : new label0
+targeted_attack_epoch_5_perturbed_image_320
+original label36 : new label0
+targeted_attack_epoch_5_perturbed_image_321
+original label10 : new label0
+targeted_attack_epoch_5_perturbed_image_322
+original label1 : new label0
+targeted_attack_epoch_5_perturbed_image_323
+original label17 : new label0
+targeted_attack_epoch_5_perturbed_image_324
+original label13 : new label0
+targeted_attack_epoch_5_perturbed_image_325
+original label16 : new label33
+targeted_attack_epoch_5_perturbed_image_326
+original label35 : new label5
+targeted_attack_epoch_5_perturbed_image_327
+original label15 : new label0
+targeted_attack_epoch_5_perturbed_image_328
+original label7 : new label0
+targeted_attack_epoch_5_perturbed_image_329
+original label18 : new label0
+targeted_attack_epoch_5_perturbed_image_330
+original label34 : new label0
+targeted_attack_epoch_5_perturbed_image_331
+original label26 : new label0
+targeted_attack_epoch_5_perturbed_image_332
+original label32 : new label0
+targeted_attack_epoch_5_perturbed_image_333
+original label27 : new label0
+targeted_attack_epoch_5_perturbed_image_334
+original label14 : new label0
+targeted_attack_epoch_5_perturbed_image_335
+original label5 : new label0
+targeted_attack_epoch_5_perturbed_image_336
+original label29 : new label0
+targeted_attack_epoch_5_perturbed_image_337
+original label21 : new label0
+targeted_attack_epoch_5_perturbed_image_338
+original label29 : new label0
+targeted_attack_epoch_5_perturbed_image_339
+original label13 : new label0
+targeted_attack_epoch_5_perturbed_image_340
+original label21 : new label0
+targeted_attack_epoch_5_perturbed_image_341
+original label19 : new label0
+targeted_attack_epoch_5_perturbed_image_342
+original label13 : new label0
+targeted_attack_epoch_5_perturbed_image_343
+original label26 : new label0
+targeted_attack_epoch_5_perturbed_image_344
+original label12 : new label0
+targeted_attack_epoch_5_perturbed_image_345
+original label25 : new label0
+targeted_attack_epoch_5_perturbed_image_346
+original label3 : new label4
+targeted_attack_epoch_5_perturbed_image_347
+original label27 : new label0
+targeted_attack_epoch_5_perturbed_image_348
+original label22 : new label20
+targeted_attack_epoch_5_perturbed_image_349
+original label16 : new label0
+targeted_attack_epoch_5_perturbed_image_350
+original label18 : new label26
+targeted_attack_epoch_5_perturbed_image_351
+original label13 : new label0
+targeted_attack_epoch_5_perturbed_image_352
+original label20 : new label0
+targeted_attack_epoch_5_perturbed_image_353
+original label7 : new label0
+targeted_attack_epoch_5_perturbed_image_354
+original label20 : new label0
+targeted_attack_epoch_5_perturbed_image_355
+original label28 : new label0
+targeted_attack_epoch_5_perturbed_image_356
+original label2 : new label0
+targeted_attack_epoch_5_perturbed_image_357
+original label7 : new label0
+targeted_attack_epoch_5_perturbed_image_358
+original label24 : new label0
+targeted_attack_epoch_5_perturbed_image_359
+original label18 : new label0
+targeted_attack_epoch_5_perturbed_image_360
+original label19 : new label0
+targeted_attack_epoch_5_perturbed_image_361
+original label5 : new label0
+targeted_attack_epoch_5_perturbed_image_362
+original label14 : new label0
+targeted_attack_epoch_5_perturbed_image_363
+original label29 : new label0
+targeted_attack_epoch_5_perturbed_image_364
+original label21 : new label0
+targeted_attack_epoch_5_perturbed_image_365
+original label7 : new label0
+targeted_attack_epoch_5_perturbed_image_366
+original label15 : new label0
+targeted_attack_epoch_5_perturbed_image_367
+original label29 : new label0
+targeted_attack_epoch_5_perturbed_image_368
+original label16 : new label0
+targeted_attack_epoch_5_perturbed_image_369
+original label19 : new label0
+targeted_attack_epoch_5_perturbed_image_370
+original label35 : new label33
+targeted_attack_epoch_5_perturbed_image_371
+original label31 : new label0
+targeted_attack_epoch_5_perturbed_image_372
+original label28 : new label4
+targeted_attack_epoch_5_perturbed_image_373
+original label26 : new label0
+targeted_attack_epoch_5_perturbed_image_374
+original label17 : new label0
+targeted_attack_epoch_5_perturbed_image_375
+original label1 : new label0
+targeted_attack_epoch_5_perturbed_image_376
+original label32 : new label0
+targeted_attack_epoch_5_perturbed_image_377
+original label26 : new label0
+targeted_attack_epoch_5_perturbed_image_378
+original label10 : new label0
+targeted_attack_epoch_5_perturbed_image_379
+original label20 : new label0
+targeted_attack_epoch_5_perturbed_image_380
+original label12 : new label13
+targeted_attack_epoch_5_perturbed_image_381
+original label2 : new label0
+targeted_attack_epoch_5_perturbed_image_382
+original label18 : new label20
+targeted_attack_epoch_5_perturbed_image_383
+original label2 : new label0
+targeted_attack_epoch_5_perturbed_image_384
+original label24 : new label0
+targeted_attack_epoch_5_perturbed_image_385
+original label13 : new label0
+targeted_attack_epoch_5_perturbed_image_386
+original label9 : new label0
+targeted_attack_epoch_5_perturbed_image_387
+original label9 : new label0
+targeted_attack_epoch_5_perturbed_image_388
+original label15 : new label0
+targeted_attack_epoch_5_perturbed_image_389
+original label25 : new label0
+targeted_attack_epoch_5_perturbed_image_390
+original label16 : new label0
+targeted_attack_epoch_5_perturbed_image_391
+original label27 : new label0
+targeted_attack_epoch_5_perturbed_image_392
+original label16 : new label0
+targeted_attack_epoch_5_perturbed_image_393
+original label10 : new label0
+targeted_attack_epoch_5_perturbed_image_394
+original label32 : new label0
+targeted_attack_epoch_5_perturbed_image_395
+original label10 : new label0
+targeted_attack_epoch_5_perturbed_image_396
+original label4 : new label0
+targeted_attack_epoch_5_perturbed_image_397
+original label12 : new label31
+targeted_attack_epoch_5_perturbed_image_398
+original label21 : new label0
+targeted_attack_epoch_5_perturbed_image_399
+original label29 : new label0
+targeted_attack_epoch_5_perturbed_image_400
+original label6 : new label0
+targeted_attack_epoch_5_perturbed_image_401
+original label23 : new label0
+targeted_attack_epoch_5_perturbed_image_402
+original label2 : new label0
+targeted_attack_epoch_5_perturbed_image_403
+original label7 : new label0
+targeted_attack_epoch_5_perturbed_image_404
+original label9 : new label0
+targeted_attack_epoch_5_perturbed_image_405
+original label35 : new label5
+targeted_attack_epoch_5_perturbed_image_406
+original label17 : new label0
+targeted_attack_epoch_5_perturbed_image_407
+original label33 : new label0
+targeted_attack_epoch_5_perturbed_image_408
+original label32 : new label0
+targeted_attack_epoch_5_perturbed_image_409
+original label13 : new label0
+targeted_attack_epoch_5_perturbed_image_410
+original label8 : new label0
+targeted_attack_epoch_5_perturbed_image_411
+original label9 : new label0
+targeted_attack_epoch_5_perturbed_image_412
+original label30 : new label0
+targeted_attack_epoch_5_perturbed_image_413
+original label3 : new label0
+targeted_attack_epoch_5_perturbed_image_414
+original label26 : new label0
+targeted_attack_epoch_5_perturbed_image_415
+original label17 : new label0
+targeted_attack_epoch_5_perturbed_image_416
+original label35 : new label0
+targeted_attack_epoch_5_perturbed_image_417
+original label6 : new label0
+targeted_attack_epoch_5_perturbed_image_418
+original label9 : new label0
+targeted_attack_epoch_5_perturbed_image_419
+original label31 : new label0
+targeted_attack_epoch_5_perturbed_image_420
+original label1 : new label33
+targeted_attack_epoch_5_perturbed_image_421
+original label29 : new label0
+targeted_attack_epoch_5_perturbed_image_422
+original label16 : new label0
+targeted_attack_epoch_5_perturbed_image_423
+original label9 : new label0
+targeted_attack_epoch_5_perturbed_image_424
+original label15 : new label0
+targeted_attack_epoch_5_perturbed_image_425
+original label13 : new label0
+targeted_attack_epoch_5_perturbed_image_426
+original label36 : new label0
+targeted_attack_epoch_5_perturbed_image_427
+original label10 : new label0
+targeted_attack_epoch_5_perturbed_image_428
+original label3 : new label0
+targeted_attack_epoch_5_perturbed_image_429
+original label32 : new label0
+targeted_attack_epoch_5_perturbed_image_430
+original label36 : new label0
+targeted_attack_epoch_5_perturbed_image_431
+original label27 : new label0
+targeted_attack_epoch_5_perturbed_image_432
+original label33 : new label0
+targeted_attack_epoch_5_perturbed_image_433
+original label9 : new label0
+targeted_attack_epoch_5_perturbed_image_434
+original label30 : new label0
+targeted_attack_epoch_5_perturbed_image_435
+original label34 : new label0
+targeted_attack_epoch_5_perturbed_image_436
+original label2 : new label0
+targeted_attack_epoch_5_perturbed_image_437
+original label3 : new label0
+targeted_attack_epoch_5_perturbed_image_438
+original label17 : new label0
+targeted_attack_epoch_5_perturbed_image_439
+original label28 : new label0
+targeted_attack_epoch_5_perturbed_image_440
+original label33 : new label0
+targeted_attack_epoch_5_perturbed_image_441
+original label6 : new label0
+targeted_attack_epoch_5_perturbed_image_442
+original label2 : new label33
+targeted_attack_epoch_5_perturbed_image_443
+original label30 : new label0
+targeted_attack_epoch_5_perturbed_image_444
+original label6 : new label0
+targeted_attack_epoch_5_perturbed_image_445
+original label30 : new label0
+targeted_attack_epoch_5_perturbed_image_446
+original label21 : new label0
+targeted_attack_epoch_5_perturbed_image_447
+original label33 : new label0
+targeted_attack_epoch_5_perturbed_image_448
+original label14 : new label0
+targeted_attack_epoch_5_perturbed_image_449
+original label17 : new label0
+targeted_attack_epoch_5_perturbed_image_450
+original label11 : new label0
+targeted_attack_epoch_5_perturbed_image_451
+original label19 : new label0
+targeted_attack_epoch_5_perturbed_image_452
+original label16 : new label0
+targeted_attack_epoch_5_perturbed_image_453
+original label27 : new label0
+targeted_attack_epoch_5_perturbed_image_454
+original label9 : new label0
+
