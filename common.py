@@ -3,6 +3,7 @@ from timm.data.transforms_factory import create_transform
 from timm.data import resolve_data_config
 
 import torch
+import torch.nn as nn
 from torch.utils.data import DataLoader
 
 from torchvision.datasets import ImageFolder
